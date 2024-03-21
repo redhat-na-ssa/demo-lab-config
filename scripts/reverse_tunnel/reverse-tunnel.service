@@ -1,3 +1,4 @@
+# NOTE: install to /etc/systemd/system/
 [Unit]
 Description=SSH Tunnel
 After=network.target

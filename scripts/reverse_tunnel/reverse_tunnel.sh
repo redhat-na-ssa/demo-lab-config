@@ -1,4 +1,5 @@
 #!/bin/sh
+# NOTE: install to /usr/local/bin
 
 PUBLIC_IP=18.116.38.68
 LAB_IP=143.166.117.0/24
