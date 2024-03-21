@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/web-terminal/operator/overlays/fast
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/web-terminal/instance/overlays/enhanced
+# - https://github.com/codekow/demo-ai-gitops-catalog/components/configs/cluster/autoscale/overlays/default
+# - https://github.com/codekow/demo-ai-gitops-catalog/components/configs/cluster/etcd-backup/overlays/default
+- https://github.com/codekow/demo-ai-gitops-catalog/components/configs/cluster/namespace-cleanup/overlays/sandbox
+- https://github.com/codekow/demo-ai-gitops-catalog/components/configs/cluster/namespaces/overlays/default
+- https://github.com/codekow/demo-ai-gitops-catalog/components/configs/cluster/console/overlays/default
+- https://github.com/codekow/demo-ai-gitops-catalog/components/configs/cluster/console-samples
+- https://github.com/codekow/demo-ai-gitops-catalog/components/configs/cluster/rbac/overlays/no-self-provisioner
+- https://github.com/codekow/demo-ai-gitops-catalog/components/configs/kustomized/ubi-images/overlays/cluster

@@ -1,5 +1,7 @@
 #!/bin/bash -x
-for i in $(sudo virsh list | tail -n +3 | grep bootstrap | awk {'print $2'});
+# shellcheck disable=2086
+
+for i in $(sudo virsh list | tail -n +3 | grep bootstrap | awk '{print $2}');
 do
   sudo virsh destroy $i;
   sudo virsh undefine $i;
