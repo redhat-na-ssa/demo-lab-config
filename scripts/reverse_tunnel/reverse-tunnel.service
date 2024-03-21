@@ -1,4 +1,7 @@
 # NOTE: install to /etc/systemd/system/
+#
+# systemctl daemon-reload
+# systemctl enable reverse-tunnel --now
 [Unit]
 Description=SSH Tunnel
 After=network.target
