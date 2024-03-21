@@ -21,6 +21,7 @@ kludge_tunnel(){
 
   ssh -N -p 443 \
     root@"${PUBLIC_IP}" \
+    -ServerAliveInterval=60 \
     -R 0.0.0.0:80:"${OCP_APP_IP}":80 \
     -R 0.0.0.0:443:"${OCP_APP_IP}":443 \
     -R 0.0.0.0:6443:"${OCP_API_IP}":6443 \
