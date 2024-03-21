@@ -7,7 +7,12 @@ OCP_APP_IP=172.29.172.201
 OCP_DNS_NAME=cluster1.wf.edgelab.online
 
 kludge_tunnel(){
-  echo "Setup your dns to resolve:
+  echo "Setup your private dns to resolve:
+
+  *.apps.${OCP_DNS_NAME}  ${OCP_APP_IP}
+  api.${OCP_DNS_NAME}     ${OCP_API_IP}
+  "
+  echo "Setup your public dns to resolve:
 
   *.apps.${OCP_DNS_NAME}  ${PUBLIC_IP}
   api.${OCP_DNS_NAME}     ${PUBLIC_IP}
