@@ -1,0 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+# Advanced Cluster Security
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/advanced-cluster-management/instance/base
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/advanced-cluster-management/operator/overlays/release-2.8
