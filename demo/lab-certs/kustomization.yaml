@@ -1,0 +1,76 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/openshift-cert-manager-operator/operator/overlays/stable-v1
+- https://github.com/codekow/demo-ai-gitops-catalog/components/configs/cluster/cluster-certs/overlays/letsencrypt
+
+patches:
+  - patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/env/0/value
+        value: api.cluster1.wf.edgelab.online
+    target:
+      kind: Job
+      name: patch-cluster-api-cert
+  - patch: |-
+      - op: replace
+        path: /spec/dnsNames
+        value:
+          - api.cluster1.wf.edgelab.online
+      - op: replace
+        path: /spec/issuerRef/name
+        value: letsencrypt-staging
+    target:
+      kind: Certificate
+      name: openshift-api
+  - patch: |-
+      - op: replace
+        path: /spec/dnsNames
+        value:
+          - '*.apps.cluster1.wf.edgelab.online'
+      - op: replace
+        path: /spec/commonName
+        value: '*.apps.cluster1.wf.edgelab.online'
+      - op: replace
+        path: /spec/issuerRef/name
+        value: letsencrypt-staging
+    target:
+      kind: Certificate
+      name: openshift-wildcard
+  - patch: |-
+      - op: replace
+        path: /spec/acme/solvers/0/selector/dnsZones
+        value:
+          - 'edgelab.online'
+          - 'cluster1.wf.edgelab.online'
+      - op: add
+        path: /spec/acme/solvers/0/dns01/cnameStrategy
+        value: Follow
+      - op: replace
+        path: /spec/acme/solvers/0/dns01/route53/accessKeyID
+        value: AKIAU7LUSPJKZJ4HIP5V
+      - op: replace
+        path: /spec/acme/solvers/0/dns01/route53/hostedZoneID
+        value: Z0215630D4AG3Y2CMVR0
+    target:
+      kind: ClusterIssuer
+      name: letsencrypt-staging
+  - patch: |-
+      - op: replace
+        path: /spec/acme/solvers/0/selector/dnsZones
+        value:
+          - 'edgelab.online'
+          - 'cluster1.wf.edgelab.online'
+      - op: add
+        path: /spec/acme/solvers/0/dns01/cnameStrategy
+        value: Follow
+      - op: replace
+        path: /spec/acme/solvers/0/dns01/route53/accessKeyID
+        value: AKIAU7LUSPJKZJ4HIP5V
+      - op: replace
+        path: /spec/acme/solvers/0/dns01/route53/hostedZoneID
+        value: Z0215630D4AG3Y2CMVR0
+    target:
+      kind: ClusterIssuer
+      name: letsencrypt-staging

@@ -1,0 +1,11 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleLink
+metadata:
+  name: github-catalog
+spec:
+  href: 'https://github.com/codekow/demo-ai-gitops-catalog'
+  location: ApplicationMenu
+  text: GitHub - GitOps Catalog
+  applicationMenu:
+    section: Git Repos
+    imageURL: https://img.icons8.com/fluency/512/github.png

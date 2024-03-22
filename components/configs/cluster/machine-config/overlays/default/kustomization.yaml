@@ -3,3 +3,7 @@ kind: Kustomization
 
 resources:
   - ../../base
+
+patches:
+  - path: exclude-ssh-master.yaml
+  - path: exclude-ssh-worker.yaml
