@@ -55,7 +55,7 @@ patches:
         value: Z0215630D4AG3Y2CMVR0
     target:
       kind: ClusterIssuer
-      name: letsencrypt-staging
+      name: letsencrypt-prod
   - patch: |-
       - op: replace
         path: /spec/acme/solvers/0/selector/dnsZones
