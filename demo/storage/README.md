@@ -15,6 +15,7 @@ oc get sc
 # setup registry operator
 oc patch configs.imageregistry.operator.openshift.io/cluster --type=merge -p '{"spec":{"rolloutStrategy":"RollingUpdate","replicas":2}}'
 oc patch configs.imageregistry.operator.openshift.io cluster --type merge -p '{"spec":{"managementState":"Managed"}}'
+oc patch configs.imageregistry.operator.openshift.io cluster --type merge -p '{"spec":{"storage":{"emptyDir": null}}}'
 oc patch configs.imageregistry.operator.openshift.io cluster --type merge -p '{"spec":{"storage":{"pvc":{"claim": null}}}}'
 ```
 
