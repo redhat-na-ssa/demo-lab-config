@@ -18,7 +18,7 @@ patches:
     patch: |-
       - op: replace
         path: /spec/storageDeviceSets/0/dataPVCTemplate/spec/resources/requests/storage
-        value: '4'
+        value: '1'
       - op: replace
         path: /spec/storageDeviceSets/0/replica
-        value: 1
+        value: 4
