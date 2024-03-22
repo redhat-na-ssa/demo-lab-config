@@ -1,9 +1,17 @@
 #!/bin/bash
 # see https://ksingh7.medium.com/lets-automate-let-s-encrypt-tls-certs-for-openshift-4-211d6c081875
 
-export AWS_ACCESS_KEY_ID=ID
-export AWS_SECRET_ACCESS_KEY=KEY
-export EMAIL=koree@redhat.com
+# export AWS_ACCESS_KEY_ID=ID
+# export AWS_SECRET_ACCESS_KEY=KEY
+export EMAIL=${EMAIL:-no-reply@github.com}
+
+if [ -z ${AWS_ACCESS_KEY_ID} ]; then
+  echo "Error:
+    export AWS_ACCESS_KEY_ID=
+    export AWS_SECRET_ACCESS_KEY=
+  "
+  exit 1
+fi
 
 SCRATCH=./scratch
 ACME_DIR=${SCRATCH}/acme
@@ -41,19 +49,26 @@ ${ACME_DIR}/acme.sh \
   --ca-file ${CERT_DIR}/ca.cer
 
 # update router certs
+oc -n openshift-ingress delete secret openshift-wildcard-certificate
 
-oc -n openshift-ingress delete secret ${CERT_NAME}
-oc create secret tls ${CERT_NAME} \
+oc create secret tls openshift-wildcard-certificate \
   --cert=${CERT_DIR}/fullchain.pem \
   --key=${CERT_DIR}/key.pem \
   -n openshift-ingress
 
-oc patch ingresscontroller default \
-  -n openshift-ingress-operator \
-  --type=merge \
-  --patch='{"spec": { "defaultCertificate": { "name": "openshift-wildcard-certificate" }}}'
+if oc get secret openshift-wildcard-certificate -n openshift-ingress; then
+  oc patch ingresscontroller default \
+    -n openshift-ingress-operator \
+    --type=merge \
+    --patch='{"spec": { "defaultCertificate": { "name": "openshift-wildcard-certificate" }}}'
+else
+  echo "LE Setup: Error openshift-wildcard-certificate"
+  exit 1
+fi
 
+# update api certs
 oc -n openshift-config delete secret openshift-api-certificate
+
 oc create secret tls openshift-api-certificate \
   --cert=${CERT_DIR}/fullchain.pem \
   --key=${CERT_DIR}/key.pem \
@@ -63,9 +78,10 @@ if oc get secret openshift-api-certificate -n openshift-config; then
   oc patch apiserver cluster \
     --type=merge -p '{"spec":{"servingCerts": {"namedCertificates": [{"names": ["'${LE_API}'"], "servingCertificate": {"name": "openshift-api-certificate"}}]}}}'
 else
-  echo "Could not execute sync as secret 'openshift-api-certificate' in namespace 'openshift-config' does not exist, check status of CertificationRequest"
+  echo "LE Setup: Error openshift-api-certificate"
   exit 1
 fi
 
 sleep 6
+
 oc get po -n openshift-ingress
