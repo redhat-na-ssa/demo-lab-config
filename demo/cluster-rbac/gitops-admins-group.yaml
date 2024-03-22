@@ -1,0 +1,13 @@
+kind: Group
+apiVersion: user.openshift.io/v1
+metadata:
+  name: gitops-admins
+users:
+- phi.h.truong@wellsfargo.com
+- amruth.kumar1@wellsfargo.com
+- nam.nguyen3@wellsfargo.com
+- krishnakumar.chellappa@wellsfargo.com
+- richard.joy@wellsfargo.com
+- wilson.paulraj@wellsfargo.com
+- bbeaudoin@redhat.com
+- koree@redhat.com

@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - cluster-admins-group.yaml
   - cluster-admins-rolebinding.yaml
+  - gitops-admins-group.yaml
   - self-provisioner-clusterrolebinding.yaml
   # - user-group.yaml
   # - user-rolebinding.yaml

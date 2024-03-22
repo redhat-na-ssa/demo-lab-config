@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck disable=SC2034,SC2125,SC2086
 
 runai_help(){
   echo "
