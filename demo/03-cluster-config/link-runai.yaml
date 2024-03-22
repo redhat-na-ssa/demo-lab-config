@@ -1,0 +1,11 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleLink
+metadata:
+  name: link-runai
+spec:
+  href: 'https://runai.apps.cluster1.sandbox284.opentlc.com'
+  location: ApplicationMenu
+  text: RunAI
+  applicationMenu:
+    section: AI Applications
+    imageURL: https://img.icons8.com/fluency/240w/artificial-intelligence--v1.png

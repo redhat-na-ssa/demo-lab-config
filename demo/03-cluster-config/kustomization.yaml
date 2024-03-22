@@ -4,6 +4,8 @@ kind: Kustomization
 resources:
 - ../base
 - banner-data.yaml
+- link-demo.yaml
+- link-runai.yaml
 
 # Run AI
 # BUG: currently not installing
