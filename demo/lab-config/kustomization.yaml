@@ -42,10 +42,6 @@ resources:
 # OpenShift Pipelines
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/openshift-pipelines-operator-rh/operator/overlays/latest
 
-# Advanced Cluster Security
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/advanced-cluster-security/instance/overlays/default
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/advanced-cluster-security/operator/overlays/latest
-
 # Red Hat SSO
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/rhsso-operator/operator/overlays/stable
 
