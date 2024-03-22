@@ -3,14 +3,7 @@ kind: Kustomization
 
 resources:
 - ../base
-
-# One Time Apply
-
-# Cluster Login
-# - https://github.com/codekow/demo-ai-gitops-catalog/components/configs/cluster/login/overlays/htpasswd
-
-# Image Registry Config
-# - https://github.com/codekow/demo-ai-gitops-catalog/components/configs/cluster/registry/overlays/empty-dir
+- banner-data.yaml
 
 # Run AI
 # BUG: currently not installing
@@ -31,10 +24,6 @@ resources:
 
 # NmState Operator
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/kubernetes-nmstate-operator/operator/overlays/stable
-
-# Local Storage
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/local-storage/instance/overlays/default
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/local-storage/operator/overlays/stable
 
 # OpenShift Virtualization
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/kubevirt-hyperconverged/instance/overlays/default
@@ -74,5 +63,4 @@ patches:
     patch: |-
       - op: replace
         path: /spec/text
-        value: 'DEMO: Dell CSC Labs'
-        # value: 'This is a lab environment - DATA MAY BE DELETED at any time - no expectations for privacy or uptime'
+        value: 'DEMO: Dell CSC Lab'

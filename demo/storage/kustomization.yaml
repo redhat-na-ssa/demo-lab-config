@@ -1,0 +1,24 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+# Local Storage
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/local-storage/instance/overlays/default
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/local-storage/operator/overlays/stable
+
+# ODF
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/odf-operator/operator/overlays/stable-4.13
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/odf-operator/instance/overlays/local-storage
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/openshift-data-foundation/config-helpers/node-labeler/overlays/default
+
+patches:
+  - target:
+      kind: StorageCluster
+      name: ocs-storagecluster
+    patch: |-
+      - op: replace
+        path: /spec/storageDeviceSets/0/dataPVCTemplate/spec/resources/requests/storage
+        value: '4'
+      - op: replace
+        path: /spec/storageDeviceSets/0/replica
+        value: 1
