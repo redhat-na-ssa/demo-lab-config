@@ -1,11 +1,12 @@
 #!/bin/bash
+
 # see https://ksingh7.medium.com/lets-automate-let-s-encrypt-tls-certs-for-openshift-4-211d6c081875
 
 # export AWS_ACCESS_KEY_ID=ID
 # export AWS_SECRET_ACCESS_KEY=KEY
 export EMAIL=${EMAIL:-no-reply@github.com}
 
-if [ -z ${AWS_ACCESS_KEY_ID} ]; then
+if [ -z "${AWS_ACCESS_KEY_ID}" ]; then
   echo "Error:
     export AWS_ACCESS_KEY_ID=
     export AWS_SECRET_ACCESS_KEY=
@@ -16,11 +17,10 @@ fi
 SCRATCH=./scratch
 ACME_DIR=${SCRATCH}/acme
 CERT_DIR=${SCRATCH}/le-certs
-CERT_NAME=openshift-wildcard-certificate
 
 # openshift env
-export LE_API=$(oc whoami --show-server | cut -f 2 -d ':' | cut -f 3 -d '/' | sed 's/-api././')
-export LE_WILDCARD=$(oc get ingresscontroller default -n openshift-ingress-operator -o jsonpath='{.status.domain}')
+LE_API=$(oc whoami --show-server | cut -f 2 -d ':' | cut -f 3 -d '/' | sed 's/-api././')
+LE_WILDCARD=$(oc get ingresscontroller default -n openshift-ingress-operator -o jsonpath='{.status.domain}')
 
 # setup acme.sh
 [ ! -d "${ACME_DIR}" ] && git clone https://github.com/acmesh-official/acme.sh.git ${ACME_DIR}
@@ -28,12 +28,12 @@ export LE_WILDCARD=$(oc get ingresscontroller default -n openshift-ingress-opera
 # init acme
 ${ACME_DIR}/acme.sh \
   --register-account \
-  -m ${EMAIL}
+  -m "${EMAIL}"
 
 ${ACME_DIR}/acme.sh \
   --issue \
-  -d ${LE_API} \
-  -d *.${LE_WILDCARD} \
+  -d "${LE_API}" \
+  -d "*.${LE_WILDCARD}" \
   --dnssleep 60 \
   --dns dns_aws
 
@@ -76,7 +76,7 @@ oc create secret tls openshift-api-certificate \
 
 if oc get secret openshift-api-certificate -n openshift-config; then
   oc patch apiserver cluster \
-    --type=merge -p '{"spec":{"servingCerts": {"namedCertificates": [{"names": ["'${LE_API}'"], "servingCertificate": {"name": "openshift-api-certificate"}}]}}}'
+    --type=merge -p '{"spec":{"servingCerts": {"namedCertificates": [{"names": ["'"${LE_API}"'"], "servingCertificate": {"name": "openshift-api-certificate"}}]}}}'
 else
   echo "LE Setup: Error openshift-api-certificate"
   exit 1
