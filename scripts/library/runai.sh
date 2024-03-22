@@ -7,6 +7,7 @@ runai_help(){
   "
   sleep 6
 }
+
 runai_setup_control_plane(){
   OCP_CLUSTER_DOMAIN=${1:-$(oc -n openshift-ingress-operator get dns cluster --template='{{.spec.baseDomain}}')}
 
@@ -47,46 +48,45 @@ runai_setup_control_plane(){
   "
 }
 
-runai_create_cluster(){
-  USER=test@run.ai
-  PASS='Abcd!234'
-  DATA={\"name\":\"default\",\"description\":\"Default\"}
+# runai_create_cluster(){
+#   USER=test@run.ai
+#   PASS='Abcd!234'
+#   DATA={\"name\":\"default\",\"description\":\"Default\"}
   
-  curl -vk -X POST https://runai.apps."${OCP_CLUSTER_DOMAIN}"/auth/realms/runai/protocol/openid-connect/token \
-  -u "${USER}:${PASS}" \
-  --header 'Content-Type: application/x-www-form-urlencoded' \
-  --data-urlencode 'grant_type=client_credentials' \
-  --data-urlencode 'scope=openid' \
-  --data-urlencode 'response_type=id_token' \
-  --data-urlencode 'client_id=test@run.ai' \
-  --data-urlencode 'client_secret=Abcd!234'
+#   curl -vk -X POST https://runai.apps."${OCP_CLUSTER_DOMAIN}"/auth/realms/runai/protocol/openid-connect/token \
+#   -u "${USER}:${PASS}" \
+#   --header 'Content-Type: application/x-www-form-urlencoded' \
+#   --data-urlencode 'grant_type=client_credentials' \
+#   --data-urlencode 'scope=openid' \
+#   --data-urlencode 'response_type=id_token' \
+#   --data-urlencode 'client_id=test@run.ai' \
+#   --data-urlencode 'client_secret=Abcd!234'
 
-  # curl -vk -o /tmp/auth -u "${USER}:${PASS}" https://runai.apps."${OCP_CLUSTER_DOMAIN}"/v1/k8s/auth/me
-  # curl -vk -o /tmp/bundle.json -u "${USER}:${PASS}" -H "Content-Type: application/json" --data ${DATA} https://runai.apps."${OCP_CLUSTER_DOMAIN}"/v1/k8s/clusters
-}
+#   # curl -vk -o /tmp/auth -u "${USER}:${PASS}" https://runai.apps."${OCP_CLUSTER_DOMAIN}"/v1/k8s/auth/me
+#   # curl -vk -o /tmp/bundle.json -u "${USER}:${PASS}" -H "Content-Type: application/json" --data ${DATA} https://runai.apps."${OCP_CLUSTER_DOMAIN}"/v1/k8s/clusters
+# }
 
-runai_setup_cluster(){
-  OCP_CLUSTER_DOMAIN=${1:-$(oc -n openshift-ingress-operator get dns cluster --template='{{.spec.baseDomain}}')}
+# runai_setup_cluster(){
+#   OCP_CLUSTER_DOMAIN=${1:-$(oc -n openshift-ingress-operator get dns cluster --template='{{.spec.baseDomain}}')}
 
-  helm repo add runai https://run-ai-charts.storage.googleapis.com
-  helm repo update
+#   helm repo add runai https://run-ai-charts.storage.googleapis.com
+#   helm repo update
 
-  CERT_NAME=$(oc -n openshift-ingress-operator get ingresscontrollers default --template='{{.spec.defaultCertificate.name}}')
+#   CERT_NAME=$(oc -n openshift-ingress-operator get ingresscontrollers default --template='{{.spec.defaultCertificate.name}}')
 
-  if [ "${CERT_NAME}" == "<no value>" ]; then  
-    HELM_OPTS="--set global.customCA.enabled=true"
-  fi
+#   if [ "${CERT_NAME}" == "<no value>" ]; then  
+#     HELM_OPTS="--set global.customCA.enabled=true"
+#   fi
 
-  helm upgrade -i runai-cluster runai/runai-cluster -n runai \
-    --set controlPlane.url=runai.apps."${OCP_CLUSTER_DOMAIN}" \
-    --set cluster.url=runai.apps."${OCP_CLUSTER_DOMAIN}" \
-    --set controlPlane.clientSecret=E1LqoomxPjyrdy0OgXANc2fMzGxXjrRI \
-    --set cluster.uid=911f6190-4efc-430c-888b-959f1e3ab7e7 \
-    ${HELM_OPTS} \
-    --version=2.15.9 \
-    --create-namespace
-
-}
+#   helm upgrade -i runai-cluster runai/runai-cluster -n runai \
+#     --set controlPlane.url=runai.apps."${OCP_CLUSTER_DOMAIN}" \
+#     --set cluster.url=runai.apps."${OCP_CLUSTER_DOMAIN}" \
+#     --set controlPlane.clientSecret=E1LqoomxPjyrdy0OgXANc2fMzGxXjrRI \
+#     --set cluster.uid=911f6190-4efc-430c-888b-959f1e3ab7e7 \
+#     ${HELM_OPTS} \
+#     --version=2.15.9 \
+#     --create-namespace
+# }
 
 runai_uninstall(){
   helm uninstall runai-cluster -n runai
