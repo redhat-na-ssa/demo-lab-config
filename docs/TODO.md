@@ -2,10 +2,11 @@
 
 Info Sharing
 
-- [ ] Show the list of operators for disconnected install
-  - capture `oc-mirror` config / docs in repo
-  - list of (OpenShift) cluster operators
-  - list of OperatorHub operators
+- [ ] Explain how to install / lifecycle OpenShift in a disconnected environment
+- [ ] Show how to get a list of operators for disconnected install
+  - Explain `oc-mirror` config / docs in repo
+  - List of (OpenShift) cluster operators
+  - List of OperatorHub operators
 
 Demos
 
