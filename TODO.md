@@ -1,8 +1,17 @@
 # TODO List
 
+Misc
+
 - [ ] Secure ACS route into cluster with public trusted cert
-- [ ] Run.ai Demo
-- [ ] Explore Hashicorp vault for secret management
-- [ ] Show the list of operators that are captured in `oc-mirror`
+- [ ] Show the list of operators for disconnected install
+  - capture `oc-mirror` config / docs in repo
   - list of cluster operators
   - list of OperatorHub operators
+
+Demos
+
+- [ ] ACS
+- [ ] ACM
+- [ ] ArgoCD
+- [ ] Run.ai
+- [ ] OpenShift integration with Hashicorp Vault
