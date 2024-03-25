@@ -9,7 +9,7 @@ metadata:
     helm.sh/chart: mlflow-server-0.6.2
     app.kubernetes.io/name: mlflow-server
     app.kubernetes.io/instance: mlflow-server
-    app.kubernetes.io/version: "2.6"
+    app.kubernetes.io/version: "2.10.2"
     app.kubernetes.io/managed-by: Helm
 spec:
   replicas: 1
@@ -30,7 +30,7 @@ spec:
         - name: mlflow-server
           securityContext:
             {}
-          image: "quay.io/troyer/mlflow-server:2.6"
+          image: "quay.io/troyer/mlflow-server:2.10.2"
           imagePullPolicy: IfNotPresent
           ports:
             - name: mlflow-server
