@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mlflow
+  description: The project containing the MLflow server and associated components.
+  annotations:
+    openshift.io/display-name: MLflow Project

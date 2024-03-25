@@ -1,0 +1,13 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+#  - configMaps.yaml
+  - serviceaccount.yaml
+  - pgcluster.yaml
+#  - odhApplication.yaml
+  - service.yaml
+  - route.yaml
+  - deployment.yaml

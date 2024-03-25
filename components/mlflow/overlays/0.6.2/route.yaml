@@ -1,0 +1,22 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: mlflow-server
+  namespace: mlflow
+  labels:
+    helm.sh/chart: mlflow-server-0.6.2
+    app.kubernetes.io/name: mlflow-server
+    app.kubernetes.io/instance: mlflow-server
+    app.kubernetes.io/version: "2.6"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  to:
+    kind: Service
+    name: mlflow-server
+    weight: 100
+  port:
+    targetPort: oauth
+  tls:
+    termination: reencrypt
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
