@@ -4,4 +4,4 @@ metadata:
   name: mlflow
   description: The project containing the MLflow server and associated components.
   annotations:
-    openshift.io/display-name: MLflow Project  
+    openshift.io/display-name: MLflow Project
