@@ -82,6 +82,12 @@ To retrieve your token from openshift run the following command:
 oc whoami --show-token
 ```
 
+### Demonstration Code
+
+* [Credit Card Fraud App](https://ai-on-openshift.io/demos/credit-card-fraud-detection-mlflow/credit-card-fraud/) which uses MLflow to track and store experiments
+* [sklearn-wine](https://github.com/strangiato/mlflow-server/blob/main/examples/sklearn-wine/train.ipynb) that shows a Jupyter notebook containing code to interact with MLflow for model tracking
+* Example of [MLflow logging in YOLOv8 training workflow](https://github.com/ultralytics/ultralytics/issues/8134#issuecomment-1938006808)
+
 ## References
 
 * [MLflow home page](https://mlflow.org)
