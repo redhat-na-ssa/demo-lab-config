@@ -7,3 +7,9 @@
 ## Summary
 
 TODO: Artifacts for deploying Dell Lab Hardware
+
+## Development
+
+```
+scripts/lint.sh
+```
