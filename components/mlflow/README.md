@@ -64,13 +64,13 @@ data:
   S3_ENDPOINT_URL: ''
 ```
 
-### Utilizing MLFlow from Outside the Cluster with OAuth
+### Utilizing MLflow from Outside the Cluster with OAuth
 
-When accessing MLFlow from outside of the cluster with OAuth enabled, the route is secured by an OpenShift OAuth Proxy.  This OAuth proxy by default will only allow users to access MLFlow using the UI. 
+When accessing MLflow from outside of the cluster with OAuth enabled, the route is secured by an OpenShift OAuth Proxy.  This OAuth proxy by default will only allow users to access MLflow using the UI. 
 
-If you wish to run training processes from outside of the cluster that write to MLFlow you must set `enableBearerTokenAccess: true`.  This option requires additional permissions to be granted to the MLFlow Service Account which requires cluster admin privileges.
+If you wish to run training processes from outside of the cluster that write to MLflow you must set `enableBearerTokenAccess: true`.  This option requires additional permissions to be granted to the MLflow Service Account which requires cluster admin privileges.
 
-Once this option is enabled you can set the following environment variable in your training environment and MLFlow will automatically pass your Bearer Token to the OpenShift OAuth Proxy and authenticate any API calls MLFlow makes to the server.
+Once this option is enabled you can set the following environment variable in your training environment and MLflow will automatically pass your Bearer Token to the OpenShift OAuth Proxy and authenticate any API calls MLflow makes to the server.
 
 ```
 MLFLOW_TRACKING_TOKEN
