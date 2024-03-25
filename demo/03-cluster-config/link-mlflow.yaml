@@ -1,0 +1,13 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleLink
+metadata:
+  name: link-mlflow
+spec:
+  href: 'https://mlflow-server-mlflow.apps.cluster1.sandbox284.opentlc.com/'
+  location: ApplicationMenu
+  text: MLflow
+  applicationMenu:
+    section: AI Applications
+    # See icon set at https://github.com/mlflow/mlflow/issues/1853
+    # This image found at https://github.com/mlflow/mlflow/issues/7840#issuecomment-1431474965 
+    imageURL: https://user-images.githubusercontent.com/17848490/219058675-ae83b435-7432-4628-8f08-86e7a29d8fb4.svg
