@@ -16,25 +16,53 @@ The current *overlays* available are for the following channels:
 
 If you have cloned this repository, you can install MLflow based on the overlay of your choice by running from the root directory.
 
-```
+```sh
 oc apply -k overlays/<channel>
 ```
 
 Or, without cloning:
 
-```
+```sh
 oc apply -k https://github.com/redhat-na-ssa/demo-lab-config/components/mlflow/overlays/<channel>
 ```
 
 As part of a different overlay in your own GitOps repo:
 
-```
+```yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - https://github.com/redhat-na-ssa/demo-lab-config/components/mlflow/overlays/<<channel>?ref=main
 ```
-## Usage
+### Configuration
+
+Define the following in the OpenShift namespace:
+
+```yaml
+kind: Secret
+apiVersion: v1
+metadata:
+  name: mlflow-server
+  namespace: mlflow
+data:
+  AWS_ACCESS_KEY_ID: ''
+  AWS_SECRET_ACCESS_KEY: ''
+type: Opaque
+```
+
+and
+
+```yaml
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: mlflow-server
+  namespace: mlflow
+immutable: false
+data:
+  BUCKET_NAME: ''
+  S3_ENDPOINT_URL: ''
+```
 
 ### Utilizing MLFlow from Outside the Cluster with OAuth
 
