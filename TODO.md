@@ -1,8 +1,7 @@
 # TODO List
 
-Misc
+Info Sharing
 
-- [ ] Secure ACS route into cluster with public trusted cert
 - [ ] Show the list of operators for disconnected install
   - capture `oc-mirror` config / docs in repo
   - list of cluster operators
@@ -15,3 +14,7 @@ Demos
 - [ ] ArgoCD
 - [ ] Run.ai
 - [ ] OpenShift integration with Hashicorp Vault
+
+Cluster Configuration Work
+
+- [ ] Secure ACS route into cluster with public trusted cert
