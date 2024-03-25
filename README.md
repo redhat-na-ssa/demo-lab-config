@@ -6,7 +6,17 @@
 
 ## Summary
 
-TODO: Artifacts for deploying Dell Lab Hardware
+This repo contains artifacts for deploying Dell lab Hardware.
+
+This repo aids in the deployment of operators for day 2 operations and uses:
+
+- [Kustomize](https://kustomize.io/)
+
+This is often used in the following tools:
+
+- ArgoCD
+- `kubectl apply -k`
+- `oc apply -k`
 
 ## Development
 
