@@ -1,6 +1,6 @@
-# MLflow
+# MLflow on OpenShift
 
-Install MLflow.
+This project contains Kustomize YAML for installing MLflow on an OpenShift cluster.
 
 Do not use the `base` directory directly, as you will need to patch the `channel` based on the version of OpenShift you are using, or the version of the operator you want to use.
 
