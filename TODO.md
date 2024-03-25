@@ -4,7 +4,7 @@ Info Sharing
 
 - [ ] Show the list of operators for disconnected install
   - capture `oc-mirror` config / docs in repo
-  - list of cluster operators
+  - list of (OpenShift) cluster operators
   - list of OperatorHub operators
 
 Demos
