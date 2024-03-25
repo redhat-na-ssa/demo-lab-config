@@ -19,3 +19,6 @@ rolloutStrategy
 sc
 TODO
 yaml
+repo
+Kustomize
+ArgoCD
