@@ -93,3 +93,4 @@ oc whoami --show-token
 * [MLflow home page](https://mlflow.org)
 * [AI on OpenShift how-to guide](https://ai-on-openshift.io/tools-and-applications/mlflow/mlflow/)
 * MLflow container [source code](https://github.com/strangiato/mlflow-server/)
+* [Setting up a Development Machine with MLFlow and MinIO](https://blog.min.io/setting-up-a-development-machine-with-mlflow-and-minio/)
