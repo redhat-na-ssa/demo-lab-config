@@ -3,4 +3,5 @@ kind: Namespace
 metadata:
   name: mlflow
   description: The project containing the MLflow server and associated components.
-  displayName: MLflow project
+  annotations:
+    openshift.io/display-name: MLflow Project  
