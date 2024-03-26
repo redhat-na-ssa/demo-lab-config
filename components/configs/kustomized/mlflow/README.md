@@ -65,6 +65,12 @@ data:
   S3_ENDPOINT_URL: ''
 ```
 
+Update the secrets above with the cluster configuration, the passwords can be extracted with:
+
+```sh
+oc -n minio extract secret/minio-root-user --to=-
+```
+
 ### Utilizing MLflow from Outside the Cluster with OAuth
 
 When accessing MLflow from outside of the cluster with OAuth enabled, the route is secured by an OpenShift OAuth Proxy.  This OAuth proxy by default will only allow users to access MLflow using the UI.
