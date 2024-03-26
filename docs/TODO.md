@@ -14,9 +14,13 @@ Demos
 - [ ] ACM
 - [ ] ArgoCD
 - [ ] Run.ai
-- [ ] OpenShift integration with Hashicorp Vault
+- [ ] OpenShift integration with Hashicorp Vault **
 
 Cluster Configuration Work
 
 - [x] Secure ACS route into cluster with public trusted cert
   - see app (waffle) menu for link
+
+Legend
+
+** - outside original scope
