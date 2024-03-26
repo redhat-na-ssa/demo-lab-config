@@ -62,7 +62,7 @@ metadata:
 immutable: false
 data:
   BUCKET_NAME: ''
-  S3_ENDPOINT_URL: ''
+  S3_ENDPOINT_URL: 'minio.minio.svc.cluster.local'
 ```
 
 Update the secrets above with the cluster configuration, the passwords can be extracted with:
