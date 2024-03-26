@@ -5,7 +5,7 @@ metadata:
 spec:
   href: "https://mlflow-server-mlflow.apps.cluster1.sandbox284.opentlc.com/"
   location: ApplicationMenu
-  text: MLflow
+  text: MLflow UI
   applicationMenu:
     section: AI Applications
     # See icon set at https://github.com/mlflow/mlflow/issues/1853

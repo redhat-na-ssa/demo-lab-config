@@ -6,3 +6,4 @@ resources:
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/crunchy-postgres-operator/operator/overlays/v5
 - ../../components/configs/kustomized/mlflow/overlays/0.6.2
 - link-mlflow.yaml
+- link-minio.yaml
