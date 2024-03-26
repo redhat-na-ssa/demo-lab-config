@@ -18,4 +18,4 @@ Demos
 
 Cluster Configuration Work
 
-- [ ] Secure ACS route into cluster with public trusted cert
+- [x] Secure ACS route into cluster with public trusted cert
