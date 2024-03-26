@@ -22,3 +22,4 @@
 
 - [x] Secure ACS route into cluster with public trusted cert
   - see app (waffle) menu for link
+- [ ] Clone this repo into the web terminal
