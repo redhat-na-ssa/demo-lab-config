@@ -82,7 +82,7 @@ spec:
                   extract ${OBJECT} \
                   --keys ca.pem \
                   --to /tmp
-                
+
                 oc -n ${NAMESPACE} get route demo -o wide && return
 
                 echo "setup: reencrypt route using default router certs"
