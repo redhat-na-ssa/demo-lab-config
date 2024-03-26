@@ -34,6 +34,7 @@ kind: Kustomization
 resources:
   - https://github.com/redhat-na-ssa/demo-lab-config/components/mlflow/overlays/<<channel>?ref=main
 ```
+
 ### Configuration
 
 Define the following in the OpenShift namespace:
@@ -66,7 +67,7 @@ data:
 
 ### Utilizing MLflow from Outside the Cluster with OAuth
 
-When accessing MLflow from outside of the cluster with OAuth enabled, the route is secured by an OpenShift OAuth Proxy.  This OAuth proxy by default will only allow users to access MLflow using the UI. 
+When accessing MLflow from outside of the cluster with OAuth enabled, the route is secured by an OpenShift OAuth Proxy.  This OAuth proxy by default will only allow users to access MLflow using the UI.
 
 If you wish to run training processes from outside of the cluster that write to MLflow you must set `enableBearerTokenAccess: true`.  This option requires additional permissions to be granted to the MLflow Service Account which requires cluster admin privileges.
 
