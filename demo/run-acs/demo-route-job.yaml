@@ -1,0 +1,106 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: setup-reencrypt-route-job
+  namespace: stackrox
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - secrets
+      - services
+      - endpoints
+    verbs:
+      - get
+  - apiGroups:
+      - route.openshift.io
+    resources:
+      - routes
+      - routes/custom-host
+    verbs:
+      - create
+      - update
+      - patch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: setup-reencrypt-route-job
+  namespace: stackrox
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  # kind: Role
+  # name: setup-reencrypt-route-job
+  kind: ClusterRole
+  name: edit
+subjects:
+  - kind: ServiceAccount
+    name: setup-reencrypt-route-job
+    namespace: stackrox
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: setup-reencrypt-route-job
+  namespace: stackrox
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: setup-reencrypt-route-job-
+  name: setup-reencrypt-route-job
+  namespace: stackrox
+  annotations:
+    argocd.argoproj.io/hook: Sync
+    # argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+        - name: setup-reencrypt-route-job
+          image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest
+          env:
+            - name: OBJECT
+              value: secret/central-tls
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          command:
+            - /bin/bash
+            - -c
+            - |
+              #!/usr/bin/env bash
+              # set -x
+
+              create_demo_route(){
+
+              echo "get: acs ca.pem"
+
+              if oc -n ${NAMESPACE} get ${OBJECT} >/dev/null 2>&1; then
+                oc -n ${NAMESPACE} \
+                  extract ${OBJECT} \
+                  --keys ca.pem \
+                  --to /tmp
+                
+                oc -n ${NAMESPACE} get route demo -o wide && return
+
+                echo "setup: reencrypt route using default router certs"
+
+                oc -n ${NAMESPACE} \
+                  create route reencrypt \
+                  demo \
+                  --insecure-policy=Redirect \
+                  --service=central \
+                  --port=https \
+                  --dest-ca-cert=/tmp/ca.pem
+              else
+                echo "error: ${OBJECT} not in ${NAMESPACE}"
+              fi
+              }
+
+              create_demo_route
+      restartPolicy: Never
+      terminationGracePeriodSeconds: 30
+      serviceAccount: setup-reencrypt-route-job
+      serviceAccountName: setup-reencrypt-route-job

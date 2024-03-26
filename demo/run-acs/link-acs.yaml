@@ -1,0 +1,11 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleLink
+metadata:
+  name: link-acs
+spec:
+  href: 'https://demo-stackrox.apps.cluster1.sandbox284.opentlc.com'
+  location: ApplicationMenu
+  text: Advanced Cluster Security (ACS)
+  applicationMenu:
+    section: Security / Compliance
+    imageURL: static/assets/redhat.svg
