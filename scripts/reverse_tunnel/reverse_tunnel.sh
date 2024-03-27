@@ -1,11 +1,42 @@
-#!/bin/sh
+#!/bin/bash
 # NOTE: install to /usr/local/bin
 
-PUBLIC_IP=18.116.38.68
-LAB_IP=143.166.117.0/24
-OCP_API_IP=172.29.172.200
-OCP_APP_IP=172.29.172.201
-OCP_DNS_NAME=cluster1.wf.edgelab.online
+ENV_FILE=/usr/loca/bin/reverse_tunnel.env
+
+usage(){
+  echo "
+    Install script and env into /usr/local/bin
+
+    cp reverse_tunnel.sh /usr/local/bin/
+    cp reverse_tunnel.env /usr/local/bin/
+    cp reverse-tunnel.service /etc/systemd/system/
+
+    systemctl enable reverse-tunnel --now
+    systemctl status reverse-tunnel
+
+    journalctl -u reverse-tunnel
+  "
+  exit 0
+}
+
+get_script_path(){
+  SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+  echo "${SCRIPT_DIR}"
+}
+
+check_install(){
+  [ "$(get_script_path)" == "/usr/loca/bin" ] && usage
+}
+
+# shellcheck disable=SC1090
+[ -e "${ENV_FILE}" ] && . "${ENV_FILE}"
+
+[ -z "${PUBLIC_IP}" ] && usage
+[ -z "${EGRESS_IP}" ] && usage
+[ -z "${OCP_API_IP}" ] && usage
+[ -z "${OCP_APP_IP}" ] && usage
+[ -z "${OCP_DNS_NAME}" ] && usage
+
 
 kludge_tunnel(){
   echo "Setup your private dns to resolve:
@@ -31,15 +62,15 @@ kludge_tunnel(){
 
 kludge_test(){
   curl -k \
-    --connect-to "${PUBLIC_IP}":443:example.apps.cluster1.example.com:443 \
-    https://example.apps.cluster1.example.com
+    --connect-to "${PUBLIC_IP}":443:example.apps."${OCP_DNS_NAME}":443 \
+    https://example.apps."${OCP_DNS_NAME}"
 }
 
 kludge_iptables(){
   iptables -t nat \
-    -I PREROUTING -s "${LAB_IP}" -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 22
+    -I PREROUTING -s "${EGRESS_IP}" -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 22
   iptables -t nat \
-    -I PREROUTING -s "${LAB_IP}" -p tcp -m tcp --dport 443 -j REDIRECT --to-ports 22
+    -I PREROUTING -s "${EGRESS_IP}" -p tcp -m tcp --dport 443 -j REDIRECT --to-ports 22
 }
 
 kludge_tunnel

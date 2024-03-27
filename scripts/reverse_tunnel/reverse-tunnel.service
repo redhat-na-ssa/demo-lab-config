@@ -7,6 +7,7 @@ Description=SSH Tunnel
 After=network.target
 
 [Service]
+LimitNOFILE=1048576
 Restart=always
 RestartSec=20
 EnvironmentFile=/usr/local/bin/reverse_tunnel.env
