@@ -1,7 +1,7 @@
 #!/bin/bash
 # NOTE: install to /usr/local/bin
 
-ENV_FILE=/usr/loca/bin/reverse_tunnel.env
+ENV_FILE=/usr/local/bin/reverse_tunnel.env
 
 usage(){
   echo "
@@ -25,7 +25,7 @@ get_script_path(){
 }
 
 check_install(){
-  [ "$(get_script_path)" == "/usr/loca/bin" ] && usage
+  [ "$(get_script_path)" == "/usr/local/bin" ] && usage
 }
 
 # shellcheck disable=SC1090

@@ -10,6 +10,7 @@ After=network.target
 LimitNOFILE=1048576
 Restart=always
 RestartSec=20
+WorkingDirectory=/usr/local/bin
 EnvironmentFile=/usr/local/bin/reverse_tunnel.env
 User=redhat
 ExecStart=/usr/local/bin/reverse_tunnel.sh
