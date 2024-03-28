@@ -4,7 +4,8 @@ metadata:
   name: nncp-br-cnv
 spec:
   nodeSelector:
-    node-role.kubernetes.io/worker: ""
+    # node-role.kubernetes.io/worker: ""
+    kubernetes.io/hostname: csctmp-r760-16.hpc.local
   desiredState:
     interfaces:
       - name: br-cnv
