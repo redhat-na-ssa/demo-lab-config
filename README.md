@@ -11,6 +11,7 @@ This repo contains artifacts for deploying Dell lab Hardware.
 This repo aids in the deployment of operators for day 2 operations and uses:
 
 - [Kustomize](https://kustomize.io/)
+- [Helm](https://helm.sh/)
 
 This is often used in the following tools:
 
