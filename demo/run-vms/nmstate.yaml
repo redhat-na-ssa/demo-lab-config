@@ -3,12 +3,12 @@ kind: NodeNetworkConfigurationPolicy
 metadata:
   name: nncp-br-cnv
 spec:
-  nodeSelector: 
-    node-role.kubernetes.io/worker: "" 
+  nodeSelector:
+    node-role.kubernetes.io/worker: ""
   desiredState:
     interfaces:
       - name: br-cnv
-        description: Linux bridge with eno1 as a port 
+        description: Linux bridge on nodes
         type: linux-bridge
         state: up
         bridge:
