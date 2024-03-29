@@ -3,6 +3,8 @@ data/
 scratch/
 dictionary.dic
 
+htpasswd
+kubeconfig
 *.decrypted
 
 # swap files
