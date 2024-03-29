@@ -5,12 +5,11 @@ genpass(){
     < /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c"${1:-32}"
 }
 
-USER=${1:-admin}
-PASS=${2:-$(genpass)}
 HTPASSWD_FILE=scratch/htpasswd
 
 htpasswd_add_user(){
-
+  USER=${1:-admin}
+  PASS=${2:-$(genpass)}
 
   echo "
     USERNAME: ${USER}
@@ -57,7 +56,10 @@ htpasswd_decrypt_file(){
 }
 
 ocp_setup_user(){
-  htpasswd_add_user
+  USER=${1:-admin}
+  PASS=${2:-$(genpass)}
+  
+  htpasswd_add_user "${USER}" "${PASS}"
   htpasswd_set_ocp_admin
 
   echo "

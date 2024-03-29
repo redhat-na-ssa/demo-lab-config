@@ -19,6 +19,16 @@ This is often used in the following tools:
 - `kubectl apply -k`
 - `oc apply -k`
 
+## Various Commands
+
+Setup cluster users
+```
+. scripts/wip/setup_user.sh
+
+htpasswd_get_file
+ocp_setup_user
+```
+
 ## Development
 
 The following cli tools will be useful:

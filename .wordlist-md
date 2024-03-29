@@ -30,6 +30,7 @@ namespace
 namespaces
 OAuth
 oc
+ocp
 OCP
 openshift
 OpenShift
@@ -50,5 +51,6 @@ sc
 sklearn
 TODO
 UI
+wip
 yaml
 YOLOv
