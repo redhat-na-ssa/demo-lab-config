@@ -21,6 +21,30 @@ This is often used in the following tools:
 
 ## Development
 
+The following cli tools will be useful:
+
+- `bash`
+- `git`
+- `sops`
+- `age`
+
+`age` secrets
+
+```
+# encrypt
+age --encrypt --armor \
+  -R authorized_keys \
+  -o htpasswd.age \
+  scratch/htpasswd
+
+# decrypt
+age --decrypt \
+  -i ~/.ssh/id_ed25519 \
+  -i ~/.ssh/id_rsa \
+  -o scratch/htpasswd \
+  htpasswd.age
+```
+
 ```
 scripts/lint.sh
 ```
