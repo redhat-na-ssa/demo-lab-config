@@ -7,9 +7,10 @@ genpass(){
 
 USER=${1:-admin}
 PASS=${2:-$(genpass)}
+HTPASSWD_FILE=scratch/htpasswd
 
 htpasswd_add_user(){
-  HTPASSWD_FILE=scratch/htpasswd
+
 
   echo "
     USERNAME: ${USER}
@@ -18,6 +19,13 @@ htpasswd_add_user(){
 
   touch "${HTPASSWD_FILE}"
   htpasswd -bB -C 10 "${HTPASSWD_FILE}" "${USER}" "${PASS}"
+}
+
+htpasswd_get_file(){
+  oc -n openshift-config \
+    extract secret/oauth-htpasswd \
+    --keys=htpasswd \
+    --to=scratch
 }
 
 htpasswd_set_file(){
@@ -37,14 +45,14 @@ htpasswd_encrypt_file(){
   age --encrypt --armor \
     -R authorized_keys \
     -o htpasswd.age \
-    scratch/htpasswd
+    "${HTPASSWD_FILE}"
 }
 
 htpasswd_decrypt_file(){
   age --decrypt \
     -i ~/.ssh/id_ed25519 \
     -i ~/.ssh/id_rsa \
-    -o scratch/htpasswd \
+    -o "${HTPASSWD_FILE}" \
     htpasswd.age
 }
 
