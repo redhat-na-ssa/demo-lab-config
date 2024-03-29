@@ -6,6 +6,7 @@ resources:
 - banner-data.yaml
 - link-demo.yaml
 - link-runai.yaml
+- web-terminal-tooling.yaml
 
 # Run AI
 # BUG: currently not installing
