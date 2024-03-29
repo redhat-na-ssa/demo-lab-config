@@ -51,7 +51,7 @@ resources:
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/servicemeshoperator/operator/overlays/stable
 
 # OpenShift Web Terminal
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/web-terminal/instance/overlays/enhanced
+- web-terminal-tooling.yaml
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/web-terminal/operator/overlays/fast
 
 patches:

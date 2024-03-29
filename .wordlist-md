@@ -2,14 +2,17 @@ ACM
 acs
 apiVersion
 ArgoCD
+cli
 config
 configs
+decrypt
 defaultRoute
 emptyDir
 github
 gitops
 GitOps
 html
+htpasswd
 httpErrorCodePages
 https
 imageregistry
@@ -27,6 +30,7 @@ namespace
 namespaces
 OAuth
 oc
+ocp
 OCP
 openshift
 OpenShift
@@ -42,9 +46,11 @@ rhu
 rol
 RollingUpdate
 rolloutStrategy
+rsa
 sc
 sklearn
 TODO
 UI
+wip
 yaml
 YOLOv

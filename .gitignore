@@ -1,10 +1,11 @@
 # custom excludes
 data/
 scratch/
-files.txt
-bootstrap/sealed-secrets-secret.yaml
-
 dictionary.dic
+
+htpasswd
+kubeconfig
+*.decrypted
 
 # swap files
 *~
