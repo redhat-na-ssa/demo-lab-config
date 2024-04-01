@@ -44,6 +44,11 @@ resources:
 # OpenShift Pipelines
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/openshift-pipelines-operator-rh/operator/overlays/latest
 
+# OpenShift Serverless
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/serverless-operator/instance/knative-eventing/overlays/default
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/serverless-operator/instance/knative-serving/overlays/default
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/serverless-operator/operator/overlays/stable
+
 # Red Hat SSO
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/rhsso-operator/operator/overlays/stable
 
