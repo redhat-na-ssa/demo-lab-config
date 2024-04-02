@@ -1,5 +1,6 @@
 ACM
 acs
+ai
 apiVersion
 ArgoCD
 cli
@@ -19,6 +20,7 @@ imageregistry
 ingresscontroller
 io
 Jupyter
+kubeflow
 Kubernetes
 Kustomization
 kustomize
@@ -26,6 +28,7 @@ Kustomize
 managementState
 MinIO
 MLflow
+mpi
 namespace
 namespaces
 OAuth
@@ -47,10 +50,12 @@ rol
 RollingUpdate
 rolloutStrategy
 rsa
+runai
 sc
 sklearn
 TODO
 UI
 wip
+www
 yaml
 YOLOv
