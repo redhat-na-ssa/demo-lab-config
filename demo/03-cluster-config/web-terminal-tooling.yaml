@@ -26,6 +26,12 @@ spec:
             . <(curl -s "${YOLO_URL}" | tee /tmp/yolo.sh)
             term_init
 
+            echo "
+            if [ -e ~/demo-lab-config ]; then
+              cd demo-lab-config
+            fi
+            " >> ~/.bashrc
+
             sleep infinity  # just in case
 
         cpuLimit: 600m
