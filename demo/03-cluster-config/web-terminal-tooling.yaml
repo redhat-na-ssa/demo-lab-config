@@ -28,7 +28,7 @@ spec:
 
             echo "
             if [ -e ~/demo-lab-config ]; then
-              cd demo-lab-config
+              cd ~/demo-lab-config
             fi
             " >> ~/.bashrc
 
