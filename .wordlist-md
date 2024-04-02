@@ -1,5 +1,6 @@
 ACM
 acs
+ai
 apiVersion
 ArgoCD
 cli
@@ -19,6 +20,7 @@ imageregistry
 ingresscontroller
 io
 Jupyter
+kubeflow
 Kubernetes
 Kustomization
 kustomize
@@ -47,6 +49,7 @@ rol
 RollingUpdate
 rolloutStrategy
 rsa
+runai
 sc
 sklearn
 TODO
