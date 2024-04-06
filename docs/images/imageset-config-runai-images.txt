@@ -1,0 +1,27 @@
+============ Registries ============
+docker.io
+gcr.io
+============== Images ==============
+docker.io/bitnami/minio:2023.11.20-debian-11-r0
+docker.io/bitnami/postgresql:11.18.0-debian-11-r16
+docker.io/bitnami/redis:7.0.12-debian-11-r2
+docker.io/bitnami/redis-exporter:1.51.0-debian-11-r11
+docker.io/bitnami/thanos:0.32.5-debian-11-r1
+gcr.io/run-ai-prod/assets-service:2.15.13
+gcr.io/run-ai-prod/authorization:2.15.13
+gcr.io/run-ai-prod/backend:2.15.13
+gcr.io/run-ai-prod/busybox:2.15.13
+gcr.io/run-ai-prod/cluster-service:2.15.13
+gcr.io/run-ai-prod/db-mechanic:2.15.13
+gcr.io/run-ai-prod/engine-operator:2.16.30
+gcr.io/run-ai-prod/frontend:2.15.13
+gcr.io/run-ai-prod/go-operator:2.16.30
+gcr.io/run-ai-prod/grafana:2.15.13
+gcr.io/run-ai-prod/identity-manager:2.15.13
+gcr.io/run-ai-prod/k8s-objects-tracker:2.15.13
+gcr.io/run-ai-prod/keycloak:2.15.13
+gcr.io/run-ai-prod/policy-service:2.15.13
+gcr.io/run-ai-prod/postgresql-client:2.15.13
+gcr.io/run-ai-prod/redoc:2.15.13
+gcr.io/run-ai-prod/tenants-manager:2.15.13
+gcr.io/run-ai-prod/traefik:2.15.13

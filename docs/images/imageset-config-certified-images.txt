@@ -1,0 +1,29 @@
+============ Registries ============
+gcr.io
+ghcr.io
+nvcr.io
+registry.connect.redhat.com
+============== Images ==============
+gcr.io/kubebuilder/kube-rbac-proxy:ea363ada
+ghcr.io/k8snetworkplumbingwg/sriov-network-device-plugin:bea0b1e7
+ghcr.io/mellanox/network-operator-init-container:latest
+nvcr.io/nvidia/cloud-native/dcgm:39c43175
+nvcr.io/nvidia/cloud-native/gpu-operator-validator:cdca3c5d
+nvcr.io/nvidia/cloud-native/k8s-driver-manager:e8fc8a77
+nvcr.io/nvidia/cloud-native/k8s-mig-manager:3156332f
+nvcr.io/nvidia/cloud-native/k8s-rdma-shared-dev-plugin:4b194540
+nvcr.io/nvidia/cloud-native/network-operator:c42b5173
+nvcr.io/nvidia/cloud-native/vgpu-device-manager:e4525b07
+nvcr.io/nvidia/cuda:4772e02b
+nvcr.io/nvidia/driver:41de7908
+nvcr.io/nvidia/driver:658de5d6
+nvcr.io/nvidia/driver:a878e137
+nvcr.io/nvidia/gpu-feature-discovery:9143aaeb
+nvcr.io/nvidia/gpu-operator:ff7174f0
+nvcr.io/nvidia/k8s/container-toolkit:d76cbf67
+nvcr.io/nvidia/k8s/dcgm-exporter:26e61a0c
+nvcr.io/nvidia/k8s-device-plugin:ce569b8f
+nvcr.io/nvidia/kubevirt-gpu-device-plugin:e63f95a2
+nvcr.io/nvidia/mellanox/doca-driver:55bf9ee
+registry.connect.redhat.com/nvidia/gpu-operator-bundle:753d66fc
+registry.connect.redhat.com/nvidia-network-operator/nvidia-network-operator:12f9e6fb
