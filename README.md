@@ -26,7 +26,8 @@ This is often used in the following tools:
 ## Various Commands
 
 Setup cluster users
-```
+
+```sh
 . scripts/wip/setup_user.sh
 
 htpasswd_get_file
@@ -44,7 +45,7 @@ The following cli tools will be useful:
 
 `age` secrets
 
-```
+```sh
 # encrypt
 age --encrypt --armor \
   -R authorized_keys \
@@ -59,6 +60,6 @@ age --decrypt \
   htpasswd.age
 ```
 
-```
+```sh
 scripts/lint.sh
 ```
