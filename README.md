@@ -6,7 +6,7 @@
 
 ## Summary
 
-This repo contains artifacts for deploying Dell lab Hardware.
+This repo contains artifacts for deploying Lab Hardware.
 
 This repo aids in the deployment of operators for day 2 operations and uses:
 
@@ -65,7 +65,7 @@ scripts/lint.sh
 ```
 
 ## Repo Structure
-```
+```sh
 .
 ├── bootstrap                             # used to for initial provisioning
 ├── clusters                              # used to define a running configuration
