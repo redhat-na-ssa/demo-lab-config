@@ -65,6 +65,7 @@ scripts/lint.sh
 ```
 
 ## Repo Structure
+
 ```sh
 .
 ├── bootstrap                             # used to for initial provisioning
