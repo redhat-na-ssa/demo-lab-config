@@ -17,7 +17,8 @@ mirror:
     channels:
     - name: stable-4.13
       type: ocp
-      # minVersion: 4.13.38
+      minVersion: 4.13.36
+      shortestPath: true
   #   - name: stable-4.14
   #     type: ocp
   #     minVersion: 4.14.18
