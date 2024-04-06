@@ -32,12 +32,7 @@ get_list_images_for_humans(){
 
 main(){
   get_mapping components/imageset/imageset-config-ocp.yaml
-  get_list_registry
-  get_list_images_for_humans
-
   get_mapping components/imageset/imageset-config-runai.yaml
-  get_list_registry
-  get_list_images_for_humans
 }
 
 main

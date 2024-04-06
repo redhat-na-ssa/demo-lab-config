@@ -21,14 +21,14 @@ mirror:
   #   - name: stable-4.14
   #     type: ocp
   #     minVersion: 4.14.18
-  # operators:
-  #   - catalog: 'registry.redhat.io/redhat/redhat-operator-index:v4.14'
-  #     packages:
-  #       - name: advanced-cluster-management
-  #         channels:
-  #           - name: 'release-2.10'
-  #             minVersion: '2.10.0'
-  #     # targetName: custom-redhat-index
-  #     # targetTag: v4.13.0.0
+  operators:
+    - catalog: 'registry.redhat.io/redhat/redhat-operator-index:v4.13'
+      packages:
+        - name: web-terminal
+          channels:
+            - name: fast
+              minVersion: '1.7.0'
+      # targetName: custom-ocp-index
+      # targetTag: v4.13.0.0
   additionalImages:
   - name: registry.redhat.io/ubi8/ubi:latest
