@@ -7,35 +7,24 @@ resources:
 - link-demo.yaml
 - link-runai.yaml
 
-# Run AI
-# BUG: currently not installing
-# - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/run-ai/operator/overlays/stable
-
 # OpenShift Logging
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/cluster-logging/operator/overlays/stable
-
-# Node Maintenance Operator
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/node-maintenance-operator/operator/overlays/stable
-
-# Nvidia GPU Operator
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/gpu-operator-certified/instance/overlays/default
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/gpu-operator-certified/operator/overlays/stable
-
-# Nvidia Network Operator
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/nvidia-network-operator/operator/overlays/24.1.0
-
-# NmState Operator
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/kubernetes-nmstate-operator/operator/overlays/stable
-
-# OpenShift Virtualization
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/kubevirt-hyperconverged/instance/overlays/default
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/kubevirt-hyperconverged/operator/overlays/stable
 
 # Compliance
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/compliance-operator/operator/overlays/stable
 
+# NmState Operator
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/kubernetes-nmstate-operator/operator/overlays/stable
+
 # Loki
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/loki-operator/operator/overlays/stable-5.8
+# - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/loki-operator/operator/overlays/stable-5.8
+
+# Node Maintenance Operator
+# - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/node-maintenance-operator/operator/overlays/stable
+
+# OpenShift Virtualization
+# - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/kubevirt-hyperconverged/instance/overlays/default
+# - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/kubevirt-hyperconverged/operator/overlays/stable
 
 # Node Feature Discovery - for Nvidia
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/nfd/instance/overlays/only-nvidia
@@ -50,7 +39,7 @@ resources:
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/serverless-operator/operator/overlays/stable
 
 # Red Hat SSO
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/rhsso-operator/operator/overlays/stable
+# - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/rhsso-operator/operator/overlays/stable
 
 # OpenShift Service Mesh
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/servicemeshoperator/operator/overlays/stable
@@ -58,6 +47,18 @@ resources:
 # OpenShift Web Terminal
 - web-terminal-tooling.yaml
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/web-terminal/operator/overlays/fast
+
+# Nvidia GPU Operator
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/gpu-operator-certified/instance/overlays/default
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/gpu-operator-certified/operator/overlays/stable
+
+# Nvidia Network Operator
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/nvidia-network-operator/operator/overlays/24.1.0
+
+# Run AI
+# BUG: currently not installing via operator
+# - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/run-ai/operator/overlays/stable
+
 
 patches:
   - target:
