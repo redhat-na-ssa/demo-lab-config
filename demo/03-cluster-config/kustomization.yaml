@@ -23,8 +23,8 @@ resources:
 # - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/node-maintenance-operator/operator/overlays/stable
 
 # OpenShift Virtualization
-# - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/kubevirt-hyperconverged/instance/overlays/default
-# - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/kubevirt-hyperconverged/operator/overlays/stable
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/kubevirt-hyperconverged/instance/overlays/default
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/kubevirt-hyperconverged/operator/overlays/stable
 
 # Node Feature Discovery - for Nvidia
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/nfd/instance/overlays/only-nvidia
