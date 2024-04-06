@@ -1,0 +1,19 @@
+# run.ai helm charts
+---
+apiVersion: mirror.openshift.io/v1alpha2
+kind: ImageSetConfiguration
+# archiveSize: 4
+storageConfig:
+mirror:
+  helm:
+    repositories:
+      - name: runai-backend
+        url: https://backend-charts.storage.googleapis.com
+        charts:
+          - name: control-plane
+            version: 2.15.13
+      - name: runai
+        url: https://run-ai-charts.storage.googleapis.com
+        charts:
+          - name: runai-cluster
+            version: 2.16.30
