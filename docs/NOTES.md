@@ -13,6 +13,14 @@
 
 ## List of Container Images
 
+Run the following to regenerate the following lists into `scratch/mirror_media`
+
+```sh
+./scripts/wip/image_list.sh
+
+cp scratch/mirror_media/*.txt docs/images/
+```
+
 - [OpenShift Platform Images](images/imageset-config-ocp-images.txt)
 - [Operators - Red Hat Supported](images/imageset-config-redhat-images.txt)
 - [Operators - Red Hat Certified Partners / Nvidia](images/imageset-config-certified-images.txt)
