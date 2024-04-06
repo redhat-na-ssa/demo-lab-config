@@ -31,7 +31,9 @@ get_list_images_for_humans(){
 }
 
 main(){
+  get_mapping components/imageset/imageset-config-all.yaml
   get_mapping components/imageset/imageset-config-ocp.yaml
+  get_mapping components/imageset/imageset-config-ocp-upgrade.yaml
   get_mapping components/imageset/imageset-config-redhat.yaml
   get_mapping components/imageset/imageset-config-certified.yaml
   get_mapping components/imageset/imageset-config-runai.yaml
