@@ -2,16 +2,15 @@
 
 ## List of Container Images
 
-- [OpenShift Platform Images](images/imageset-config-ocp-images.txt)
-- [Operators - Red Hat Supported](images/imageset-config-redhat-images.txt)
-- [Operators - Red Hat Certified Partners / Nvidia](images/imageset-config-certified-images.txt)
-- [Run.ai](images/imageset-config-runai-images.txt)
+- [OpenShift - Platform](images/imageset-config-ocp-images.txt) - [[ImageSet Config](components/imageset/imageset-config-ocp.yaml)]
+- [Operators - Red Hat Supported](images/imageset-config-redhat-images.txt) - [[ImageSet Config](components/imageset/imageset-config-redhat.yaml)]
+- [Operators - Red Hat Certified Partners / Nvidia](images/imageset-config-certified-images.txt) - [[ImageSet Config](components/imageset/imageset-config-certified.yaml)]
+- [Run.ai - Platform](images/imageset-config-runai-images.txt) - [[ImageSet Config](components/imageset/imageset-config-runai.yaml)]
 
 Regenerate the lists above into `scratch/mirror_media` using the following command:
 
 ```sh
 ./scripts/wip/image_list.sh
-
 cp scratch/mirror_media/*images.txt docs/images/
 ```
 
