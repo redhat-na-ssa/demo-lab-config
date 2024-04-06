@@ -17,18 +17,7 @@ mirror:
     channels:
     - name: stable-4.13
       type: ocp
-      minVersion: 4.13.36
+      # minVersion: 4.13.38
   #   - name: stable-4.14
   #     type: ocp
   #     minVersion: 4.14.18
-  operators:
-    - catalog: 'registry.redhat.io/redhat/redhat-operator-index:v4.13'
-      packages:
-        - name: web-terminal
-          channels:
-            - name: fast
-              minVersion: '1.7.0'
-      # targetName: custom-ocp-index
-      # targetTag: v4.13.0.0
-  additionalImages:
-  - name: registry.redhat.io/ubi8/ubi:latest

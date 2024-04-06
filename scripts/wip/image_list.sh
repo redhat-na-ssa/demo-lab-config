@@ -7,7 +7,7 @@ get_mapping(){
     -c "${IMAGE_SET_FILE}" \
     --dry-run file://scratch/mirror_media
   
-  FILE=$(basename -- ${IMAGE_SET_FILE%.yaml}).map
+  FILE=$(basename -- "${IMAGE_SET_FILE%.yaml}").map
   MAPPING=scratch/mirror_media/${FILE}
 
   cp scratch/mirror_media/oc-mirror-workspace/mapping.txt "${MAPPING}"
@@ -32,6 +32,8 @@ get_list_images_for_humans(){
 
 main(){
   get_mapping components/imageset/imageset-config-ocp.yaml
+  get_mapping components/imageset/imageset-config-redhat.yaml
+  get_mapping components/imageset/imageset-config-certified.yaml
   get_mapping components/imageset/imageset-config-runai.yaml
 }
 
