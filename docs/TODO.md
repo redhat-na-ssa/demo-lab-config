@@ -14,7 +14,7 @@
 
 - [x] ACS
 - [x] ACM
-- [ ] ArgoCD
+- [x] ArgoCD
 - [x] Run.ai
 - [ ] OpenShift integration with Hashicorp Vault **
 
