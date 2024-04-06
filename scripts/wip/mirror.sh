@@ -29,7 +29,7 @@ ocp_mirror_dry_run(){
   # sed '0,/use the following/d ; /^$/d' scratch/dry_run
 }
 
-ocp_get_pull_secret(){
+ocp_mirror_get_pull_secret(){
   oc -n openshift-config \
     extract secret/pull-secret \
     --to=- | tee scratch/pull-secret | jq .
