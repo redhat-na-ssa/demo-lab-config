@@ -18,7 +18,7 @@ Run the following to regenerate the following lists into `scratch/mirror_media`
 ```sh
 ./scripts/wip/image_list.sh
 
-cp scratch/mirror_media/*.txt docs/images/
+cp scratch/mirror_media/*images.txt docs/images/
 ```
 
 - [OpenShift Platform Images](images/imageset-config-ocp-images.txt)
