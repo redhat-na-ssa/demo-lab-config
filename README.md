@@ -19,6 +19,10 @@ This is often used in the following tools:
 - `kubectl apply -k`
 - `oc apply -k`
 
+## General Notes
+
+- [Notes](docs)
+
 ## Various Commands
 
 Setup cluster users
