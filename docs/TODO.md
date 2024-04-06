@@ -6,14 +6,14 @@
 
 - [ ] Explain how to install / lifecycle OpenShift in a disconnected environment
 - [ ] Show how to get a list of operators for disconnected install
-  - Explain `oc-mirror` config / docs in repo
+  - Explain `oc-mirror` config / docs in repo - [Here](https://docs.openshift.com/container-platform/4.14/installing/disconnected_install/installing-mirroring-installation-images.html)
   - List of (OpenShift) cluster operators
   - List of OperatorHub operators
 
 ## Demos
 
-- [ ] ACS
-- [ ] ACM
+- [x] ACS
+- [x] ACM
 - [ ] ArgoCD
 - [ ] Run.ai
 - [ ] OpenShift integration with Hashicorp Vault **
@@ -22,5 +22,5 @@
 
 - [x] Secure ACS route into cluster with public trusted cert
   - see app (waffle) menu for link
-- [ ] Clone this repo into the web terminal
+- [x] Clone this repo into the web terminal
 - [ ] Explore DevSpaces pushing to GH
