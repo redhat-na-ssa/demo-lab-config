@@ -45,6 +45,9 @@ mirror:
         - name: servicemeshoperator
           channels:
             - name: stable
+        - name: rhacs-operator
+          channels:
+            - name: stable
       # targetName: custom-ocp-index
       # targetTag: v4.13.0.0
   # additionalImages:
