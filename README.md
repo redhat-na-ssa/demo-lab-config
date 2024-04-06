@@ -63,3 +63,28 @@ age --decrypt \
 ```sh
 scripts/lint.sh
 ```
+
+## Repo Structure
+```
+.
+├── bootstrap                             # used to for initial provisioning
+├── clusters                              # used to define a running configuration
+├── components                            # configurations in Kustomize and YAML
+├── demo                                  # install and prepare for demo of software
+│   ├── 00-cluster-one-time
+│   ├── 01-cluster-rbac
+│   ├── 02-cluster-storage
+│   ├── 03-cluster-config
+│   ├── run-acm
+│   ├── run-acs
+│   ├── run-devspaces
+│   ├── run-kubeflow
+│   ├── run-mlflow
+│   └── run-tests
+├── docs                                  # various documentation, software groups
+│   ├── images
+│   └── operators
+├── notebooks                             # notebooks to demo software
+├── scratch                               # excluded from git
+└── scripts                               # scripts to automate, list list-images.sh
+```
