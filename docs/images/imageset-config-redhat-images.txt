@@ -1,6 +1,19 @@
 ============ Registries ============
 registry.redhat.io
 ============== Images ==============
+registry.redhat.io/advanced-cluster-security/rhacs-central-db-rhel8:505d621f
+registry.redhat.io/advanced-cluster-security/rhacs-collector-rhel8:b8ff4f2f
+registry.redhat.io/advanced-cluster-security/rhacs-collector-slim-rhel8:529c531b
+registry.redhat.io/advanced-cluster-security/rhacs-main-rhel8:4da0be2c
+registry.redhat.io/advanced-cluster-security/rhacs-operator-bundle:5533e343
+registry.redhat.io/advanced-cluster-security/rhacs-rhel8-operator:a4f2c4e5
+registry.redhat.io/advanced-cluster-security/rhacs-roxctl-rhel8:cd88a54
+registry.redhat.io/advanced-cluster-security/rhacs-scanner-db-rhel8:e7139afa
+registry.redhat.io/advanced-cluster-security/rhacs-scanner-db-slim-rhel8:1601a07e
+registry.redhat.io/advanced-cluster-security/rhacs-scanner-rhel8:c44c40c8
+registry.redhat.io/advanced-cluster-security/rhacs-scanner-slim-rhel8:282b3d72
+registry.redhat.io/advanced-cluster-security/rhacs-scanner-v4-db-rhel8:f878c000
+registry.redhat.io/advanced-cluster-security/rhacs-scanner-v4-rhel8:ba90c121
 registry.redhat.io/container-native-virtualization/bridge-marker-rhel9:916c8d92
 registry.redhat.io/container-native-virtualization/cluster-network-addons-operator-rhel9:329f762b
 registry.redhat.io/container-native-virtualization/cnv-containernetworking-plugins-rhel9:67449878
