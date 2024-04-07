@@ -4,7 +4,7 @@
 
 Operational Examples
 
-- [All for Disconnected](images/imageset-config-all.txt) - [[ImageSet Config](../components/imageset/imageset-config-all.yaml)]
+- [All for Disconnected](images/imageset-config-all-images.txt) - [[ImageSet Config](../components/imageset/imageset-config-all.yaml)]
 - [OpensShift Upgrade - 4.13 to 4.14 (Platform Only)](images/imageset-config-ocp-upgrade-images.txt) - [[ImageSet Config](../components/imageset/imageset-config-ocp-upgrade.yaml)]
 
 Grouped Components
