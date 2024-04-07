@@ -28,20 +28,22 @@ This is often used in the following tools:
 Setup cluster users
 
 ```sh
-. scripts/wip/setup_user.sh
+. scripts/wip/demo_setup.sh
 
 htpasswd_get_file
-ocp_setup_user
+ocp_setup_user < username@domain >
 ```
 
 ## Development
+
+NOTE: Most scripts have been developed / tested on x86_64 Linux.
 
 The following cli tools will be useful:
 
 - `bash`
 - `git`
-- `sops`
 - `age`
+- `sops`
 
 `age` secrets
 
