@@ -27,6 +27,8 @@ setup_bin_path(){
 ocp_mirror_get_pull_secret(){
   export DOCKER_CONFIG="${GIT_ROOT}/scratch"
 
+  [ -e "${DOCKER_CONFIG}/config.json" ] && return
+
   oc -n openshift-config \
     extract secret/pull-secret \
     --to=- | tee "${GIT_ROOT}/scratch/pull-secret" > "${DOCKER_CONFIG}/config.json"
@@ -50,8 +52,8 @@ download_oc-mirror(){
 bin_check(){
   name=${1:-oc}
 
-  OS="$(uname | tr '[:upper:]' '[:lower:]')"
-  ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')"
+  # OS="$(uname | tr '[:upper:]' '[:lower:]')"
+  # ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')"
 
   which "${name}" || download_"${name}"
  
@@ -82,7 +84,7 @@ setup_bin_path
 bin_check oc
 bin_check oc-mirror
 
-=================================
+# =================================
 
 get_mapping(){
   IMAGE_SET_FILE=${1:-components/imageset/imageset-config-ocp.yaml}
