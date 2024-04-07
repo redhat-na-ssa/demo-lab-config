@@ -13,6 +13,10 @@ mirror:
   operators:
     - catalog: 'registry.redhat.io/redhat/redhat-operator-index:v4.13'
       packages:
+        # oc mirror list operators --catalog registry.redhat.io/redhat/redhat-operator-index:v4.14 --package advanced-cluster-management --channel=release-2.10
+        - name: advanced-cluster-management
+          channels:
+            - name: release-2.10
         # oc mirror list operators --catalog registry.redhat.io/redhat/redhat-operator-index:v4.14 --package devworkspace-operator --channel=fast
         - name: devworkspace-operator
           channels:
