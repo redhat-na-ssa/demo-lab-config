@@ -83,6 +83,7 @@ check_git_root
 setup_bin_path
 bin_check oc
 bin_check oc-mirror
+ocp_mirror_get_pull_secret
 
 # =================================
 
