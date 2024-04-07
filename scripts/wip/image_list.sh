@@ -97,6 +97,7 @@ get_mapping(){
   FILE=$(basename -- "${IMAGE_SET_FILE%.yaml}").map
   MAPPING=scratch/mirror_media/${FILE}
 
+  [ -e "scratch/mirror_media/oc-mirror-workspace/mapping.txt" ] || return
   cp scratch/mirror_media/oc-mirror-workspace/mapping.txt "${MAPPING}"
 
   echo "============ Registries ============" > "${MAPPING%.map}-images.txt"  
