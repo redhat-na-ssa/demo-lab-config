@@ -2,6 +2,12 @@
 
 ## List of Container Images
 
+You can find [release.txt](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.13/release.txt) to contain a list of images required to deploy the OpenShift Platform.
+
+The tool [oc-mirror](https://github.com/openshift/oc-mirror) is extremely useful for helping life cycle the OpenShift platform along with various operators and software that runs on the platform.
+
+The following information is produced by using the `oc-mirror` plugin.
+
 Operational Examples
 
 - [All for Disconnected](images/imageset-config-all-images.txt) - [[ImageSet Config](../components/imageset/imageset-config-all.yaml)]
