@@ -1,0 +1,119 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v1alpha2
+archiveSize: 4
+storageConfig:
+  registry:
+    imageURL: "csctmp-c6525-8.hpc.local:8443/mirror/oc-mirror-metadata"
+    skipTLS: false
+mirror:
+  platform:
+    channels:
+    - name: stable-4.13
+      type: ocp
+      minversion: 4.13.36
+    - name: stable-4.14
+      type: ocp
+      minVersion: 4.14.16
+    graph: true
+    architectures:
+      - amd64
+
+  operators:
+    - catalog: 'registry.redhat.io/redhat/redhat-operator-index:v4.13'
+      packages:
+        - name: web-terminal
+          channels:
+            - name: fast
+              minVersion: 1.8.0+0.1708477299.p
+        - name: rhacs-operator
+          channels:
+            - name: stable
+              minVersion: 4.3.5
+        - name: openshift-gitops-operator
+          channels:
+            - name: latest
+              minVersion: 1.12.0
+        - name: openshift-pipelines-operator-rh
+          channels:
+            - name: latest
+              minVersion: 1.14.2
+        - name: advanced-cluster-management
+          channels:
+            - name: release-2.10
+              minVersion: 2.10.0
+            - name: release-2.9
+              minVersion: 2.9.3
+            - name: release-2.8
+              minVersion: 2.8.5
+        - name: nfd
+          channels:
+            - name: stable
+              minVersion: 4.13.0-202402081808
+        - name: devspaces
+          channels:
+            - name: stable
+              minVersion: 3.12.0
+        - name: rhsso-operator
+          channels:
+            - name: stable
+              minVersion: 7.6.7-opr-001
+        - name: cluster-logging
+          channels:
+            - name: stable-5.8
+              minVersion: 5.8.4
+        - name: compliance-operator
+          channels:
+            - name: stable
+              minVersion: 1.4.0
+        - name: servicemeshoperator
+          channels:
+            - name: stable
+              minVersion: 2.5.0-0
+        - name: local-storage-operator
+          channels:
+            - name: stable
+              minVersion: 4.13.0-202402081808
+        - name: kubevirt-hyperconverged
+          channels:
+            - name: stable
+              minVersion: 4.13.7
+        - name: node-maintenance-operator
+          channels:
+            - name: stable
+              minVersion: 5.3.0
+        - name: kubernetes-nmstate-operator
+          channels:
+            - name: stable
+              minVersion: 4.13.0-202402211707
+        - name: ocs-operator
+          channels:
+            - name: stable-4.13
+              minVersion: 4.13.7-rhodf
+        - name: odf-operator
+          channels:
+            - name: stable-4.13
+              minVersion: 4.13.7-rhodf
+        - name: loki-operator
+          channels:
+            - name: stable-5.8
+              minVersion: 5.8.4
+      targetName: custom-redhat-index
+      targetTag: 4.13-v1.0
+    - catalog: 'registry.redhat.io/redhat/certified-operator-index:v4.13'
+      packages:
+        #- name: nvidia-network-operator
+        #  channels:
+        #    - name: 24.1.0
+        #      minVersion: 24.1.0
+        - name: gpu-operator-certified
+          channels:
+            - name: stable
+              minVersion: 23.9.2
+            - name: v23.9
+              minVersion: 23.9.2
+        - name: crunchy-postgres-operator
+          channels:
+            - name: v5
+              minVersion: 5.5.1
+      targetName: custom-certified-index
+      targetTag: 4.13-v1.0
