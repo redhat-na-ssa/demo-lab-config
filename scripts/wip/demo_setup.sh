@@ -18,6 +18,8 @@ htpasswd_add_user(){
   echo "
     USERNAME: ${USER}
     PASSWORD: ${PASS}
+
+    FILE: ${HTPASSWD_FILE}
   "
 
   touch "${HTPASSWD_FILE}"
