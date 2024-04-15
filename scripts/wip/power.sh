@@ -4,12 +4,12 @@ LOGIN="redhat:Redhat@123!"
 NODES=(172.29.134.8{1..3} 172.29.170.21{6..9})
 
 power_action(){
-  ACTION=${1:-On}
   URL_PATH='redfish/v1/Systems/System.Embedded.1/Actions/ComputerSystem.Reset'
+  ACTION=${1:-On}
 
   for DRAC in ${NODES[*]}
   do
-    curl -si -u "${LOGIN}" \
+    echo curl -si -u "${LOGIN}" \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -d '{"Action":"Reset","ResetType":"'"${ACTION}"'"}' \
@@ -23,7 +23,7 @@ media_eject(){
 
   for DRAC in ${NODES[*]}
   do
-    curl -si -u "${LOGIN}" \
+    echo curl -si -u "${LOGIN}" \
       -H 'Content-Type: application/json' \
       -d '{}' \
       -k -X POST \
