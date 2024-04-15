@@ -37,3 +37,9 @@ cp scratch/mirror_media/*images.txt docs/images/
 
 - https://docs.openshift.com/container-platform/4.14/security/index.html
 - https://docs.openshift.com/container-platform/4.14/security/compliance_operator/co-overview.html
+
+## Misc
+
+```sh
+pull_secret: '{"auths":{"none":{"auth":""}}}'
+```
