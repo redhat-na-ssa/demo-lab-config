@@ -10,10 +10,10 @@ power_action(){
   for DRAC in ${NODES[*]}
   do
     curl -si -u "${LOGIN}" \
-      -k -X POST \
-      --header 'Content-Type: application/json' \
-      --header 'Accept: application/json' \
+      -H 'Content-Type: application/json' \
+      -H 'Accept: application/json' \
       -d '{"Action":"Reset","ResetType":"'"${ACTION}"'"}' \
+      -k -X POST \
       "https://${DRAC}/${URL_PATH}"
   done
 }
