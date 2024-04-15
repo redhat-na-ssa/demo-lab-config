@@ -27,7 +27,7 @@ media_eject(){
       -H 'Content-Type: application/json' \
       -d '{}' \
       -k -X POST \
-      https://${DRAC}/${URL_PATH}
+      "https://${DRAC}/${URL_PATH}"
   done
 }
 
