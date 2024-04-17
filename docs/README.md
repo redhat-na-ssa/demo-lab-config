@@ -15,7 +15,7 @@
 `"quay.io":{"auth":"<copy-this-token>"`
 
 ```sh
-LOGIN=$(cat scratch/pull-secret | jq '.auths."quay.io".auth' | sed 's/"//g')
+LOGIN=$(cat scratch/pull-secret.txt | jq '.auths."quay.io".auth' | sed 's/"//g')
 echo "${LOGIN}" | base64 -d | tr ':' '\n'
 ```
 
