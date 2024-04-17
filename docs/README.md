@@ -14,13 +14,13 @@
 1. Copy the text in the quotations
 `"quay.io":{"auth":"<copy-this-token>"` 
 ```
-printf '<copied-token>' | base64 -d
+printf '<copied-token>' | base64 -d | tr ':' '\n'
 ```
 1. Paste the output in your private registry auth location
 
 ## List of Container Images
 
-You can find [release.txt](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.13/release.txt) to contain a list of images required to deploy the OpenShift Platform.
+You can find [release.txt](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.13/release.txt) [[local copy]](images/release.txt) to contain a list of images required to deploy the OpenShift Platform.
 
 The tool [oc-mirror](https://github.com/openshift/oc-mirror) is extremely useful for helping life cycle the OpenShift platform along with various operators and software that runs on the platform.
 
