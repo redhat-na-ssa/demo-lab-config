@@ -13,13 +13,15 @@
 1. Find the entry for `"quay.io":{"auth":`
 1. Copy the text in the quotations
 `"quay.io":{"auth":"<copy-this-token>"`
+1. Base64 decode `echo "${TOKEN}" | base64 -d | tr ':' '\n'`
+1. Paste the output in your private registry auth location
+
+### Example
 
 ```sh
-LOGIN=$(cat scratch/pull-secret.txt | jq '.auths."quay.io".auth' | sed 's/"//g')
-echo "${LOGIN}" | base64 -d | tr ':' '\n'
+TOKEN=$(cat scratch/pull-secret.txt | jq '.auths."quay.io".auth' | sed 's/"//g')
+echo "${TOKEN}" | base64 -d | tr ':' '\n'
 ```
-
-7. Paste the output in your private registry auth location
 
 ## List of Container Images
 
