@@ -22,7 +22,7 @@ Prerequisites:
 1. Find the entry for `"quay.io":{"auth":`
 ![images](./images/cat-pull-secret.png)
 1. Copy the text in the quotations
-`"quay.io":{"auth":"<copy-this-token>"`
+`"quay.io":{"auth":"<COPY_THIS_COPY>"`
 1. Base64 decode `echo "${TOKEN}" | base64 -d | tr ':' '\n'`
 1. Paste the output in your private registry auth location
 
@@ -32,6 +32,11 @@ Prerequisites:
 TOKEN=$(cat scratch/pull-secret.txt | jq '.auths."quay.io".auth' | sed 's/"//g')
 echo "${TOKEN}" | base64 -d | tr ':' '\n'
 ```
+
+### Alternate
+If you have `podman`, you can authenticate with the pull-secret.txt from your CLI using `podman login quay.io --authfile pull-secret.txt`
+
+![images](./images/podman-login-quay.png)
 
 ## List of Container Images
 
