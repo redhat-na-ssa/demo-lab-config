@@ -6,16 +6,18 @@
 ![images](./images/console-rh-com.png)
 1. Search 'openshift' or go directly to `https://console.redhat.com/openshift/overview`
 ![images](./images/console-rh-com-overview.png)
-1. Go to downloads or 'https://console.redhat.com/openshift/downloads#tool-pull-secret'
+1. Go to downloads or '<https://console.redhat.com/openshift/downloads#tool-pull-secret>'
 ![images](./images/tool-pull-secret.png)
 1. View the pull-secret.txt file
 `cat <your-path>/pull-secret.txt
 1. Find the entry for `"quay.io":{"auth":`
 1. Copy the text in the quotations
-`"quay.io":{"auth":"<copy-this-token>"` 
-```
+`"quay.io":{"auth":"<copy-this-token>"`
+
+```sh
 printf '<copied-token>' | base64 -d | tr ':' '\n'
 ```
+
 1. Paste the output in your private registry auth location
 
 ## List of Container Images
@@ -47,14 +49,14 @@ cp scratch/mirror_media/*images.txt docs/images/
 
 ## ACM Links
 
-- https://role.rhu.redhat.com/rol-rhu/app/courses/do480-2.4/pages/ch08s04
-- https://github.com/open-cluster-management-io/policy-collection/blob/main/community/CM-Configuration-Management/policy-acs-operator-central.yaml
-- https://github.com/open-cluster-management-io/policy-collection/tree/main/community/CM-Configuration-Management
+- <https://role.rhu.redhat.com/rol-rhu/app/courses/do480-2.4/pages/ch08s04>
+- <https://github.com/open-cluster-management-io/policy-collection/blob/main/community/CM-Configuration-Management/policy-acs-operator-central.yaml>
+- <https://github.com/open-cluster-management-io/policy-collection/tree/main/community/CM-Configuration-Management>
 
 ## Security Related Links
 
-- https://docs.openshift.com/container-platform/4.14/security/index.html
-- https://docs.openshift.com/container-platform/4.14/security/compliance_operator/co-overview.html
+- <https://docs.openshift.com/container-platform/4.14/security/index.html>
+- <https://docs.openshift.com/container-platform/4.14/security/compliance_operator/co-overview.html>
 
 ## Misc
 
