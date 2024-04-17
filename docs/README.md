@@ -7,7 +7,7 @@ When using a private registry for installation or upgrading, you need to be able
 Prerequisites:
 - you MUST have account to access `console.redhat.com`
 - you MUST have access to your private registry
-- you NEED `jq` to run the Shell example, but not required
+- you NEED `jq`, `base64`, `bash` to run the Shell example, but not required
 
 ### Steps
 
