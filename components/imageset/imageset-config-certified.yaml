@@ -23,6 +23,9 @@ mirror:
           channels:
             - name: '24.1.1'
             - name: stable
+        - name: vault-secrets-operator
+          channels:
+            - name: stable
       # targetName: custom-ocp-index
       # targetTag: v4.13.0.0
   # KLUDGE: START

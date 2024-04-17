@@ -1,5 +1,23 @@
 # Notes
 
+# Updating Private Registry with Auth to pull release.txt
+
+1. Go to console.redhat.com
+![images](./images/console-rh-com.png)
+1. Search 'openshift' or go directly to `https://console.redhat.com/openshift/overview`
+![images](./images/console-rh-com-overview.png)
+1. Go to downloads or 'https://console.redhat.com/openshift/downloads#tool-pull-secret'
+![images](./images/tool-pull-secret.png)
+1. View the pull-secret.txt file
+`cat <your-path>/pull-secret.txt
+1. Find the entry for `"quay.io":{"auth":`
+1. Copy the text in the quotations
+`"quay.io":{"auth":"<copy-this-token>"` 
+```
+printf '<copied-token>' | base64 -d
+```
+1. Paste the output in your private registry auth location
+
 ## List of Container Images
 
 You can find [release.txt](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.13/release.txt) to contain a list of images required to deploy the OpenShift Platform.
