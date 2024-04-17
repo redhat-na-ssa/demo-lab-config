@@ -16,7 +16,7 @@
 1. Base64 decode `echo "${TOKEN}" | base64 -d | tr ':' '\n'`
 1. Paste the output in your private registry auth location
 
-### Example
+### Shell Example
 
 ```sh
 TOKEN=$(cat scratch/pull-secret.txt | jq '.auths."quay.io".auth' | sed 's/"//g')
