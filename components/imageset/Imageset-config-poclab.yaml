@@ -101,7 +101,7 @@ mirror:
       targetTag: 4.13-v1.0
     - catalog: 'registry.redhat.io/redhat/certified-operator-index:v4.13'
       packages:
-        #- name: nvidia-network-operator
+        # - name: nvidia-network-operator
         #  channels:
         #    - name: 24.1.0
         #      minVersion: 24.1.0

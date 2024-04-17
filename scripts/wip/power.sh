@@ -1,5 +1,5 @@
-#!/bin/sh
-# shellcheck disable=SC2148,SC3009,SC2086
+#!/bin/bash
+# shellcheck disable=SC2148,SC3009,SC2086,SC2048,SC2054
 LOGIN="redhat:Redhat@123!"
 NODES=(172.29.134.8{1..3} 172.29.170.21{6..9})
 
