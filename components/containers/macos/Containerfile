@@ -1,7 +1,0 @@
-FROM docker.io/library/fedora:latest
-
-RUN dnf install -y \
-  which \
-  gpgme \
-  bash-completion \
-  tree 

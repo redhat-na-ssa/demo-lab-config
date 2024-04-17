@@ -1,24 +1,14 @@
-# Containerfile
+# oc-mirror container
 
-This Containerfile builds a fedora container with podman in to execute the functions in this repo, like list_images.sh, on a Mac.
+On macOS, you can run a Red Hat container with oc-mirror that will allow you mirror images for disconnected registries.
 
 ```
-# build the container from the root dir of this repo
-podman build -t macos_arm --arch=amd64 components/containers/macos
+# search for oc-mirror images
+podman search registry.redhat.io/oc-mirror
 
-# run the container locally from the door dir of this repo
-podman run -it --rm -v $(pwd):/data localhost/macos_arm 
+# run the oc-mirror container - change the entrypoint
+podman run -it --rm --name oc-mirror-0 --entrypoint bash registry.redhat.io/openshift4/oc-mirror-plugin-rhel9:latest
 
-# list the data dir in the container
-cd data && ls -l
-
-# source functions
-source scripts/functions
-
-# check if oc installed
-bin_check oc
-
-# run the script to list the images for software
-./scripts/wip/image_list.sh
-
+# from the container run oc-mirror command
+oc-mirror
 ```
