@@ -18,7 +18,7 @@
 printf '<copied-token>' | base64 -d | tr ':' '\n'
 ```
 
-1. Paste the output in your private registry auth location
+7. Paste the output in your private registry auth location
 
 ## List of Container Images
 
