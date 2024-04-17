@@ -1,6 +1,15 @@
 # Notes
 
-# Updating Private Registry with Auth to pull release.txt
+## Updating your Private Registry (i.e. JFrog Artifactory) with credentials to pull OpenShift images
+
+When using a private registry for installation or upgrading, you need to be able to authenticate to multiple Red Hat locations: cloud.openshift.com, quay.io, and registry.redhat.io. The Red Hat OpenShift pull-secret.txt file provides these credentials. Below are the steps to fetch these credentials.
+
+Prerequisites:
+- you MUST have account to access `console.redhat.com`
+- you MUST have access to your private registry
+- you NEED `jq` to run the Shell example, but not required
+
+### Steps
 
 1. Go to console.redhat.com
 ![images](./images/console-rh-com.png)
