@@ -2,7 +2,7 @@
 ---
 apiVersion: mirror.openshift.io/v1alpha2
 kind: ImageSetConfiguration
-# archiveSize: 4
+archiveSize: 4
 storageConfig:
   local:
     path: ./scratch/mirror_media
