@@ -1,0 +1,518 @@
+Creating directory: scratch/mirror_media/oc-mirror-workspace/src/publish
+Creating directory: scratch/mirror_media/oc-mirror-workspace/src/v2
+Creating directory: scratch/mirror_media/oc-mirror-workspace/src/charts
+Creating directory: scratch/mirror_media/oc-mirror-workspace/src/release-signatures
+No metadata detected, creating new workspace
+Pulling chart control-plane
+WARNING: Verification not found for runai-backend/control-plane: failed to fetch https://backend-charts.storage.googleapis.com/control-plane-2.15.13.tgz.prov : 404 Not Found
+Pulling chart runai-cluster
+WARNING: Verification not found for runai/runai-cluster: failed to fetch https://run-ai-charts.storage.googleapis.com/runai-cluster-2.16.30.tgz.prov : 404 Not Found
+<dir>
+  bitnami/minio
+    blobs:
+      docker.io/bitnami/minio sha256:71dfa05691e5dcbba4dc9ce263bc156ce6a02e486869cbb8b5fb635de1827a46 6.394KiB
+      docker.io/bitnami/minio sha256:80ccf708246a5eb7bf7bc2cad71d1ab1398f5ceb3c3e7ef24640ffb3a8cadf34 6.396KiB
+      docker.io/bitnami/minio sha256:6344984927710cb1319a7981652cfb3a2030986d3c8da7e4f8d4f299246350b2 73.29MiB
+      docker.io/bitnami/minio sha256:93f17cc9ed1c960f6a5b2109cb93d5975562c27ebbbce9e7f1d5b1c8e75508a3 77.51MiB
+    manifests:
+      sha256:621cfbe232809a5768bd23864567c3896a291c866a1952398be474a3b7f6fed8
+      sha256:75901f32b53d9abbfcbd31763f2cec5174d11b73f9a2dd4acadbb7e94e0302a6
+      sha256:f6ffcc4b951beeb2d5c8f94544449e15d887fd2c7336385681d2f987674bed0e
+      sha256:621cfbe232809a5768bd23864567c3896a291c866a1952398be474a3b7f6fed8 -> 2023.11.20-debian-11-r0
+  bitnami/postgresql
+    blobs:
+      docker.io/bitnami/postgresql sha256:703925ab989874a953e86d939a1e5e5136f1bff91a16eb6152fd79ea9c29cf03 9.104KiB
+      docker.io/bitnami/postgresql sha256:f8c1c832ce65f8c860a3388bf6681a4046a949475bc305b5a22e6deddf94abb5 29.47MiB
+      docker.io/bitnami/postgresql sha256:3d4a7dc6d7bf3641b502da242b5de0a4adc8925d93c1a8b66600e601ada5316c 56.28MiB
+    manifests:
+      sha256:01d4c69efd98dfbb374ed03eb11f59c5d0cd36365352088dd59643b5c72f919c -> 11.18.0-debian-11-r16
+  bitnami/redis
+    blobs:
+      docker.io/bitnami/redis sha256:2261df7aa1e198365711b36123618173eb4c7c23f7a9c48eb678e3eed1cb6efe 5.916KiB
+      docker.io/bitnami/redis sha256:7df5ed2e891a18abeb802bcf48f2e862ab3ca9c739bc49b3ec15ede82012c40a 5.919KiB
+      docker.io/bitnami/redis sha256:f9e0faeb63b954a911f07dbff0afa03ebad8e7bbe7898e85ba36d23f5cdbb317 33.52MiB
+      docker.io/bitnami/redis sha256:d3c8d807ccbf0a74606d33d0df48fde81ad8b08e82a7dc62d73978318be7fd30 34.89MiB
+    manifests:
+      sha256:1338ee7b728f89be09e7e1dbe7d1a47bd957e506af1fe56c1a2e750f1a5806f5
+      sha256:7b27f242e7f91d49708e3eacf81192886b571d1b5e6945c01a41ed031e41a139
+      sha256:a7f19b7b42ab5f6dcb7e6865abea27b9c508e326c5409f723c5adf2942542132
+      sha256:7b27f242e7f91d49708e3eacf81192886b571d1b5e6945c01a41ed031e41a139 -> 7.0.12-debian-11-r2
+  bitnami/redis-exporter
+    blobs:
+      docker.io/bitnami/redis-exporter sha256:2b0a57b73fc35c716e5691b40cd5bcc90b69f4134fc48afe27d6ee1c3bf40c05 4.986KiB
+      docker.io/bitnami/redis-exporter sha256:f9aa06951f09eabcd802bfe28befd66a51117481a3aec34fa0fefd7522089e5c 4.991KiB
+      docker.io/bitnami/redis-exporter sha256:91d1a9370d026e115992c5ededdbdaa3dd1c342c26943a5ba4b1541a7611fec0 33.52MiB
+      docker.io/bitnami/redis-exporter sha256:b24003f74f0a37e109dd38741a253d69278f4c44a833579a542113a3271535d2 35.16MiB
+    manifests:
+      sha256:4c7829c0e7dba51acc0b35f83b6238ab6ffddc8acfe1c051b80b52b7ac09c949
+      sha256:71fb09cb938cc0e4a848bb19b46c6816e75043d1d1f919fde7684ae40adeadb2
+      sha256:8fa707ae727dc35f44c6458a7244c76a672d592107eca864dab37d987adcb32f
+      sha256:4c7829c0e7dba51acc0b35f83b6238ab6ffddc8acfe1c051b80b52b7ac09c949 -> 1.51.0-debian-11-r11
+  bitnami/thanos
+    blobs:
+      docker.io/bitnami/thanos sha256:ad40be756ab2f7014bcebbb8bb27635a6ace061e714146387043441409cb9459 2.863KiB
+      docker.io/bitnami/thanos sha256:d7818d065936f4f8d38833321be325f60475c6787bfba73a563becea7828398f 2.863KiB
+      docker.io/bitnami/thanos sha256:778d8f6c33f4a2d1d6136cda4176f3ee3a359cfd59e47f1cdc85c74c7ed25540 20.09MiB
+      docker.io/bitnami/thanos sha256:a17ccfa7df92b0295e18e80bafda96358ce579e120637ba4a7083b98a292c67c 21.73MiB
+    manifests:
+      sha256:2181ede35cfb60c3f5330fcf6280cc1b611dde608c42b4890f53bef9d878ecb5
+      sha256:24c2eefdd76fa2fc9df1194d3f983025c0221dd0a1f851bb51a1aaf5235a1878
+      sha256:aadef581d65e0048baa0b81d487fb551868af7f18b4914832dff5c8f21af1e8e
+      sha256:2181ede35cfb60c3f5330fcf6280cc1b611dde608c42b4890f53bef9d878ecb5 -> 0.32.5-debian-11-r1
+  run-ai-prod/assets-service
+    blobs:
+      gcr.io/run-ai-prod/assets-service sha256:b8b5a411e56094a428b72364b365d14c3f84e8460cf2ce98ab59291b639babd1 167B
+      gcr.io/run-ai-prod/assets-service sha256:d08af4fa8a1336ddfa1e82914ad03b725e1ce45537f135d6f02fe4093082dff5 167B
+      gcr.io/run-ai-prod/assets-service sha256:7f3b407b7b6c7cb9d49814914d95237d913e8be5b977cd11fc77cb6822f741ce 1.372KiB
+      gcr.io/run-ai-prod/assets-service sha256:aff71b8215081e0ca649851f025a0f04278de15819b19872b3293acead607922 1.372KiB
+      gcr.io/run-ai-prod/assets-service sha256:f8ccef2745ade50ecdae5eeb8a2b090fa989829dc660f5b6dff298690695a465 2.902KiB
+      gcr.io/run-ai-prod/assets-service sha256:2cf6ee756c4131a4076884ff288f15b06bf8b2793859dfa5d02489e493a309e8 7.024KiB
+      gcr.io/run-ai-prod/assets-service sha256:1547127661b64598d4c258bd0f2abebfa53a74482cff00e34e6b0bd5585c707c 7.028KiB
+      gcr.io/run-ai-prod/assets-service sha256:eeee233e7cd2e9ca119ef148a783f7ebee1876b043a383ad37991bbd1e4f8638 27.88MiB
+      gcr.io/run-ai-prod/assets-service sha256:e3649b5f99e0fcf52b3d19c3b201484e78f19873fb98a5b5a4b3a4d64c75ae78 35.9MiB
+      gcr.io/run-ai-prod/assets-service sha256:87e3ab05d9a4afadab5e2fe35fa8150a7a01c25ac51130a933b585d3dfa0f05c 37.51MiB
+    manifests:
+      sha256:082ae4c9874cd5d8b8c624e071904c30935ba5aa607bb63130b2d207d3f90760
+      sha256:24ed86b9cd592d2aecb31d3344c244881f282f9b993040255998c4cb9e7ef4b2
+      sha256:47f709debe7abb80912f4c0b32e38ecc0e8d73619c92a99c55bbd4be7d7f06ca
+      sha256:567a0fd4a81c939e34ab07143181cd34ac1d40d287334bb9d2df5762bbead65f
+      sha256:65bc6072d954a7e9414b8ce115701497739d8beb1f39b1d552600dd98e576d4b
+      sha256:567a0fd4a81c939e34ab07143181cd34ac1d40d287334bb9d2df5762bbead65f -> 2.15.13
+  run-ai-prod/authorization
+    blobs:
+      gcr.io/run-ai-prod/authorization sha256:686994cf433d248f36a4a0077ad786cff5a37b6bbc62ca1cb2de0c800fd32810 167B
+      gcr.io/run-ai-prod/authorization sha256:d3faea98db366a70846ab0b991a13472d2e8d357ec9d92b3ae7a674e658bb4f0 167B
+      gcr.io/run-ai-prod/authorization sha256:e0192f4d0c48a7e0777f522c51757f85466717a5fda0f6cd85e1e450a7f28ebe 291B
+      gcr.io/run-ai-prod/authorization sha256:8c82958c9d56d0b36fe82222abf04a45b8c33eb91f6846a893b1cde40075ad1f 639B
+      gcr.io/run-ai-prod/authorization sha256:7151ac2d1f5e787ccd72e129025ecbd76aa2ecea0fbe400d5908c9cc99524778 1.371KiB
+      gcr.io/run-ai-prod/authorization sha256:a2af91992010b9aa2f0a36a0d3b2d89c2d1a360198851b168b02c5d215c033c3 1.371KiB
+      gcr.io/run-ai-prod/authorization sha256:34feb7ae14cdbaf27e01c854e9b4254cf698a1de2a100337ab74a058d5807bdc 7.258KiB
+      gcr.io/run-ai-prod/authorization sha256:3b818b61d5eb443158bcf84f7c54112df757539e20188a2577acc4231a83673f 7.262KiB
+      gcr.io/run-ai-prod/authorization sha256:2a3b7f7fb3651eb7cafdf727b72a4383f1aeb81ead49d33a3d52b8447ed544fc 13.02MiB
+      gcr.io/run-ai-prod/authorization sha256:e3649b5f99e0fcf52b3d19c3b201484e78f19873fb98a5b5a4b3a4d64c75ae78 35.9MiB
+      gcr.io/run-ai-prod/authorization sha256:87e3ab05d9a4afadab5e2fe35fa8150a7a01c25ac51130a933b585d3dfa0f05c 37.51MiB
+    manifests:
+      sha256:222b004705285a4dc138f126740ad28ed253c9fcf6e0b48bdb3ae0b57743cbe7
+      sha256:5362335e99b92986020f0cfe5dc2a6f5ad473bdbd9670324765d053daa7313c8
+      sha256:55570b159db39220fefa06fab17bb4cc8df3dd142e0ae2105133cede7bc3da7b
+      sha256:dff4f86246664a24b8ed9ab70cb64598e414a2c9d9b2a4e24118114116b951d8
+      sha256:f2e17684b50d76cd30aec71558404e0dcfb9fc8aa25d183b7e7f69284876521e
+      sha256:222b004705285a4dc138f126740ad28ed253c9fcf6e0b48bdb3ae0b57743cbe7 -> 2.15.13
+  run-ai-prod/backend
+    blobs:
+      gcr.io/run-ai-prod/backend sha256:f6e4d5b389e10058eae1e8ab5d43f8a95e8c7838e93cbc7cd165d7287296e745 138B
+      gcr.io/run-ai-prod/backend sha256:30668709e5c58382d194fc200b7ceb083b70564bb04661ec487fdf53b3548c6e 140B
+      gcr.io/run-ai-prod/backend sha256:d5b646089e8afbd9a68839764647bcb8a4220e3cf9f45e8c52740b96fdd24b53 167B
+      gcr.io/run-ai-prod/backend sha256:fd2538e3b0f7dada503e979cc35adf43a08871dcea014789d1ef83379d5b4e85 167B
+      gcr.io/run-ai-prod/backend sha256:76205e80d39323001e51f5f56c6c6a875ceb2094cd2922d7a5eb2749faf81a40 1.354KiB
+      gcr.io/run-ai-prod/backend sha256:b90d0dd1a4bb2a450adeae07978656a5531c41dbce25b5282796651662fc5a63 1.354KiB
+      gcr.io/run-ai-prod/backend sha256:7f0b5d05142702bc4e743efc5f8c182ed6e79911ffe753c2dfc2b2d8324244e2 4.403KiB
+      gcr.io/run-ai-prod/backend sha256:e72a03d4303501dca8eb7da906507f73a585eac8fbece243403b976e6639c2b8 21.76KiB
+      gcr.io/run-ai-prod/backend sha256:50cb1ae63602a79cd1119847188ae75612cfab5d10b0e38f56b802b6cd633719 21.78KiB
+      gcr.io/run-ai-prod/backend sha256:9a69c067fb0612d66b869bd386066017c1f710a0ba0acf6db12780d80cbed441 43.98KiB
+      gcr.io/run-ai-prod/backend sha256:1e57d9c6036822573a6dd52faccafacf6671e62fc2c03ee7b1a01857108c9743 464.7KiB
+      gcr.io/run-ai-prod/backend sha256:b10bf20f45d9a2e1d7eb924aad16e378831828340e512af4ccdde99c5374a41a 17.26MiB
+      gcr.io/run-ai-prod/backend sha256:b44b25672062c6d752712d90c0982015ff4df3c190bb13c1ac3bb64b1254d416 17.59MiB
+      gcr.io/run-ai-prod/backend sha256:c4974ff0e0ae81144d032c192e477f3a72353d65660e2270240621cdc22e7b55 73.27MiB
+      gcr.io/run-ai-prod/backend sha256:b93d626beb88002765714c9c8b0151fc2737886fe5d65c61d5833904da294cb8 74.36MiB
+      gcr.io/run-ai-prod/backend sha256:d66a972c08964d487e0b43062210ac00ce3dca3fe569ac665c4324ea6522507d 75.11MiB
+      gcr.io/run-ai-prod/backend sha256:540b91a7e555fecf012915c3bd348e3bb30742afaa767c38d18068fa35226e72 115MiB
+      gcr.io/run-ai-prod/backend sha256:261ece2739355c5a4a5ee15ea5dd9a2a96dd84d843a871e1340368c9c2797f58 122.4MiB
+    manifests:
+      sha256:05551f6252b015bbf28e772ff35c3b4f6d181867826cac1c0170b91223f29a80
+      sha256:2926c9b4d13afb47498b3b2a55f63827650b7e0df591ebbb56f9523a2b49fe43
+      sha256:43bc28c8b865e15de13f47560ddb266bf88b931ca86e0e3259965a5ebda2b8b8
+      sha256:52b3e11724b4dd84df8fdcd494858d2e81bec606bc1678eae8ec4a4679b53048
+      sha256:d2f1f75a9315092486da1000f2ef04428b91010e06b7c6b384844144d692f4c9
+      sha256:2926c9b4d13afb47498b3b2a55f63827650b7e0df591ebbb56f9523a2b49fe43 -> 2.15.13
+  run-ai-prod/busybox
+    blobs:
+      gcr.io/run-ai-prod/busybox sha256:3783b704f14e84f801235c17976a090eda4fcd63bc784d00bff0d32458d83c4f 167B
+      gcr.io/run-ai-prod/busybox sha256:757fbbe5d3f79656cb81a500f7c1f73d529059089151b6cf40bebbf4fe4d4921 167B
+      gcr.io/run-ai-prod/busybox sha256:be09a73959de918aa926b60b637a5b2d3ed56259747b55a37b3b398127dc7285 782B
+      gcr.io/run-ai-prod/busybox sha256:eecf174fa0d0e1c4347409a2bde005c2091bb81cf53dc49089b61d81be63c622 782B
+      gcr.io/run-ai-prod/busybox sha256:96ca33754e09fa2e36853082772988c44d1121ec6c21cabca7f41f5ce400c4ee 1.327KiB
+      gcr.io/run-ai-prod/busybox sha256:e8f9a4fe7cf246f8ca5a7a8d988bf9ad0c5a8b2b06e3317ec50c3efce74c56f4 1.327KiB
+      gcr.io/run-ai-prod/busybox sha256:805f301826ef94301d30be8873f4c2f9a03fd5cad88b4d71808991046153eb86 1.907MiB
+      gcr.io/run-ai-prod/busybox sha256:a58ecd4f0c864650a4286c3c2d49c7219a3f2fc8d7a0bf478aa9834acfe14ae7 2.471MiB
+    manifests:
+      sha256:1c7e2c9913d6e31322d689aa572ac079edbc140ee450c0e71771e99376cc483b
+      sha256:3d2d6863cd0c13ed1c8315c38da8bc42549f6898984444b9649db774385ff55f
+      sha256:5720c9ebbc567a9b68fbb2387be1c0070d68bd7b3611d5bf174d5430e7723a74
+      sha256:6ec4cb382f990400b7e9ba935eb49bcbabfe8a9c20773a67ffe391a8f049d6c2
+      sha256:d7d58a143b75b9e39a9c88506116a0c9339933cf8afd03ca14ed29e89f5b2095
+      sha256:3d2d6863cd0c13ed1c8315c38da8bc42549f6898984444b9649db774385ff55f -> 2.15.13
+  run-ai-prod/cluster-service
+    blobs:
+      gcr.io/run-ai-prod/cluster-service sha256:92b13bc486a683cf047211f3c5b076bbb08e6f276ab28aac82a44720f67d089f 167B
+      gcr.io/run-ai-prod/cluster-service sha256:db119173072db47a86db9e89d7b1cbe7017f4fd898d6b6adb48939f131f09a03 167B
+      gcr.io/run-ai-prod/cluster-service sha256:df34bd8a9458fdf82d6e5c71de6ed1643d5f93df62b9c029606953412fd2d29b 267B
+      gcr.io/run-ai-prod/cluster-service sha256:20593accd2165cb2de7d7a00e0295cc5e22a789c9453951fd325c0f386ab1f67 441B
+      gcr.io/run-ai-prod/cluster-service sha256:32fa79c3348353a2cf23f3c660e2d87ef96953bd910e319fec29078c9d55eb2c 1.375KiB
+      gcr.io/run-ai-prod/cluster-service sha256:b87c316de8b4941fb22a95855410e598e189b5b620d1feb4d4970d76be7ed7b7 1.375KiB
+      gcr.io/run-ai-prod/cluster-service sha256:5eb8e2418226af6f96a42a4c8623cad758c367ae465847641478304647cf89ba 7.266KiB
+      gcr.io/run-ai-prod/cluster-service sha256:9e0996a4f88b5f55cf9c198d0a67ce15dbd5eccf4c7aeee7d6d8d3efaf514f2d 7.27KiB
+      gcr.io/run-ai-prod/cluster-service sha256:5612c73a5eb17c872342c4267d639a6692f7125ecab1bf963750118018d0a79a 10.11MiB
+      gcr.io/run-ai-prod/cluster-service sha256:e3649b5f99e0fcf52b3d19c3b201484e78f19873fb98a5b5a4b3a4d64c75ae78 35.9MiB
+      gcr.io/run-ai-prod/cluster-service sha256:87e3ab05d9a4afadab5e2fe35fa8150a7a01c25ac51130a933b585d3dfa0f05c 37.51MiB
+    manifests:
+      sha256:0f675549009ce02eeed7185392496656f1f39e1f8b9392522082297ffb7346d9
+      sha256:4972b7b000df306294794f1f6883ae86f88bc3d093122ab944870c8252e57ab9
+      sha256:7141d186739f169a14dfd53f9aba3fca217381a8e679fda1a80fdb4f43ffbd16
+      sha256:92e735518e9dc50d5de169d05220557ae82d5f8a6411f64b3c46771fb459b180
+      sha256:e86f0d16935e684edae6f23c7d82f67410f97cdb48583b60675f809bab1a6be8
+      sha256:7141d186739f169a14dfd53f9aba3fca217381a8e679fda1a80fdb4f43ffbd16 -> 2.15.13
+  run-ai-prod/db-mechanic
+    blobs:
+      gcr.io/run-ai-prod/db-mechanic sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B
+      gcr.io/run-ai-prod/db-mechanic sha256:41d78da1f0d8f4dfb1381ec4428247ead41e5c0d73e593f84a4eb126d914ea5e 147B
+      gcr.io/run-ai-prod/db-mechanic sha256:4d6ae65428c42ce964200047c86a3013247f07b892049a44bfec5bda49e2fc05 167B
+      gcr.io/run-ai-prod/db-mechanic sha256:63774d8146ac5f3917ba57758e6b411e466d474d91f41e367f89fa815a159784 167B
+      gcr.io/run-ai-prod/db-mechanic sha256:173703ae7be153d2a04de5c4e9c9f6ff7ca81b4265174002978dab9253685c69 1.516KiB
+      gcr.io/run-ai-prod/db-mechanic sha256:4f198012e773f652cd8c9e5d3fd9d8b69e3d5677f1db3a3784a8a68e241466f6 1.516KiB
+      gcr.io/run-ai-prod/db-mechanic sha256:b1925ad4ba390620ac360f30bf81f4dddb13c763cda9adb02095ac6f64f8f74d 32.16KiB
+      gcr.io/run-ai-prod/db-mechanic sha256:06eef0c2cd4d7610e8e549d3f4c825e0140f38a8842a17bc03f1a5daa2b79172 32.16KiB
+      gcr.io/run-ai-prod/db-mechanic sha256:add6b39c35b66bb4187f9b2128b2d09a432b6bfe24810180f9301ff8ecb86c28 32.3KiB
+      gcr.io/run-ai-prod/db-mechanic sha256:14ce9a0fc0bdee9a29c23117fe95ccc417a3371d47bd6bb5fa1171cd027aea14 13.5MiB
+      gcr.io/run-ai-prod/db-mechanic sha256:235735f9025fda6329b2a9d1cda16507b0994d37ddf778eddb7650bca5b05d88 13.5MiB
+      gcr.io/run-ai-prod/db-mechanic sha256:4da493486a8e6bed896d94989fd40199cacab25cef2022dc5b72dc9b0be61387 35.94MiB
+      gcr.io/run-ai-prod/db-mechanic sha256:dc35b837139a95d1b9f7f7b0435a024a74ab972416bdc248f3f608c9f917a753 37.49MiB
+      gcr.io/run-ai-prod/db-mechanic sha256:467c9e0536cca13480e352becec751c4fa932ebe5874899158eb58dc0d9c7870 120.2MiB
+      gcr.io/run-ai-prod/db-mechanic sha256:1baa322208b151b6c1bdf50bec072e051f42adf6d0e21b43a4f36384cf7c1264 122MiB
+    manifests:
+      sha256:37eb3601108c511f11edd8e2b6b5b9658940cf99dbb50e0d725a0a980fa3d3e1
+      sha256:592a823e671fdc3193fa55a26c1bd12dbfec23bde8880e92b2670078606eb72f
+      sha256:979a3e93374e6a3b4bcc3e6e8463aecac0d1ca3cb8bf60b3d481ed66f6a952d1
+      sha256:e7b6112f5359a320cd58de105a2d34c653a86cf9d32b38a66fffcabb4773f619
+      sha256:f930c0c08e37f4e7aee22db62a59dd2fdacb71bf1aee907dd319405069edb013
+      sha256:592a823e671fdc3193fa55a26c1bd12dbfec23bde8880e92b2670078606eb72f -> 2.15.13
+  run-ai-prod/engine-operator
+    blobs:
+      gcr.io/run-ai-prod/engine-operator sha256:52d212f9a8a837613abf0118bcc34b9616f17258e3d86f8b38a6def9b6b0ceab 167B
+      gcr.io/run-ai-prod/engine-operator sha256:f33bf1136a8f0a7a76eac685851b2e7aa1699eaf5d9a85752ddebdce22f1da5b 167B
+      gcr.io/run-ai-prod/engine-operator sha256:2676c8108beb0bfccde4e1cb58fb32292b91b84c8b5328f59ec19c08c5bd41d6 1.403KiB
+      gcr.io/run-ai-prod/engine-operator sha256:ff9f13ebc11a498e2a3a1d422ba1ae4a7d6c4c3c2ccec493a226a714b1a71e9e 1.403KiB
+      gcr.io/run-ai-prod/engine-operator sha256:799633e05ec3b8e40a8128ed39a240160729d2ba4e8372604fa8e8bb6d9077d1 6.763KiB
+      gcr.io/run-ai-prod/engine-operator sha256:e41e8e02e1cd0b5570a8f808944b4bab45f9837ef4ccabcb858bdaa1179db44b 6.77KiB
+      gcr.io/run-ai-prod/engine-operator sha256:d68b7618e278d49cf4b0cd2d7173f35a5945a37059859f8b679df6ecbfc254f9 17.57MiB
+      gcr.io/run-ai-prod/engine-operator sha256:0117dee8e815188cd7730b6fcd34a97b4e46a81ee9295f2b8988ea6cb636372d 35.99MiB
+      gcr.io/run-ai-prod/engine-operator sha256:458deefb34fd5ebe4d61ee921d46e7c8994065680078e8c671d4f4bac3b10ec3 37.48MiB
+    manifests:
+      sha256:248249a85cd1f44eff0ebb6e4697f71648cc845a2bf3be3c09f5b1f280aebdcc
+      sha256:5dc28d5790608d2c9bfa3ea8a0dca1a331de3a5585f9cd08a896debec51c9804
+      sha256:7d36a7e6eb2f3f2cfad7db687d515eabc9c1cbc378314d7a4680d3ba6ba9cb12
+      sha256:de30f68b290792683e6e0ccd7bb74464898856f954e6d7d7bac29cd3b21acd70
+      sha256:f0270aa5ef0a0b70dc862dd0ce29592c9509dad961ea587467651c578a93d652
+      sha256:5dc28d5790608d2c9bfa3ea8a0dca1a331de3a5585f9cd08a896debec51c9804 -> 2.16.30
+  run-ai-prod/frontend
+    blobs:
+      gcr.io/run-ai-prod/frontend sha256:4844a4b3e725b40e855b9196d1dcfee9b07c040ef392c09c3297616804e18cb6 167B
+      gcr.io/run-ai-prod/frontend sha256:950a19d7c3b2f5c0f9b249b2320f158cfffd360b695f6f35f9a6aff7cda81b36 167B
+      gcr.io/run-ai-prod/frontend sha256:02a92d9591ded8068b191cd2b0450c486f371cc308ee254e22aa08e23f905a8a 365B
+      gcr.io/run-ai-prod/frontend sha256:ede6cbc7a7879d2dc1e371204a01102245f90868a75eda20fa72f9164e1e0320 366B
+      gcr.io/run-ai-prod/frontend sha256:25c2cc88c8ebadab91acb0c2c5ff2f27a7f599c9030f4a1612aa8fe744315f61 1.357KiB
+      gcr.io/run-ai-prod/frontend sha256:c57dd0e6c0df7928728d865bce5bfad348872fbab85406c7451de9a74fc5454c 1.357KiB
+      gcr.io/run-ai-prod/frontend sha256:8d93d2a1cd9a800c932eb5049abd9c6613c5c5ecf15b9033f1aecfd4b68dd7cb 21.63KiB
+      gcr.io/run-ai-prod/frontend sha256:345389089610a6093a849805bb1f5caa6c2d15ccddc47ab9a1c86fca6ba8ec61 21.64KiB
+      gcr.io/run-ai-prod/frontend sha256:0b9945adb9098858c52b1e3779a71886f1210cf142c5be37e2f91a8d34583d15 17.32MiB
+      gcr.io/run-ai-prod/frontend sha256:ef578499ee321ced5bd13affacfa5bd8b44ba14330af84f3e22efe57fd52a1ef 17.63MiB
+      gcr.io/run-ai-prod/frontend sha256:4800070ddcc1099faf6655bcbe47f97599e89b88f610b74391a4dead3351b12b 22.19MiB
+      gcr.io/run-ai-prod/frontend sha256:caad213e68a4aa3144c3452bf7ee61367ddc34f214f2ef0e783e29630b5401f2 22.19MiB
+      gcr.io/run-ai-prod/frontend sha256:3bddfe9cb25061109524482226f8d84b8750656ae19aaf0729cc6d9b661b0ec8 62.99MiB
+      gcr.io/run-ai-prod/frontend sha256:b8e534d33fe6550bd478f1e79bfdad4793cf8905ceb17acd84d2588be259bc1e 64.48MiB
+      gcr.io/run-ai-prod/frontend sha256:e1cb992e7555fa2b8405f96330d856d798e8f9fa2e2b78fdbb7cde084dfb010a 73.36MiB
+      gcr.io/run-ai-prod/frontend sha256:b4e744f5f131fb2db0dd7649806f286ecaa3fcda18dc9a4245d83e902100ccb3 75.12MiB
+    manifests:
+      sha256:22c1e01521e5b7b6198f83fffcba1249ee740116a1136538a169ab24c3bb35b3
+      sha256:247b70e30a89f32939480a39a72c35bb29da1cd4ed70161ad73ca5a92e29b3b2
+      sha256:665f32308f1c4ee0a7c0fb8cfafe71ccf35917ed300be986d5706adc28e40940
+      sha256:b603db6f23eaa6b6f9982583f9afd17dc6c23b0b888e49335ea761cc7b876d97
+      sha256:e3e877fbf38880b05542fe10112586538cbc1fd7d33029f6d1b1cba9f2c3e02c
+      sha256:e3e877fbf38880b05542fe10112586538cbc1fd7d33029f6d1b1cba9f2c3e02c -> 2.15.13
+  run-ai-prod/go-operator
+    blobs:
+      gcr.io/run-ai-prod/go-operator sha256:0018dca87c6416bae2eda237d2c442ce18195684dac3d45596e69eb79180eff7 167B
+      gcr.io/run-ai-prod/go-operator sha256:cb5cd2432a206f5a40a5050e6bf64650325ff1a76349b0d0188bcd11d54a596b 167B
+      gcr.io/run-ai-prod/go-operator sha256:81217236b7bfdd17e3c18f0c79e84e90084fe4fd2f75012a69f69c324810f20e 1.39KiB
+      gcr.io/run-ai-prod/go-operator sha256:d77c2b024dfb4151a937ac655a9cde9b0b5ae0ce7e4e092558700caff35ca657 1.39KiB
+      gcr.io/run-ai-prod/go-operator sha256:1c63136d545ce4d67389e80fd84b5e969e138266f53faab70b4f472c5a891069 6.752KiB
+      gcr.io/run-ai-prod/go-operator sha256:6d29a5a42a358b966696fa3173f85e0047a961a5c087e392f1c1c24578e0300a 6.759KiB
+      gcr.io/run-ai-prod/go-operator sha256:e6c488371768c51255b7c7c223d496fbde88b415cff2d66c935d6411d2cf85ef 24.04MiB
+      gcr.io/run-ai-prod/go-operator sha256:0117dee8e815188cd7730b6fcd34a97b4e46a81ee9295f2b8988ea6cb636372d 35.99MiB
+      gcr.io/run-ai-prod/go-operator sha256:458deefb34fd5ebe4d61ee921d46e7c8994065680078e8c671d4f4bac3b10ec3 37.48MiB
+    manifests:
+      sha256:5bdb87a9d2bf7e3cb9bccaff9187260761a79a8bb51e53ed8cc64cec7613707c
+      sha256:b5fc6551bf76a2963fd995fc7e55d2935db0930e3fa2a00718abc186bb9bb5b4
+      sha256:cd3e59b6a7f8585fa17c3ef5d1f6165f69a1e2d51817b59aa9a9a4effeb836ed
+      sha256:edd89cc3f11647096c0ee079cac572d118568df00584da8546924f39f7cd8a27
+      sha256:f854420c2a5ce995eac5739c8e0721e990b022c2a1df6ac69cef1c7598298c5a
+      sha256:b5fc6551bf76a2963fd995fc7e55d2935db0930e3fa2a00718abc186bb9bb5b4 -> 2.16.30
+  run-ai-prod/grafana
+    blobs:
+      gcr.io/run-ai-prod/grafana sha256:146833aeeedc01d5bfc0a04709201be1656c30861b8f8eba616e1e93ce59a6fb 91B
+      gcr.io/run-ai-prod/grafana sha256:5ae958684ced40e06a7d5fa387fda6208630f019c3f2acc20c001158ef9b3702 140B
+      gcr.io/run-ai-prod/grafana sha256:a976bdbaa77f65e4c5303abed02c5ae6a56e68e971abb6b24c517fa77bcdbb06 140B
+      gcr.io/run-ai-prod/grafana sha256:9e3ae173707c8ca1837a6dbbe9b83806a9516a251095e3aaf1b6f8b50db65891 167B
+      gcr.io/run-ai-prod/grafana sha256:a977704d075e58685507cb51d09284ac05893d3362c6b88a3275bb6d5618b8d1 167B
+      gcr.io/run-ai-prod/grafana sha256:2e2f5c142666620859892d0d11e06eddc44049900d017b93a88b074554eb3a89 339B
+      gcr.io/run-ai-prod/grafana sha256:4121919173eecddc9b9543a9fb555a3e1beef4ffa4506920fcbba8074c1443ed 342B
+      gcr.io/run-ai-prod/grafana sha256:89190edd5dae79480307c04a9553853d2f567ccc9d9786f63ba5d7d3f3df6628 1.198KiB
+      gcr.io/run-ai-prod/grafana sha256:1bfffc0db129395cc5954cbcaf6670faf2d7e11ee238d15e2393d243c81a1b7e 1.335KiB
+      gcr.io/run-ai-prod/grafana sha256:4523d2d8e51b004f104a5efacb6b5ffa96ee49c7130e5372a0f85b0554a16cfa 1.335KiB
+      gcr.io/run-ai-prod/grafana sha256:21dc5264dab55805c923974bfd133ed0b7f998b8ff616b03bbe7e271dd6c3486 7.481KiB
+      gcr.io/run-ai-prod/grafana sha256:e69ec68ade74e2a9cd20af98cbfff09a1c2c9d3577755b95283e7816654edc4e 7.483KiB
+      gcr.io/run-ai-prod/grafana sha256:e7e5ee74d972bae06bec504843e126fbb9f8e31fcc411ad96f7d9110c1a40e14 11.64KiB
+      gcr.io/run-ai-prod/grafana sha256:05952510da2314448319d64e77c53bf0456293956ca4ad92ccd76ec26dccbfe0 11.65KiB
+      gcr.io/run-ai-prod/grafana sha256:05e70a7e67e3360cb693f2f4d3e7e22c71bf7a98f6fbfb92f3c3202289997ce1 19.55KiB
+      gcr.io/run-ai-prod/grafana sha256:38376db40357d9f27b84b23926c2958280d2e69a324465b369c66b43faf3ce88 19.56KiB
+      gcr.io/run-ai-prod/grafana sha256:a15a98545d0014986c9bfbbecd4f6ecb453f6ee03223a9a2826d328adce31f74 38.69KiB
+      gcr.io/run-ai-prod/grafana sha256:f63c26d35d846e87820b0ecf740cd3b4a315c3c62c5a2866bba967e9305d1dd2 38.71KiB
+      gcr.io/run-ai-prod/grafana sha256:7e0ad7186da5c3ec00451fef89c9f110be99f4573ee3a79963cf24e05b4220aa 86.48KiB
+      gcr.io/run-ai-prod/grafana sha256:56167599a194dceda6004a7282ae75c76f2d37a9f0ff1317511062d4c08f5b77 2.904MiB
+      gcr.io/run-ai-prod/grafana sha256:e74c3e61749606e44c33c3242b9629c9b0c03b8ab1c523e2e6698e45bf637fa2 3.001MiB
+      gcr.io/run-ai-prod/grafana sha256:9fda8d8052c61740409c4bea888859c141fd8cc3f58ac61943144ff6d1681b2d 3.176MiB
+      gcr.io/run-ai-prod/grafana sha256:7264a8db6415046d36d16ba98b79778e18accee6ffa71850405994cffa9be7de 3.244MiB
+      gcr.io/run-ai-prod/grafana sha256:5042353907dcb70d1ae89cd8f292086e5d4d750b29c63a27a40e736981f3f423 4.474MiB
+      gcr.io/run-ai-prod/grafana sha256:e2804f941d3b2c191856ec02f903171bfa68bcd3680549a6975d407a6b787576 32.77MiB
+      gcr.io/run-ai-prod/grafana sha256:faf254317127dc33c665c67338a674db546c532db0b3ce18debe9ee12f9832e6 34.69MiB
+      gcr.io/run-ai-prod/grafana sha256:65c97c1562cea0a26658cab9d1ac5572d04eb2221a5e06376de356aa32113f4f 40.91MiB
+      gcr.io/run-ai-prod/grafana sha256:a2a5b8a99f3dd03b44dd6fe7d49c55913f55e913d8baa5928f67ef128ca85f8a 40.91MiB
+    manifests:
+      sha256:4f14680cc32386d967add2a894f1bed834e4e8747b9301aecfb8fbad9b2c0d73
+      sha256:7c1d3b576a79a82ea4deaea480a2f1505c4f6e9e58d36bff96c3ad66fa0fb29d
+      sha256:98deba1b1f08c070ee3e63e922fb652213b1658eeeced8126c48fa749b4f84f4
+      sha256:b91d1a366c73111558f795cc37e3c97e9137ebdba6f0b0b0cd1d6850221f9b0f
+      sha256:bb71a8f1c0ac5bb2fedd1a5a9dd54678503c4c886bf43b8ec9c10987c36316d3
+      sha256:4f14680cc32386d967add2a894f1bed834e4e8747b9301aecfb8fbad9b2c0d73 -> 2.15.13
+  run-ai-prod/identity-manager
+    blobs:
+      gcr.io/run-ai-prod/identity-manager sha256:532cdce967164ee53aeb235fe67392c4f6a42d574c107ca980f8e3be72437dc2 167B
+      gcr.io/run-ai-prod/identity-manager sha256:72e60e2ec93a2f479d45cc7f60026880c08727fc376934c2697039a93c529a5a 167B
+      gcr.io/run-ai-prod/identity-manager sha256:025633e4ef409f9033c1d8d38750337fe37b7f05ddcee04278d43c1ca8088838 1.377KiB
+      gcr.io/run-ai-prod/identity-manager sha256:a53994365648f091114c5a1fad49b08ee9ad5d3c24f03202c84951a36f02b0ab 1.377KiB
+      gcr.io/run-ai-prod/identity-manager sha256:c0421ec57b5915b1ed463ab3f0697097580c5817b8805c86b99f9c8b960f5daa 6.661KiB
+      gcr.io/run-ai-prod/identity-manager sha256:b978f501e23a7cd7cc057fab2a21b1e6f4fc6a6a778e787b60c6489a1e145fea 6.665KiB
+      gcr.io/run-ai-prod/identity-manager sha256:64dc3795801b5f4ba3201b39005180b48b955cfe7cafe53d6448b2ab709a216f 9.018MiB
+      gcr.io/run-ai-prod/identity-manager sha256:e3649b5f99e0fcf52b3d19c3b201484e78f19873fb98a5b5a4b3a4d64c75ae78 35.9MiB
+      gcr.io/run-ai-prod/identity-manager sha256:87e3ab05d9a4afadab5e2fe35fa8150a7a01c25ac51130a933b585d3dfa0f05c 37.51MiB
+    manifests:
+      sha256:54b01f75fe61d463732b6bc32628ba3b06ddb185df0588cb0739cea0b4ab55f8
+      sha256:5c0438235c0273f86a6e95bdeec1fe797568d9982c5cf0329f30c157e0feca9a
+      sha256:68368f8348af0d0613a2ce189ace080caad8b7fb87a69a9f674c93b7d2b13388
+      sha256:80a165b95305b787a41cfa0719e475000750a6d21eb5072e270a07f1403f84ec
+      sha256:d78a817c3c4bee48999f8f007cfe4688c338e06d1fca773453e21b393a15f158
+      sha256:68368f8348af0d0613a2ce189ace080caad8b7fb87a69a9f674c93b7d2b13388 -> 2.15.13
+  run-ai-prod/k8s-objects-tracker
+    blobs:
+      gcr.io/run-ai-prod/k8s-objects-tracker sha256:0ea848f296cfdc1ea2213755fead790da291640906601806ce6edd50696b6ecd 167B
+      gcr.io/run-ai-prod/k8s-objects-tracker sha256:6fa8351c7ca37807ce773f30e136e47719e6fc0349b8232fcf96e839401e8033 167B
+      gcr.io/run-ai-prod/k8s-objects-tracker sha256:040513d68e5c16bac5ee567fd47d58dc154cc0451bbb18736d3927a84e944e6d 229B
+      gcr.io/run-ai-prod/k8s-objects-tracker sha256:2528efb96e3e5f47448793b918ca5de5785c0d4dfeb27f99f06cb74a318d13f7 403B
+      gcr.io/run-ai-prod/k8s-objects-tracker sha256:00f6601ee7ec292e085645f3e74709b0146a7c409297c069c29b52b73e1373e3 1.381KiB
+      gcr.io/run-ai-prod/k8s-objects-tracker sha256:612b417b383647d1668938491eebc0d6e12fbe632d8f9b13d13b14b6d84aa8b7 1.381KiB
+      gcr.io/run-ai-prod/k8s-objects-tracker sha256:643e6921030df492e792571349329620a172386cd892fc31726906df1f8cff61 7.281KiB
+      gcr.io/run-ai-prod/k8s-objects-tracker sha256:47e15b33f5d5c452e85f1b0a3f29ef8af2d526e2cafa99eabdf3a2a789dd684a 7.285KiB
+      gcr.io/run-ai-prod/k8s-objects-tracker sha256:52fa89d76789c67cc4fbde7fa32cacbeeab425eef45d04bfd563e8f7fc59e7c0 10.83MiB
+      gcr.io/run-ai-prod/k8s-objects-tracker sha256:e3649b5f99e0fcf52b3d19c3b201484e78f19873fb98a5b5a4b3a4d64c75ae78 35.9MiB
+      gcr.io/run-ai-prod/k8s-objects-tracker sha256:87e3ab05d9a4afadab5e2fe35fa8150a7a01c25ac51130a933b585d3dfa0f05c 37.51MiB
+    manifests:
+      sha256:5db23e9874184692c9a5f39952893308fc0ed822073386085631aa535148b43d
+      sha256:62668c69c27009e8662bff47c29c314a40e7f0b1f36ec5b6324c6ba0e5f51ee3
+      sha256:98bcac082a4292551ee30d73276553e7fe7b9a7266e3d544b90e403f35085a03
+      sha256:e2e580b4c6be4dc3bf4b971d1016d85fae930ae55c285151ab0258506d27f36c
+      sha256:eee0ca9bd7dd1fbee6674b9d436ca90d76768d6f9be2b295ff24d07a503b6eda
+      sha256:62668c69c27009e8662bff47c29c314a40e7f0b1f36ec5b6324c6ba0e5f51ee3 -> 2.15.13
+  run-ai-prod/keycloak
+    blobs:
+      gcr.io/run-ai-prod/keycloak sha256:6244c782adc9cad9a3536971c63b644b1bab7de01eabc9f13739aa340c5579eb 167B
+      gcr.io/run-ai-prod/keycloak sha256:71c4d75dd6ac5d9c4d6c7f0fb350fc55501f18b4e4d51894e70948ce44e33e45 167B
+      gcr.io/run-ai-prod/keycloak sha256:8853a16b75237aa6964955936ad16b60b41f35f9dbd5586f682c62ec36a8f472 1.493KiB
+      gcr.io/run-ai-prod/keycloak sha256:bf0b58b0ec74af80bec4e2750f495d26a3f190c684eb14e4923abb52fd7511b8 1.493KiB
+      gcr.io/run-ai-prod/keycloak sha256:00a71543e0d3fd08b317dc51e1daaf0d69c8828c60f1da87c4ee299bdd5d851e 2.967KiB
+      gcr.io/run-ai-prod/keycloak sha256:6ee4457125009fcc3ddfed4bd10f555ad548d9be3e0fcd96d4a467f55de67b33 2.967KiB
+      gcr.io/run-ai-prod/keycloak sha256:130d561b6ba44e97daaa36ddec1acf0e3e1298c6c2736b6c5a841392e13566df 8.902KiB
+      gcr.io/run-ai-prod/keycloak sha256:cc9ed438f8e2aaa394668e222e520ae80013e7c54a10a08fce9beaf471d80386 8.904KiB
+      gcr.io/run-ai-prod/keycloak sha256:c1b36d91d6174a7a71410eef36fe076f324fd9bf847dd4aa0ae299f09e6670e0 13.49KiB
+      gcr.io/run-ai-prod/keycloak sha256:024c07017274ad276b98df2764189a9f7f950f7bc5c9777c2746b1c4d40dbe29 13.49KiB
+      gcr.io/run-ai-prod/keycloak sha256:b065951835249d55be1ba85890dd2f7a5334ed2bb4e26b3b85614912379b984a 202.4KiB
+      gcr.io/run-ai-prod/keycloak sha256:65eb8e96122b40ea48a869d8496fce3d3ff430f4af1c12ce45639f65332c7fa7 202.4KiB
+      gcr.io/run-ai-prod/keycloak sha256:8a12692a2da21f8c2d855a509274f653e491674d68fcf87a795a673c2d09e835 36.15MiB
+      gcr.io/run-ai-prod/keycloak sha256:45824aff5e55624a3fbe92ed63343dc258c95f26f76528e695fdfeaa23ce028e 37.78MiB
+      gcr.io/run-ai-prod/keycloak sha256:a8362dc6ebac3b1ba9bfbdc1f89ad85cf83c9a02e9df536196fbf8499fe95ccd 83.32MiB
+      gcr.io/run-ai-prod/keycloak sha256:ab28744d525ee549abe36a8b0d0bb506bb6a9bc18508450ef4c972ac6194a2bb 83.86MiB
+      gcr.io/run-ai-prod/keycloak sha256:670248e54f979ebe4f4e015ba30a09f364dbe5c56f66c05640bb053b03015a29 156.4MiB
+      gcr.io/run-ai-prod/keycloak sha256:f7873bb6c0bd5b66a9670447b95dd28b04e769f53d778356fccbd19c01f77751 156.4MiB
+    manifests:
+      sha256:1f8e5a20a603440af3c158c8ec54897eefb797a27fefd2d86117cdf5b0ecfa3f
+      sha256:62addcbf07c33596bf741078185938a064a075d6ee300a19648de2ad29284f7b
+      sha256:6e903f3ce908c34461ecc673ce6ad7fff38fd53eafb3eec3eead9ec3138463de
+      sha256:9df1c9cbdfb95dde34bb84f360eb46e9d321f594c5a06b9be5900cd2bb58ba57
+      sha256:a4c3d2a53e1672b57c8c4e6f7db240230e5b9692d4e858df727b33f80bad7076
+      sha256:6e903f3ce908c34461ecc673ce6ad7fff38fd53eafb3eec3eead9ec3138463de -> 2.15.13
+  run-ai-prod/policy-service
+    blobs:
+      gcr.io/run-ai-prod/policy-service sha256:b896540bb2343cece59a7280863bb0796e51c1f9f26de6cff23fcca23a1a102b 167B
+      gcr.io/run-ai-prod/policy-service sha256:cd8edd263f321af61291bfe0ee7a057577ac3fd47bfe4bc27a4b3ba52c8a1ffe 167B
+      gcr.io/run-ai-prod/policy-service sha256:9c4d8eb8a9c73e8fdbd91f394230a5157976746339e5a9c349265f49f35d0313 1.373KiB
+      gcr.io/run-ai-prod/policy-service sha256:c0cc0d9eb629155939dd24e8d6a16c9225b71820207cff205e066b19f42e41e7 1.373KiB
+      gcr.io/run-ai-prod/policy-service sha256:1a99908b4c8452b595e31f059b0aecb8821b327bfc47f5c241f831187e87e4df 2.132KiB
+      gcr.io/run-ai-prod/policy-service sha256:d97e09402a77944f3ecf5f8692c1a14abce57a50bf84834c67bb5ec906e9566b 7.024KiB
+      gcr.io/run-ai-prod/policy-service sha256:72dfbcbe79b10ed568b1b77816cfbd649724de1c048b369c686e6aac93c5b380 7.028KiB
+      gcr.io/run-ai-prod/policy-service sha256:d65f8cb584762e96cf923ecd9b96b89814bab47650ba3e96809c64ca95e34177 25.78MiB
+      gcr.io/run-ai-prod/policy-service sha256:e3649b5f99e0fcf52b3d19c3b201484e78f19873fb98a5b5a4b3a4d64c75ae78 35.9MiB
+      gcr.io/run-ai-prod/policy-service sha256:87e3ab05d9a4afadab5e2fe35fa8150a7a01c25ac51130a933b585d3dfa0f05c 37.51MiB
+    manifests:
+      sha256:07d2a0528b589c5ecdc3d3ae1668dc94b84a0ac579f56e5378587ae70349002d
+      sha256:4f41a6988ccbb8f701f9f538c61c433c4f3d39f2ccac2675eabe1869753a573c
+      sha256:7006836a753b916eafa3a440b940228fd24fda106c3ca6e3df45ac3e5591828b
+      sha256:7bdf41f73d5a8f6dfd31bacf94eb20d430ccf73d86c7599ecb32312f2c25a805
+      sha256:86490f48c629046e2b3fa4c3c065d15fcd1201130ce25e1bf3fdcdcf5ec273b6
+      sha256:07d2a0528b589c5ecdc3d3ae1668dc94b84a0ac579f56e5378587ae70349002d -> 2.15.13
+  run-ai-prod/postgresql-client
+    blobs:
+      gcr.io/run-ai-prod/postgresql-client sha256:66e109e39e095ab8d1d1af936d9892d01c555a76feef3e60a778e24211dc3fbc 167B
+      gcr.io/run-ai-prod/postgresql-client sha256:c44e1cb050236ba132c63b45416537b4566777abbb9aa210301bc7c5c26b62a3 167B
+      gcr.io/run-ai-prod/postgresql-client sha256:8a605e6e302f14aa1c1048c00ea4a4359aad860785a8cccb7b5208a5f9ca4fb4 172B
+      gcr.io/run-ai-prod/postgresql-client sha256:b078238c2370f8eca88a8f4b7dc58e0e3faca7f700575ad5417e479f76d2df07 174B
+      gcr.io/run-ai-prod/postgresql-client sha256:365ca594bb20cb15fdea10cde09eae5edc39c4272488d56c8dbc21a9b452aded 1.113KiB
+      gcr.io/run-ai-prod/postgresql-client sha256:9704a12e0a3fda1343f4697d0ab6ab350f7d23395b35e94bfbc21136c94a6d20 1.114KiB
+      gcr.io/run-ai-prod/postgresql-client sha256:7c10a4c820076c14dfd6e8342831b23075186a8c1ec420f1c8bbd0db24422d17 1.371KiB
+      gcr.io/run-ai-prod/postgresql-client sha256:94f92d8f0e4607d8b865b15dc589ddd0d07801d412274097439f7678005f779c 1.371KiB
+      gcr.io/run-ai-prod/postgresql-client sha256:b4e5a44f5f20f54a01648c78049cfacd2554e20e3ca0fad6165f42f1e6a20de7 7.529KiB
+      gcr.io/run-ai-prod/postgresql-client sha256:002ab2788df0e9c62be52831da3da5fad27c0c2812c0b2e27c2fb801decd7895 7.536KiB
+      gcr.io/run-ai-prod/postgresql-client sha256:97b8df080d015e7dbb3f1a6c9e965fa4219d525f480b90a49951fa2467c4d26d 35.35MiB
+      gcr.io/run-ai-prod/postgresql-client sha256:bb97483784463225e9281e77ef2294be0d2ba3dfbf27f54d67c95cef5b7d4e9b 38.64MiB
+      gcr.io/run-ai-prod/postgresql-client sha256:c4974ff0e0ae81144d032c192e477f3a72353d65660e2270240621cdc22e7b55 73.27MiB
+      gcr.io/run-ai-prod/postgresql-client sha256:d66a972c08964d487e0b43062210ac00ce3dca3fe569ac665c4324ea6522507d 75.11MiB
+    manifests:
+      sha256:0bb4ba2a374dbc23969a97431f18e794c135544de20f5b455a2f2a58c864b3df
+      sha256:1db3165b2a35e24d23088f36355bc414835c970a5d9c494255796cd13700f87a
+      sha256:5c36a4574e892079f967858d6c92e273904b1d6bc023b4dee80866f2c9ec8beb
+      sha256:621213249f522e8e7522eeaf2b176dd6b442529dbacfebeaaea061dc4bd518e0
+      sha256:8bcb5d5b035ec97a2ba18795428880adb51723476a00721727ccdb37441c3b3b
+      sha256:5c36a4574e892079f967858d6c92e273904b1d6bc023b4dee80866f2c9ec8beb -> 2.15.13
+  run-ai-prod/redoc
+    blobs:
+      gcr.io/run-ai-prod/redoc sha256:332d0140479292558289bf61ac63d7315572f081d007c6161b0de7ad612496df 167B
+      gcr.io/run-ai-prod/redoc sha256:b2079c33b443c0b85b904fb5129a7936defead6c2852a01df30c4b99b89bbe2d 167B
+      gcr.io/run-ai-prod/redoc sha256:4e6f462c8a6979f3030c3fb412b6005166b4d9eb30c8ef00d5b5758399d9d5cf 369B
+      gcr.io/run-ai-prod/redoc sha256:1fb28e0782405498e456397e2480b5de8628c4f7d9659b7c2bdad3fbaa268f8e 371B
+      gcr.io/run-ai-prod/redoc sha256:96215def0190f497a7c2f4585689927fd727eb6dcd9eb505c023ce9d12a24f76 391B
+      gcr.io/run-ai-prod/redoc sha256:2633dad1b99f6513c768d33943a02595185e11aecc84f5b3adeca7a0e424d3d3 393B
+      gcr.io/run-ai-prod/redoc sha256:34ebd991552040c3da0467eb15a6875a330e668759523191b09b57bb6772cb0d 596B
+      gcr.io/run-ai-prod/redoc sha256:b1f04c72f4f1d946084c6aa42509b43dff66923756d2adcb51fc721896e869c4 601B
+      gcr.io/run-ai-prod/redoc sha256:da9c2e764c5b41e0bbfc9eb73ac5b2b59da2bdf783bd922fc0bd03619eec5377 624B
+      gcr.io/run-ai-prod/redoc sha256:54b19e12c655c874b68e76b8b3ef3ee251c66d98b6958e5e317019bcd96e7b85 626B
+      gcr.io/run-ai-prod/redoc sha256:12f8b551981bb7460c8dd195d33ccb3fb551bc71c2342610cd38bbb1b043a440 847B
+      gcr.io/run-ai-prod/redoc sha256:3ad53bcac38ca6846f38566ffda6b5f1a1a47fb735fa636a9fb545b6d6f8c0c2 849B
+      gcr.io/run-ai-prod/redoc sha256:1c2214f9937c53ac881d0b534a439de6a6c7b5e76fc16f8f216330dd4aa4e7a7 958B
+      gcr.io/run-ai-prod/redoc sha256:ade17ad21ef4248e95654886a2cb2156dec3e40862e33ecc7d8ef64cee3c8a9b 958B
+      gcr.io/run-ai-prod/redoc sha256:1324d9977cd29dcc7f79727f27e22624a72074183dff494ca95d1248ae726f77 1.186KiB
+      gcr.io/run-ai-prod/redoc sha256:94be7e780731a47d606e156cf15a95564c8bea30635376a099eb6925b4ab0bb8 1.187KiB
+      gcr.io/run-ai-prod/redoc sha256:80a9a4609f0e3c9ab517f87d1367531543ea0fe874f6ff452b65c272919f3cbd 1.329KiB
+      gcr.io/run-ai-prod/redoc sha256:ecf53028418f73354f5f14d55ab6f1f5f1b3ed45e06300f377f793859041434e 1.329KiB
+      gcr.io/run-ai-prod/redoc sha256:1b9b96da2c74ef457a717b7c55c425ba4a57827d50ccec68105b79c0786a54a4 1.368KiB
+      gcr.io/run-ai-prod/redoc sha256:b42a2f288f4d6e0d106f78770ea2aeccd31fe259ea5c5555036d6c9df28b3063 1.371KiB
+      gcr.io/run-ai-prod/redoc sha256:f7c4074d1aebce1b09726ba2834da5bd5387ab9a230b3bae54601b1c17a8d8f8 7.782KiB
+      gcr.io/run-ai-prod/redoc sha256:44b51082220984ae6e8f870e6a4d459f5ad76360d0c3d1b0eec97aeb1a58cd5e 7.79KiB
+      gcr.io/run-ai-prod/redoc sha256:f0bbb096b5f629da543e8d1432696d15b84b11779ca09afe2ef02ca29d5a587d 17.3KiB
+      gcr.io/run-ai-prod/redoc sha256:190c1221001bc737f0a81c695120dd6272340c0a19289fb232dcd90545a8bc67 17.3KiB
+      gcr.io/run-ai-prod/redoc sha256:af479a62c46ba6aa83c0cbdafdcfa304b84df34080c5cb37144b816a67aff954 17.3KiB
+      gcr.io/run-ai-prod/redoc sha256:b7777d035609f7215e5f4f6a65d007ed40994552267e17ecd84119c2da42ddb6 17.3KiB
+      gcr.io/run-ai-prod/redoc sha256:394a55c2d5e024048bc61e11f34c553b45c94ced0ab4e05f68d5a59452c14c42 64.06KiB
+      gcr.io/run-ai-prod/redoc sha256:cf05310c93da59337da0a055e27f369fbe37e6a6d01fcd3730915ac11ee4d6ef 64.06KiB
+      gcr.io/run-ai-prod/redoc sha256:89842ebba20e94b4d69176055114b9e94a4fdcbd31630d3a7e090952a27f137b 1.101MiB
+      gcr.io/run-ai-prod/redoc sha256:f8fc71edf9a18a7f9e1d2a169bb9b8828ffaeb7d53780e52a4fc494ae4313d88 1.101MiB
+      gcr.io/run-ai-prod/redoc sha256:e6742ae0f218cbef05d91c7ef077919f75da879d6fc43d1de401678ed4537e82 1.113MiB
+      gcr.io/run-ai-prod/redoc sha256:8b0ce847203d30da19359305ce44d81cac0c94de4a51e83b92c9b8d4afdb734f 1.113MiB
+      gcr.io/run-ai-prod/redoc sha256:67bd7b24fa55848f736a3a652db18d85e73b79c1edb9adf7f71db1c858a8a7c8 1.193MiB
+      gcr.io/run-ai-prod/redoc sha256:80ce8283a4e07afba2e0a559c563e9d15da0ca9a22d4741b3f485cbd2c3be6bb 1.193MiB
+      gcr.io/run-ai-prod/redoc sha256:579b34f0a95bb83b3acd6b3249ddc52c3d80f5c84b13c944e9e324feb86dd329 3.177MiB
+      gcr.io/run-ai-prod/redoc sha256:96526aa774ef0126ad0fe9e9a95764c5fc37f409ab9e97021e7b4775d82bf6fa 3.244MiB
+      gcr.io/run-ai-prod/redoc sha256:d11a451e6399fe2b878dc222bdad9735775678e47847b0c467f84643f581191f 3.701MiB
+      gcr.io/run-ai-prod/redoc sha256:740091335c742882a72f93c12141a4664bcc078b1fc4369e0eea4ceab7dd93ee 3.781MiB
+      gcr.io/run-ai-prod/redoc sha256:84c2ace09e04b7e1408ea670cdf77826c537513a120d4049f72bdade2759ae8c 11.75MiB
+      gcr.io/run-ai-prod/redoc sha256:153aef7ca07feea4e2b5a91a781c37b2a2e1eb60ca4da845fa067eee26f43d7d 12.07MiB
+    manifests:
+      sha256:4715c77b9de147f6da35b51bfe327c5d1d1003bf31fde8016d6585b3aca251e2
+      sha256:67e9123da765ba0f533c4655f7813c2f8bd2bda381f83860eea19b1b81effb96
+      sha256:88b26ca278d537c0a72cc7c741f0250cce40e5dd7be6bf5d5122070d255e5ca9
+      sha256:9c230dd9f5eaead45a934b0ba961d719b82dbddfb6d0d5a8bd8f37141beba675
+      sha256:e3306014380c9fc423653a41cf8f65f115fae12c0359119780f3a131ca0e4835
+      sha256:e3306014380c9fc423653a41cf8f65f115fae12c0359119780f3a131ca0e4835 -> 2.15.13
+  run-ai-prod/tenants-manager
+    blobs:
+      gcr.io/run-ai-prod/tenants-manager sha256:755ca87dcc63b2801805f6c46dc19ce0e9a9017cf1de808562e725afedc3cd8a 167B
+      gcr.io/run-ai-prod/tenants-manager sha256:90f7b337ee5b4558855d9b3993287ef26842a2d3b31e1f935b8c70905eb05c8c 167B
+      gcr.io/run-ai-prod/tenants-manager sha256:74beb7d7d1d03e3e5e0e2a2724bc54a0397b410b4272462bb4f17ed30385e945 1.373KiB
+      gcr.io/run-ai-prod/tenants-manager sha256:b8ef834bfad1f7898a770a11fe0fee7cdff8796086c9ed4bd4d36cf5a411310a 1.373KiB
+      gcr.io/run-ai-prod/tenants-manager sha256:105071bbb4f6a363d4a24ea21feb6b45faa75fa6cfa0809c845f1757583a7ce1 6.658KiB
+      gcr.io/run-ai-prod/tenants-manager sha256:ffe772a763a8b2bced966e2670a57ccbe4538246612371d5289b0b74b35f521d 6.662KiB
+      gcr.io/run-ai-prod/tenants-manager sha256:7d1e2aef67189e4a0806572a73828f5c39b20e8fcc1f62c5ba12f173f84818dd 17.28MiB
+      gcr.io/run-ai-prod/tenants-manager sha256:e3649b5f99e0fcf52b3d19c3b201484e78f19873fb98a5b5a4b3a4d64c75ae78 35.9MiB
+      gcr.io/run-ai-prod/tenants-manager sha256:87e3ab05d9a4afadab5e2fe35fa8150a7a01c25ac51130a933b585d3dfa0f05c 37.51MiB
+    manifests:
+      sha256:20aa34a20b8a831bb456f7250f43c7a683b23ef5f6c6266f812afe24e24e7056
+      sha256:5958b4601f56a20a13aa3db91d15b235618a54dd52d36cb61ec9a4f40fd2b419
+      sha256:606348b91aa529eef51728e4bdda6c2e0c72b435bb69db5811419ea6d0fccc73
+      sha256:991963356f6fc8682ac220019cf2c10e44969d0a637742d374adc4bc2b45ed60
+      sha256:cbdd099233b677340295a3dc5b2a7630f46d0b0a0df338e2205bab9f805a9d4c
+      sha256:5958b4601f56a20a13aa3db91d15b235618a54dd52d36cb61ec9a4f40fd2b419 -> 2.15.13
+  run-ai-prod/traefik
+    blobs:
+      gcr.io/run-ai-prod/traefik sha256:be2d236768e7ca241f9a44d3b2c33d801aaeae97a0510137f70d2a4db99d5fef 167B
+      gcr.io/run-ai-prod/traefik sha256:cebd0cc0729b373b9c2eb39e3410e3bce421334989110c8cbc53c1c722cdbda4 167B
+      gcr.io/run-ai-prod/traefik sha256:043f01742e9c079f76aa4524a7f55f153a6d0ced946663371b8e157c333c8afa 367B
+      gcr.io/run-ai-prod/traefik sha256:cea349f5f8a775924119f640676ef0b55a652143545b75c966e52dccc0b25a3b 368B
+      gcr.io/run-ai-prod/traefik sha256:008ae5f8ae942787bc1cd9eb7edcd2b761a76f6f83909af54215f9e9254f93d9 1.176KiB
+      gcr.io/run-ai-prod/traefik sha256:5c9d1f1b6ba212a81d8c2df8de0ade8115fdf5fb1e85154c174b7d918886276a 1.176KiB
+      gcr.io/run-ai-prod/traefik sha256:224677f17435af619de765b7ffb4cac698d3306e903ff6bdf13d73b031bd0d07 1.327KiB
+      gcr.io/run-ai-prod/traefik sha256:590180fa83ea425981177df8cdcb29086a208afe67ed729f362f7705bdfa65e9 1.327KiB
+      gcr.io/run-ai-prod/traefik sha256:7a721e70b3cc2044e44cd21e46dc184d2d8a0c0587d3c2b00ee8e65acbc8c976 3.516KiB
+      gcr.io/run-ai-prod/traefik sha256:713d30b6c17a66e2f2df016291b97c446df4f228d73ea21f06c2110de6665b00 3.519KiB
+      gcr.io/run-ai-prod/traefik sha256:eeed05813ad6dab5b7d0156cab3e4976cd245786d76cc19071687bf8232d0683 607.7KiB
+      gcr.io/run-ai-prod/traefik sha256:38b59e422640e276d23497c5544f7d98d0d1a6eed46644029a75b232afc0e4dc 609.9KiB
+      gcr.io/run-ai-prod/traefik sha256:d0cbbb1b4cfa77c5b72bbfe39c5acc17c94db5ec56873cbabb5b938f9b6729fe 2.95MiB
+      gcr.io/run-ai-prod/traefik sha256:4cdf01df47bce97772fd3947f7d4c01172fe73c54b9688f5c766f2ad1887198d 2.95MiB
+      gcr.io/run-ai-prod/traefik sha256:579b34f0a95bb83b3acd6b3249ddc52c3d80f5c84b13c944e9e324feb86dd329 3.177MiB
+      gcr.io/run-ai-prod/traefik sha256:96526aa774ef0126ad0fe9e9a95764c5fc37f409ab9e97021e7b4775d82bf6fa 3.244MiB
+      gcr.io/run-ai-prod/traefik sha256:27163b2644a7f56bc248f42f0002375480295665c372ec73a52045dbd137a1a0 34.49MiB
+      gcr.io/run-ai-prod/traefik sha256:86ea8083d7bce4dd990c2ea838f2c04ab7fcc56a861c000ae0094825b6912661 37.3MiB
+    manifests:
+      sha256:33f332e3e6c3caab2afc8ae9c8d691b85063c1faca27d051796e42c981b3a4c5
+      sha256:ace71208f94919efeddf36109ec12d51805caafae7dd4bbfdec1b11a9fc07703
+      sha256:c39bd66a8e9f93e30646449f154c320da6f4341f456d78dfbd45550b0dc3bd0e
+      sha256:edb5704bf498f48c58fc28dc99c4d4c2ec90bea470d0aac7ce6f519eb187b654
+      sha256:fe7e90ae430ed2ddafd4c8e409cee8d2111f566e9e2acdd2c3505550306f9494
+      sha256:ace71208f94919efeddf36109ec12d51805caafae7dd4bbfdec1b11a9fc07703 -> 2.15.13
+  stats: shared=8 unique=257 size=2.768GiB ratio=0.89
+
+phase 0:
+   bitnami/minio                 blobs=4  mounts=0 manifests=4 shared=0
+   bitnami/redis-exporter        blobs=4  mounts=0 manifests=4 shared=0
+   run-ai-prod/db-mechanic       blobs=15 mounts=0 manifests=6 shared=0
+   run-ai-prod/keycloak          blobs=18 mounts=0 manifests=6 shared=0
+   run-ai-prod/grafana           blobs=28 mounts=0 manifests=6 shared=0
+   run-ai-prod/busybox           blobs=8  mounts=0 manifests=6 shared=0
+   bitnami/thanos                blobs=4  mounts=0 manifests=4 shared=0
+   bitnami/redis                 blobs=4  mounts=0 manifests=4 shared=0
+   bitnami/postgresql            blobs=3  mounts=0 manifests=1 shared=0
+   run-ai-prod/frontend          blobs=16 mounts=0 manifests=6 shared=0
+   run-ai-prod/postgresql-client blobs=14 mounts=0 manifests=6 shared=2
+   run-ai-prod/policy-service    blobs=10 mounts=0 manifests=6 shared=2
+   run-ai-prod/redoc             blobs=40 mounts=0 manifests=6 shared=2
+   run-ai-prod/engine-operator   blobs=9  mounts=0 manifests=6 shared=2
+phase 1:
+   run-ai-prod/backend             blobs=18 mounts=2 manifests=6 shared=2
+   run-ai-prod/traefik             blobs=18 mounts=2 manifests=6 shared=2
+   run-ai-prod/authorization       blobs=11 mounts=2 manifests=6 shared=2
+   run-ai-prod/cluster-service     blobs=11 mounts=2 manifests=6 shared=2
+   run-ai-prod/identity-manager    blobs=9  mounts=2 manifests=6 shared=2
+   run-ai-prod/k8s-objects-tracker blobs=11 mounts=2 manifests=6 shared=2
+   run-ai-prod/assets-service      blobs=10 mounts=2 manifests=6 shared=2
+   run-ai-prod/go-operator         blobs=9  mounts=2 manifests=6 shared=2
+   run-ai-prod/tenants-manager     blobs=9  mounts=2 manifests=6 shared=2
+
+info: Planning completed in 1.12s
+info: Dry run complete
+Writing image mapping to scratch/mirror_media/oc-mirror-workspace/mapping.txt

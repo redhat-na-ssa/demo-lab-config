@@ -88,14 +88,13 @@ ocp_mirror_get_pull_secret
 # =================================
 
 get_mapping(){
-  IMAGE_SET_FILE=${1:-components/imageset/imageset-config-ocp.yaml}
+  IMAGE_SET_FILE=${1:-components/imageset/imageset-config-ocp.yaml}  
+  FILE=$(basename -- "${IMAGE_SET_FILE%.yaml}").map
+  MAPPING=scratch/mirror_media/${FILE}
 
   oc mirror \
     -c "${IMAGE_SET_FILE}" \
-    --dry-run file://scratch/mirror_media
-  
-  FILE=$(basename -- "${IMAGE_SET_FILE%.yaml}").map
-  MAPPING=scratch/mirror_media/${FILE}
+    --dry-run file://scratch/mirror_media > "${MAPPING%.map}-output.txt" 2>&1
 
   [ -e "scratch/mirror_media/oc-mirror-workspace/mapping.txt" ] || return
   cp scratch/mirror_media/oc-mirror-workspace/mapping.txt "${MAPPING}"

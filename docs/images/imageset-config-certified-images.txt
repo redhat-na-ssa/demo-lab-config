@@ -3,6 +3,7 @@ gcr.io
 ghcr.io
 nvcr.io
 registry.connect.redhat.com
+registry.redhat.io
 ============== Images ==============
 gcr.io/kubebuilder/kube-rbac-proxy:ea363ada
 ghcr.io/k8snetworkplumbingwg/sriov-network-device-plugin:bea0b1e7
@@ -25,5 +26,8 @@ nvcr.io/nvidia/k8s/dcgm-exporter:26e61a0c
 nvcr.io/nvidia/k8s-device-plugin:ce569b8f
 nvcr.io/nvidia/kubevirt-gpu-device-plugin:e63f95a2
 nvcr.io/nvidia/mellanox/doca-driver:55bf9ee
+registry.connect.redhat.com/hashicorp/vault-secrets-operator:35aadf9
+registry.connect.redhat.com/hashicorp/vault-secrets-operator-bundle:8c1d5929
 registry.connect.redhat.com/nvidia/gpu-operator-bundle:753d66fc
 registry.connect.redhat.com/nvidia-network-operator/nvidia-network-operator:12f9e6fb
+registry.redhat.io/openshift4/ose-kube-rbac-proxy:894ca3e3
