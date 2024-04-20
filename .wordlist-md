@@ -16,6 +16,7 @@ decrypt
 defaultRoute
 dir
 emptyDir
+entrypoint
 github
 gitops
 GitOps
@@ -36,6 +37,7 @@ kustomize
 Kustomize
 localhost
 macos
+macOS
 managementState
 MinIO
 MLflow
@@ -60,6 +62,7 @@ pvc
 pwd
 redhat
 repo
+rhel
 rhu
 rol
 RollingUpdate
