@@ -35,6 +35,14 @@ power_on(){
   power_action On
 }
 
+power_off_graceful(){
+  power_action GracefulShutdown
+}
+
 power_off(){
   power_action ForceOff
+}
+
+power_restart_graceful(){
+  power_action GracefulRestart
 }
