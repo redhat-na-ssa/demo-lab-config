@@ -9,7 +9,7 @@ power_action(){
 
   for DRAC in ${NODES[*]}
   do
-    echo curl -si -u "${LOGIN}" \
+    curl -si -u "${LOGIN}" \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -d '{"Action":"Reset","ResetType":"'"${ACTION}"'"}' \
