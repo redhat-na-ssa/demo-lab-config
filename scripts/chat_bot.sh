@@ -6,10 +6,14 @@ ask_api(){
   MODEL=$(get_first_model)
   PROMPT=${1:-How long does it take to install OpenShift}
 
-
+  echo "PROMPT: ${PROMPT}"
+  
+  echo "DEBUG: ON"
+  set -x
   curl -s "${ENDPOINT}" \
     -H 'Content-Type: application/json' \
     -d $'{"model":'"${MODEL}"',"messages":[{"role":"user","content":"'"${PROMPT}"'"}]}'
+  set +x
 }
 
 get_first_model(){
