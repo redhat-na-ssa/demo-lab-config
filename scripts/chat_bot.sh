@@ -1,5 +1,8 @@
 #!/bin/bash
 
+ENDPOINT=${ENDPOINT:-https://test-llama2-autoscale-runai-llm-training1.apps.cluster1.sandbox284.opentlc.com}
+export ENDPOINT
+
 usage(){
   echo "usage:
   . scripts/chat_bot.sh
@@ -18,14 +21,13 @@ is_sourced(){
 }
 
 kludgebot_get_first_model(){
-  ENDPOINT='https://test-llama2-autoscale-runai-llm-training1.apps.cluster1.sandbox284.opentlc.com'
   curl -s "${ENDPOINT}/api/models" \
     -H 'Content-Type: application/json' \
     -d $'{"key": ""}' | jq .[0] | sed 's/ //g' | tr -d '\n'
 }
 
 ask_api(){
-  ENDPOINT='https://test-llama2-autoscale-runai-llm-training1.apps.cluster1.sandbox284.opentlc.com'
+
   MODEL='{"id":"NousResearch/Llama-2-7b-chat-hf","name":"NousResearch/Llama-2-7b-chat-hf"}'
   MESSAGE=${1:-How long does it take to install OpenShift}
   PROMPT='You are ChatGPT, a large language model trained by OpenAI. Follow the user instructions carefully. Respond using markdown.'
