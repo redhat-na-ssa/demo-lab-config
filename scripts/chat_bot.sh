@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ENDPOINT=${ENDPOINT:-https://test-llama2-autoscale-runai-llm-training1.apps.cluster1.sandbox284.opentlc.com}
+ENDPOINT=${ENDPOINT:-https://llama2-7b-2gpu2repl-runai-llm-training1.apps.cluster1.sandbox284.opentlc.com}
 export ENDPOINT
 
 usage(){
