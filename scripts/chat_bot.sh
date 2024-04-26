@@ -1,7 +1,8 @@
 #!/bin/bash
 
 usage(){
-  echo "usage: 
+  echo "usage:
+  . scripts/chat_bot.sh
   
   ask_api \"Your Question Here\"
   "
