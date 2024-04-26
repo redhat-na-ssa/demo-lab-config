@@ -15,7 +15,6 @@ ask_api(){
   # use jq if you got it
   which jq && MODEL=$(kludgebot_get_first_model)
 
-
   echo "
   ENDPOINT: ${ENDPOINT}
   MODEL: ${MODEL}
