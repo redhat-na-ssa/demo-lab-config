@@ -40,7 +40,7 @@ ask_api(){
   "
   
   set -x
-  curl -s "${ENDPOINT}/api/chat" \
+  curl -sk "${ENDPOINT}/api/chat" \
     -H 'Content-Type: application/json' \
     -d $'{"model":'"${MODEL}"',"messages":[{"role":"user","content":"'"${PROMPT}"'"}]}'
   set +x
