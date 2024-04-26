@@ -1,5 +1,21 @@
 #!/bin/bash
 
+usage(){
+  echo "usage: 
+  
+  ask_api \"Your Question Here\"
+  "
+}
+
+is_sourced(){
+  if [ -n "$ZSH_VERSION" ]; then
+      case $ZSH_EVAL_CONTEXT in *:file:*) return 0;; esac
+  else  # Add additional POSIX-compatible shell names here, if needed.
+      case ${0##*/} in dash|-dash|bash|-bash|ksh|-ksh|sh|-sh) return 0;; esac
+  fi
+  return 1  # NOT sourced.
+}
+
 kludgebot_get_first_model(){
   ENDPOINT='https://test-llama2-autoscale-runai-llm-training1.apps.cluster1.sandbox284.opentlc.com'
   curl -s "${ENDPOINT}/api/models" \
@@ -29,3 +45,5 @@ ask_api(){
     -d $'{"model":'"${MODEL}"',"messages":[{"role":"user","content":"'"${PROMPT}"'"}]}'
   set +x
 }
+
+is_sourced || usage
