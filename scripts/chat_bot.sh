@@ -29,7 +29,7 @@ ask_api(){
   PROMPT=${1:-How long does it take to install OpenShift}
 
   # use jq if you got it
-  which jq >/dev/null && MODEL=$(kludgebot_get_first_model)
+  which jq >/dev/null 2>&1 && MODEL=$(kludgebot_get_first_model)
 
   echo "
   ENDPOINT: ${ENDPOINT}
