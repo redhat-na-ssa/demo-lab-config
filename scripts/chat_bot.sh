@@ -9,8 +9,12 @@ kludgebot_get_first_model(){
 
 ask_api(){
   ENDPOINT='https://test-llama2-autoscale-runai-llm-training1.apps.cluster1.sandbox284.opentlc.com'
-  MODEL=$(kludgebot_get_first_model)
+  MODEL='{"id":"NousResearch/Llama-2-7b-chat-hf","name":"NousResearch/Llama-2-7b-chat-hf"}'
   PROMPT=${1:-How long does it take to install OpenShift}
+
+  # use jq if you got it
+  which jq && MODEL=$(kludgebot_get_first_model)
+
 
   echo "
   ENDPOINT: ${ENDPOINT}
