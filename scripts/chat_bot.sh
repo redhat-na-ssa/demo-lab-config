@@ -5,7 +5,7 @@ export ENDPOINT
 
 usage(){
   echo "usage:
-  . scripts/chat_bot.sh
+  . "${0}"
   
   ask_api \"Your Question Here\"
   "
