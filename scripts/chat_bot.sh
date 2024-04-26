@@ -35,15 +35,13 @@ ask_api(){
   ENDPOINT: ${ENDPOINT}
   MODEL: ${MODEL}
   PROMPT: ${PROMPT}
-  
-  DEBUG: ON
   "
   
-  set -x
+  # set -x
   curl -sk "${ENDPOINT}/api/chat" \
     -H 'Content-Type: application/json' \
     -d $'{"model":'"${MODEL}"',"messages":[{"role":"user","content":"'"${PROMPT}"'"}]}'
-  set +x
+  # set +x
 }
 
 is_sourced || usage
