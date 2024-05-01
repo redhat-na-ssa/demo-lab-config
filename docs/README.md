@@ -50,6 +50,7 @@ Operational Examples
 
 - [All for Disconnected](images/imageset-config-all-images.txt) - [[ImageSet Config](../components/imageset/imageset-config-all.yaml)]
 - [OpensShift Upgrade - 4.13 to 4.14 (Platform Only)](images/imageset-config-ocp-upgrade-images.txt) - [[ImageSet Config](../components/imageset/imageset-config-ocp-upgrade.yaml)]
+- [OpensShift Nvidia Operator Only](images/imageset-config-nvidia-only-images.txt) - [[ImageSet Config](../components/imageset/imageset-config-nvidia-only.yaml)]
 
 Grouped Components
 
