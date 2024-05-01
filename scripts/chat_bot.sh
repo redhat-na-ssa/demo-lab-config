@@ -5,7 +5,7 @@ export ENDPOINT
 
 usage(){
   echo "usage:
-  . "${0}"
+  . ${0}
   
   ask_api \"Your Question Here\"
   "
