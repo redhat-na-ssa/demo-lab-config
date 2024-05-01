@@ -17,6 +17,8 @@ mirror:
         - name: nfd
           channels:
             - name: stable
+    - catalog: 'registry.redhat.io/redhat/certified-operator-index:v4.13'
+      packages:
         # oc mirror list operators --catalog registry.redhat.io/redhat/certified-operator-index:v4.14 --package gpu-operator-certified --channel=stable
         - name: gpu-operator-certified
           channels:

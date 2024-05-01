@@ -43,8 +43,8 @@ download_oc(){
 }
 
 download_oc-mirror(){
-  BIN_VERSION=4.12
-  DOWNLOAD_URL=https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-${BIN_VERSION}/oc-mirror.tar.gz
+  BIN_VERSION=stable
+  DOWNLOAD_URL=https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${BIN_VERSION}/oc-mirror.tar.gz
   curl "${DOWNLOAD_URL}" -sL | tar zx -C "${BIN_PATH}/"
   chmod +x "${BIN_PATH}/oc-mirror"
 }
@@ -118,6 +118,8 @@ get_list_images_for_humans(){
 }
 
 main(){
+  get_mapping components/imageset/imageset-config-nvidia-only.yaml
+  # get_mapping components/imageset/imageset-config-mvp.yaml
   get_mapping components/imageset/imageset-config-all.yaml
   get_mapping components/imageset/imageset-config-ocp.yaml
   get_mapping components/imageset/imageset-config-ocp-upgrade.yaml
