@@ -1,0 +1,26 @@
+# red hat supported operators
+---
+apiVersion: mirror.openshift.io/v1alpha2
+kind: ImageSetConfiguration
+archiveSize: 4
+storageConfig:
+  local:
+    path: ./scratch/mirror_media
+  # registry:
+  #   imageURL: "localhost:5000"
+  #   skipTLS: false
+mirror:
+  operators:
+    - catalog: 'registry.redhat.io/redhat/redhat-operator-index:v4.13'
+      packages:
+        # oc mirror list operators --catalog registry.redhat.io/redhat/redhat-operator-index:v4.14 --package advanced-cluster-management --channel=release-2.10
+        - name: nfd
+          channels:
+            - name: stable
+        # oc mirror list operators --catalog registry.redhat.io/redhat/certified-operator-index:v4.14 --package gpu-operator-certified --channel=stable
+        - name: gpu-operator-certified
+          channels:
+            - name: 'v23.9'
+            - name: stable
+  # additionalImages:
+  # - name: registry.redhat.io/ubi8/ubi:latest
