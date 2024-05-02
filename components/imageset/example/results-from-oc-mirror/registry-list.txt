@@ -19,6 +19,7 @@
  registry.redhat.io/openshift-serverless-1
  registry.redhat.io/openshift-serverless-1-tech-preview
  registry.redhat.io/openshift-service-mesh
+ registry.redhat.io/openshift-update-service
  registry.redhat.io/rhacm2
  registry.redhat.io/rhel8
  registry.redhat.io/rhel9

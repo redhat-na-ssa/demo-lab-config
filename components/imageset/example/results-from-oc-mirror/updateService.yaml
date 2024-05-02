@@ -3,6 +3,6 @@ kind: UpdateService
 metadata:
   name: update-service-oc-mirror
 spec:
-  graphDataImage: registry-mirror.svc:5000/disconnected/openshift/graph-image@sha256:110e44d421be4e0e88e971d546fc1e86c1e5e23f590210d986bef73dc420f94a
+  graphDataImage: registry-mirror.svc:5000/disconnected/openshift/graph-image@sha256:c40984c7a878e86343557a163b8a1969b70b373c4e6559817e85bfe391f2a917
   releases: registry-mirror.svc:5000/disconnected/openshift/release-images
   replicas: 2
