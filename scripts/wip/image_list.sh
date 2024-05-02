@@ -117,7 +117,7 @@ get_list_images_for_humans(){
   sed 's#@sha256.*=file://.*:#:#' "${FILE}" | sort
 }
 
-main(){
+get_mapping_all(){
   get_mapping components/imageset/imageset-config-nvidia-only.yaml
   # get_mapping components/imageset/imageset-config-mvp.yaml
   get_mapping components/imageset/imageset-config-all.yaml
@@ -128,4 +128,4 @@ main(){
   get_mapping components/imageset/imageset-config-runai.yaml
 }
 
-main
+get_mapping_all

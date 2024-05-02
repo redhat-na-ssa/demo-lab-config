@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: mirror-redhat-operator-index
+  namespace: openshift-marketplace
+spec:
+  image: registry-mirror.svc:5000/disconnected/redhat/mirror-redhat-operator-index:v4.13.0.0
+  sourceType: grpc

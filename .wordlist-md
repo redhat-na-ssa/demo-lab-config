@@ -88,3 +88,9 @@ fc
 mv
 rw
 sha
+cmd
+dest
+http
+imageset
+svc
+tcp

@@ -5,9 +5,9 @@ kind: ImageSetConfiguration
 archiveSize: 4
 storageConfig:
   # local:
-  #   path: ./scratch/mirror_media
+  #   path: ./mirror_media
   registry:
-    imageURL: "nuc-00:5000/disconnected"
+    imageURL: "registry-mirror.svc:5000/disconnected"
     skipTLS: true
 mirror:
   platform:
