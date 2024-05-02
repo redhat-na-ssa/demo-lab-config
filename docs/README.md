@@ -85,6 +85,8 @@ d3025cdb95051ad1b992c4fc27784268d30bb0d80e375f2a2826a4bde8b50940  good_file
 68ea0127797450d105250d5d1e87fa04761cad4379c1d60918a2c8cd798a8dbd  nail_file
 ```
 
+Even though someone renamed `good_file` we can still verify that it is the `good_file` based on the hash. And we won't be tricked into thinking the `bad_file` is the `good_file`. This is the same for container images.
+
 ## ACM Links
 
 - <https://role.rhu.redhat.com/rol-rhu/app/courses/do480-2.4/pages/ch08s04>
