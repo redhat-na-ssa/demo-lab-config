@@ -16,7 +16,7 @@ mirror:
         # oc mirror list operators --catalog registry.redhat.io/redhat/certified-operator-index:v4.14 --package gpu-operator-certified --channel=stable
         - name: gpu-operator-certified
           channels:
-            - name: 'v23.9'
+            - name: 'v24.3.0'
             - name: stable
         # BUG: this operator has a reference to a missing image hash
         - name: nvidia-network-operator
