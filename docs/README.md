@@ -66,6 +66,25 @@ Regenerate the lists above into `scratch/mirror_media` using the following comma
 cp scratch/mirror_media/*images.txt docs/images/
 ```
 
+## Container Image Tags vs Digests
+
+```sh
+ls -l *_file
+-rw-r--r--. 1 cory cory 17416 May  1 19:09 bad_file
+-rw-r--r--. 1 cory cory    32    May  1 19:08 good_file
+
+sha256sum *_file
+d3025cdb95051ad1b992c4fc27784268d30bb0d80e375f2a2826a4bde8b50940  bad_file
+68ea0127797450d105250d5d1e87fa04761cad4379c1d60918a2c8cd798a8dbd  good_file
+
+mv good_file nail_file
+mv bad_file good_file
+
+sha256sum *_file
+d3025cdb95051ad1b992c4fc27784268d30bb0d80e375f2a2826a4bde8b50940  good_file
+68ea0127797450d105250d5d1e87fa04761cad4379c1d60918a2c8cd798a8dbd  nail_file
+```
+
 ## ACM Links
 
 - <https://role.rhu.redhat.com/rol-rhu/app/courses/do480-2.4/pages/ch08s04>
