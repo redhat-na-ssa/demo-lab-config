@@ -39,13 +39,13 @@ mirror:
           channels:
             - name: stable-5.9
             - name: stable
-        - name: kubernetes-nmstate-operator
-          channels:
-            - name: '4.13'
-            - name: stable
-        - name: kubevirt-hyperconverged
-          channels:
-            - name: stable
+        # - name: kubernetes-nmstate-operator
+        #   channels:
+        #     - name: '4.13'
+        #     - name: stable
+        # - name: kubevirt-hyperconverged
+        #   channels:
+        #     - name: stable
         - name: nfd
           channels:
             - name: stable

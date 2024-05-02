@@ -8,7 +8,7 @@ storageConfig:
     path: ./scratch/mirror_media
   # registry:
   #   imageURL: "localhost:5000"
-  #   skipTLS: false
+  #   skipTLS: true
 mirror:
   platform:
     architectures:
@@ -40,13 +40,6 @@ mirror:
           channels:
             - name: stable-5.9
             - name: stable
-        - name: kubernetes-nmstate-operator
-          channels:
-            - name: '4.13'
-            - name: stable
-        - name: kubevirt-hyperconverged
-          channels:
-            - name: stable
         - name: nfd
           channels:
             - name: stable
@@ -67,8 +60,8 @@ mirror:
         - name: rhacs-operator
           channels:
             - name: stable
-      # targetName: custom-ocp-index
-      # targetTag: v4.13.0.0
+      targetName: filtered-redhat-operator-index
+      targetTag: v4.13.0.0
     - catalog: 'registry.redhat.io/redhat/certified-operator-index:v4.13'
       packages:
         # oc mirror list operators --catalog registry.redhat.io/redhat/certified-operator-index:v4.14 --package gpu-operator-certified --channel=stable
@@ -76,20 +69,11 @@ mirror:
           channels:
             - name: 'v24.3'
             - name: stable
-        # BUG: this operator has a reference to a missing image hash
-        - name: nvidia-network-operator
+        - name: vault-secrets-operator
           channels:
-            - name: '24.1.1'
             - name: stable
-      # targetName: custom-ocp-index
-      # targetTag: v4.13.0.0
-  # KLUDGE: START
-  # BUG: ghcr.io/mellanox/network-operator-init-container@sha256:eab20c1439fc0ff438ef84db9f289bf344db5584f4238cf7384e1d8f1b4982c8: manifest unknown
-  additionalImages:
-    - name: ghcr.io/mellanox/network-operator-init-container:latest
-  blockedImages:
-    - name: ghcr.io/mellanox/network-operator-init-container@sha256:eab20c1439fc0ff438ef84db9f289bf344db5584f4238cf7384e1d8f1b4982c8
-  # KLUDGE: END
+      targetName: filtered-certified-operator-index
+      targetTag: v4.13.0.0
   helm:
     repositories:
       - name: runai-backend
