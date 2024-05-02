@@ -1,4 +1,3 @@
-# openshift platform images
 ---
 apiVersion: mirror.openshift.io/v1alpha2
 kind: ImageSetConfiguration
