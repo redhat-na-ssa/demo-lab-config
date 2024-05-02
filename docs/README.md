@@ -49,6 +49,7 @@ The following information is produced by using the `oc-mirror` plugin.
 Executed Example
 
 - [Example of config and outputs from oc-mirror](../components/imageset/example/)
+- [Summary of container registries](images/registry-list.txt)
 
 Operational Examples
 
