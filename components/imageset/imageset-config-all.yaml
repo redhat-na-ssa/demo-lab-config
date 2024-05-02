@@ -33,6 +33,9 @@ mirror:
         - name: devworkspace-operator
           channels:
             - name: fast
+        - name: cincinnati-operator
+          channels:
+            - name: v1
         - name: cluster-logging
           channels:
             - name: stable-5.9
