@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: nvidia-only-certified-operator-index
+  namespace: openshift-marketplace
+spec:
+  image: registry-mirror.svc:5000/disconnected/redhat/nvidia-only-certified-operator-index:v4.13.0.0
+  sourceType: grpc

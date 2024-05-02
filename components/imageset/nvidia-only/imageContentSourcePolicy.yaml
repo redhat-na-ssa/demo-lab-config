@@ -1,0 +1,18 @@
+---
+apiVersion: operator.openshift.io/v1alpha1
+kind: ImageContentSourcePolicy
+metadata:
+  labels:
+    operators.openshift.org/catalog: "true"
+  name: operator-0
+spec:
+  repositoryDigestMirrors:
+  - mirrors:
+    - registry-mirror.svc:5000/disconnected/nvidia
+    source: nvcr.io/nvidia
+  - mirrors:
+    - registry-mirror.svc:5000/disconnected/openshift4
+    source: registry.redhat.io/openshift4
+  - mirrors:
+    - registry-mirror.svc:5000/disconnected/nvidia
+    source: registry.connect.redhat.com/nvidia

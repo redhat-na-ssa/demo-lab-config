@@ -17,6 +17,8 @@ mirror:
         - name: nfd
           channels:
             - name: stable
+      targetName: nvidia-only-redhat-operator-index
+      targetTag: v4.13.0.0
     - catalog: 'registry.redhat.io/redhat/certified-operator-index:v4.13'
       packages:
         # oc mirror list operators --catalog registry.redhat.io/redhat/certified-operator-index:v4.14 --package gpu-operator-certified --channel=stable
@@ -24,5 +26,5 @@ mirror:
           channels:
             - name: 'v24.3'
             - name: stable
-  # additionalImages:
-  # - name: registry.redhat.io/ubi8/ubi:latest
+      targetName: nvidia-only-certified-operator-index
+      targetTag: v4.13.0.0
