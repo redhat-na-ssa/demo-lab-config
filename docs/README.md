@@ -5,6 +5,7 @@
 When using a private registry for installation or upgrading, you need to be able to authenticate to multiple Red Hat locations: cloud.openshift.com, quay.io, registry.connect.redhat.com and registry.redhat.io. The Red Hat OpenShift pull-secret.txt file provides these credentials. Below are the steps to fetch these credentials.
 
 Prerequisites:
+
 - you MUST have account to access `console.redhat.com`
 - you MUST have access to your private registry
 - you NEED `jq`, `base64`, `bash` to run the Shell example, but not required
@@ -13,7 +14,7 @@ Prerequisites:
 
 1. Go to console.redhat.com
 ![images](./images/console-rh-com.png)
-1. Search 'openshift' or go directly to https://console.redhat.com/openshift/overview
+1. Search 'openshift' or go directly to <https://console.redhat.com/openshift/overview>
 ![images](./images/console-rh-com-overview.png)
 1. Go to downloads or <https://console.redhat.com/openshift/downloads#tool-pull-secret>
 ![images](./images/tool-pull-secret.png)
@@ -34,6 +35,7 @@ echo "${TOKEN}" | base64 -d | tr ':' '\n'
 ```
 
 ### Alternate
+
 If you have `podman`, you can authenticate with the pull-secret.txt from your CLI using `podman login quay.io --authfile pull-secret.txt`
 
 ![images](./images/podman-login-quay.png)
@@ -46,7 +48,7 @@ The tool [oc-mirror](https://github.com/openshift/oc-mirror) is extremely useful
 
 The following information is produced by using the `oc-mirror` plugin.
 
-Executed Example
+Executed Examples
 
 - [Example of config and outputs from oc-mirror](../components/imageset/example/)
 - [Summary of container registries](images/registry-list.txt)
@@ -55,7 +57,7 @@ Operational Examples
 
 - [All for Disconnected](images/imageset-config-all-images.txt) - [[ImageSet Config](../components/imageset/imageset-config-all.yaml)]
 - [OpensShift Upgrade - 4.13 to 4.14 (Platform Only)](images/imageset-config-ocp-upgrade-images.txt) - [[ImageSet Config](../components/imageset/imageset-config-ocp-upgrade.yaml)]
-- [OpensShift Nvidia Operator Only](images/imageset-config-nvidia-only-images.txt) - [[ImageSet Config](../components/imageset/imageset-config-nvidia-only.yaml)]
+- [OpensShift Nvidia Operator Only](images/imageset-config-nvidia-only-images.txt) - [[ImageSet Config](../components/imageset/imageset-config-nvidia-only.yaml)] - [[Registries]](../components/imageset/nvidia-only/registry-list.txt)
 
 Grouped Components
 
