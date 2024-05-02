@@ -46,6 +46,10 @@ The tool [oc-mirror](https://github.com/openshift/oc-mirror) is extremely useful
 
 The following information is produced by using the `oc-mirror` plugin.
 
+Executed Example
+
+- [Example of config and outputs from oc-mirror](../components/imageset/example/)
+
 Operational Examples
 
 - [All for Disconnected](images/imageset-config-all-images.txt) - [[ImageSet Config](../components/imageset/imageset-config-all.yaml)]

@@ -22,3 +22,7 @@ oc-mirror \
   --dest-use-http docker://registry-mirror.svc:5000/disconnected \
   --ignore-history --skip-metadata-check
 ```
+
+```sh
+sed -n '/source:/{s/.*source://p}' imageContentSourcePolicy.yaml | sort -u > registry-list.txt
+```
