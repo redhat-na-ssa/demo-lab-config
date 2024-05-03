@@ -1,3 +1,4 @@
- nvcr.io/nvidia
- registry.connect.redhat.com/nvidia
- registry.redhat.io/openshift4
+nvcr.io/nvidia
+registry.connect.redhat.com/nvidia
+registry.redhat.io/openshift4
+registry.redhat.io/redhat
