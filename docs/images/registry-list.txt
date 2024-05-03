@@ -10,7 +10,6 @@ quay.io/openshift-release-dev/ocp-v4.0-art-dev
 registry.access.redhat.com/ubi8
 registry.connect.redhat.com/nvidia
 registry.connect.redhat.com/nvidia-network-operator
-registry.redhat.io/redhat
 registry.redhat.io/advanced-cluster-security
 registry.redhat.io/container-native-virtualization
 registry.redhat.io/devworkspace
@@ -21,6 +20,7 @@ registry.redhat.io/openshift-serverless-1
 registry.redhat.io/openshift-serverless-1-tech-preview
 registry.redhat.io/openshift-service-mesh
 registry.redhat.io/openshift-update-service
+registry.redhat.io/redhat
 registry.redhat.io/rhacm2
 registry.redhat.io/rhel8
 registry.redhat.io/rhel9
