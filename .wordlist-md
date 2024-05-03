@@ -94,3 +94,12 @@ http
 imageset
 svc
 tcp
+
+dev
+disableAllDefaultSources
+GPG
+ibm
+json
+operatorhub
+OperatorHub
+XDG

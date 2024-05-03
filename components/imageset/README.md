@@ -29,7 +29,7 @@ oc-mirror \
 ```
 
 ```sh
-# disable default operatorhub catlog sources
+# disable default operatorhub catalog sources
 oc patch OperatorHub cluster --type json -p '[{"op": "add", "path": "/spec/disableAllDefaultSources", "value": true}]'
 
 cat < YAML | oc apply -f -
