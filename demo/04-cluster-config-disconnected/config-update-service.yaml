@@ -1,9 +1,44 @@
+---
 apiVersion: updateservice.operator.openshift.io/v1
 kind: UpdateService
 metadata:
   name: update-service-oc-mirror
   namespace: openshift-update-service
 spec:
-  graphDataImage: 172.29.172.84:5000/disconnected/openshift/graph-image@sha256:8f42e72d227c028f636acc88b094f6bcb88d4a0959d4744e9c45a2d224a01ae6
-  releases: 172.29.172.84:5000/disconnected/openshift/release-images
+  graphDataImage: registry-v2.registry.svc.cluster.local:5000/disconnected/openshift/graph-image@sha256:8f42e72d227c028f636acc88b094f6bcb88d4a0959d4744e9c45a2d224a01ae6
+  releases: registry-v2.registry.svc.cluster.local:5000/disconnected/openshift/release-images
   replicas: 1
+# ---
+# kind: ConfigMap
+# apiVersion: v1
+# metadata:
+#   name: update-service-config
+#   namespace: openshift-config
+# data:
+#   updateservice-registry: |
+#     -----BEGIN CERTIFICATE-----
+#     MIIEUjCCA9igAwIBAgIRAOsir1XT3TPuVynexeRFG5gwCgYIKoZIzj0EAwMwSzEL
+#     MAkGA1UEBhMCQVQxEDAOBgNVBAoTB1plcm9TU0wxKjAoBgNVBAMTIVplcm9TU0wg
+#     RUNDIERvbWFpbiBTZWN1cmUgU2l0ZSBDQTAeFw0yNDAzMjIwMDAwMDBaFw0yNDA2
+#     MjAyMzU5NTlaMC4xLDAqBgNVBAMTI2FwaS5jbHVzdGVyMS5zYW5kYm94Mjg0Lm9w
+#     ZW50bGMuY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMGCNMtMJmA5CaiDy
+#     /63RY9ILT/GowhXqq9J8FAyPeGiqQSk8VHO5T1DDLOC+kylQ+pG5MWi08rpx7B9P
+#     6hUr1KOCArgwggK0MB8GA1UdIwQYMBaAFA9r5kvOOUeu9n6QHnnwMJGSyF+jMB0G
+#     A1UdDgQWBBQvwLcEQErmR5uOfylSc5cMmU5jpzAOBgNVHQ8BAf8EBAMCB4AwDAYD
+#     VR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwSQYDVR0g
+#     BEIwQDA0BgsrBgEEAbIxAQICTjAlMCMGCCsGAQUFBwIBFhdodHRwczovL3NlY3Rp
+#     Z28uY29tL0NQUzAIBgZngQwBAgEwgYgGCCsGAQUFBwEBBHwwejBLBggrBgEFBQcw
+#     AoY/aHR0cDovL3plcm9zc2wuY3J0LnNlY3RpZ28uY29tL1plcm9TU0xFQ0NEb21h
+#     aW5TZWN1cmVTaXRlQ0EuY3J0MCsGCCsGAQUFBzABhh9odHRwOi8vemVyb3NzbC5v
+#     Y3NwLnNlY3RpZ28uY29tMIIBBQYKKwYBBAHWeQIEAgSB9gSB8wDxAHYAdv+IPwq2
+#     +5VRwmHM9Ye6NLSkzbsp3GhCCp/mZ0xaOnQAAAGOaC7CJAAABAMARzBFAiA2n+eB
+#     C3tBtbugVOTDv54xQPvIZ4TluNPnSvap/sDNSgIhAKUsV2JlDEW4yUqPhq/3xpeK
+#     LUL/CP1b/GhxEZidyECgAHcAO1N3dT4tuYBOizBbBv5AO2fYT8P0x70ADS1yb+H6
+#     1BcAAAGOaC7BvwAABAMASDBGAiEA8louFFmcRK+CFFNdrqH15LGa/5JJRwzy+AzK
+#     NLrAp6gCIQCWK4bo8Z3mjA6VpYKIIjxmpPwiuigsJLyAKkEJi94YeDBWBgNVHREE
+#     TzBNgiNhcGkuY2x1c3RlcjEuc2FuZGJveDI4NC5vcGVudGxjLmNvbYImKi5hcHBz
+#     LmNsdXN0ZXIxLnNhbmRib3gyODQub3BlbnRsYy5jb20wCgYIKoZIzj0EAwMDaAAw
+#     ZQIweNNXhsJAaM3VS87YYVyH/rTtM9Rsdn8fI/MHbE8hJ5Q/IsQ01PdsY8zhjXNH
+#     huLfAjEAhJrmhBVr8UoY8Zb2znTLaA6NH+4Ve+iljUxkdXkwgF75652hYthx8LPZ
+#     7fhymUfy
+#     -----END CERTIFICATE-----

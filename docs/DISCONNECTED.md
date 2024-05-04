@@ -1,12 +1,14 @@
 # Raw Notes
 
 ```sh
+MIRROR=172.29.172.84:5000
+
 cp pull-secret.txt ${XDG_RUNTIME_DIR}/containers/auth.json
 
 # run oc-mirror from scratch area
 oc-mirror \
   --config ../components/imageset/imageset-config-lab.yaml \
-  --dest-use-http docker://172.29.172.84:5000/disconnected \
+  docker://${MIRROR}/disconnected \
   --ignore-history --skip-metadata-check
 
 # Error: Source image rejected: Invalid GPG signature

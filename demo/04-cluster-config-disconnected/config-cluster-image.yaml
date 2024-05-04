@@ -8,6 +8,7 @@ spec:
     name: registry-config
   registrySources:
     insecureRegistries:
+    - registry-v2.registry.svc.cluster.local:5000
     - 172.29.172.84:5000
     # blockedRegistries:
     # - untrusted.com
@@ -18,6 +19,38 @@ metadata:
   name: registry-config
   namespace: openshift-config
 data:
-  updateservice-registry: |
+  172.29.172.84: |
     -----BEGIN CERTIFICATE-----
+    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
+    RZcv+V0=
     -----END CERTIFICATE-----

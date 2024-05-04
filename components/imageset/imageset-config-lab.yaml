@@ -77,6 +77,7 @@ mirror:
       targetName: filtered-certified-operator-index
       targetTag: v4.13.0.0
   additionalImages:
+    - name: docker.io/library/registry:2
     - name: ghcr.io/codekow/web-terminal-tooling:latest
     - name: ghcr.io/redhat-na-ssa/udi-cuda:12.3.2-cudnn9-devel-ubi8-python311
     - name: ghcr.io/redhat-na-ssa/udi-cuda:latest
