@@ -16,6 +16,23 @@ podman run -d \
 ```
 
 ```sh
+cat < YAML | oc apply -f -
+apiVersion: config.openshift.io/v1
+kind: Image
+metadata:
+  name: cluster
+spec:
+  # additionalTrustedCA:
+  #   name: registry-config
+  registrySources:
+    insecureRegistries:
+    - 172.29.172.84:5000
+    # blockedRegistries:
+    # - untrusted.com
+YAML
+```
+
+```sh
 cp pull-secret.txt ${XDG_RUNTIME_DIR}/containers/auth.json
 
 # run oc-mirror from scratch area
@@ -60,3 +77,7 @@ YAML
 ```sh
 sed -n '/source:/{s/.*source://p}' imageContentSourcePolicy.yaml | sort -u > registry-list.txt
 ```
+
+## Links
+
+- [Old Guide](https://www.redhat.com/en/blog/openshift-private-registry)

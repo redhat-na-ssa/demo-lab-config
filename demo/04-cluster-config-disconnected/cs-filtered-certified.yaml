@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: filtered-certified-operators
+  namespace: openshift-marketplace
+spec:
+  image: 172.29.172.84:5000/disconnected/redhat/filtered-certified-operator-index:v4.13.0.0
+  sourceType: grpc
