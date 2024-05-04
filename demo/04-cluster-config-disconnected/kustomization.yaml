@@ -4,10 +4,14 @@ kind: Kustomization
 resources:
 - config-cluster-image.yaml
 - config-operatorhub.yaml
-- config-update-service.yaml
+# - config-update-service.yaml
 - cs-filtered-certified.yaml
 - cs-filtered-redhat.yaml
 - image-content.yaml
+
+# Dev Spaces
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/devspaces/instance/overlays/nvidia-gpu
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/devspaces/operator/overlays/stable
 
 # OpenShift Upgrade Operator
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/cincinnati-operator/operator/overlays/v1
