@@ -1,0 +1,401 @@
+apiVersion: v1
+items:
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    name: assets-sync
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: assets-sync
+  subjects:
+  - kind: ServiceAccount
+    name: assets-sync
+    namespace: runai
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    name: cluster-sync
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: cluster-sync-project
+  subjects:
+  - kind: ServiceAccount
+    name: cluster-sync
+    namespace: runai
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    name: external-workload-integrator
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: runai-external-workload-integrator-project
+  subjects:
+  - kind: ServiceAccount
+    name: external-workload-integrator
+    namespace: runai
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    name: pod-group-controller
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: pod-group-controller
+  subjects:
+  - kind: ServiceAccount
+    name: pod-group-controller
+    namespace: runai
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: researcher-service-rw
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: researcher-service-rw
+#   subjects:
+#   - kind: ServiceAccount
+#     name: researcher-service
+#     namespace: runai
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: runai-accessrule-controller-project
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: runai-accessrule-controller-project
+#   subjects:
+#   - kind: ServiceAccount
+#     name: accessrule-controller
+#     namespace: runai
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: runai-admission-controller-project
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: runai-admission-controller-project
+#   subjects:
+#   - kind: ServiceAccount
+#     name: runai-admission-controller
+#     namespace: runai
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: runai-binder-project
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: runai-binder-project
+#   subjects:
+#   - kind: ServiceAccount
+#     name: binder
+#     namespace: runai
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: runai-job-controller-project
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: runai-job-controller-project
+#   subjects:
+#   - kind: ServiceAccount
+#     name: runai-job-controller
+#     namespace: runai
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: runai-project-controller-cluster-pvc-per-project
+#     ownerReferences:
+#     - apiVersion: run.ai/v2
+#       blockOwnerDeletion: true
+#       controller: true
+#       kind: Project
+#       name: llm-training1
+#       uid: 2d3f22ea-89e5-48fe-a976-5ed9d79b28b7
+#     resourceVersion: "92398783"
+#     uid: db64c4a3-2e24-420d-b599-0b2ec2bca5d7
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: runai-project-controller-cluster-pvc-per-project
+#   subjects:
+#   - kind: ServiceAccount
+#     name: runai-project-controller
+#     namespace: runai
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: runai-project-controller-cluster-secret-per-project
+#     ownerReferences:
+#     - apiVersion: run.ai/v2
+#       blockOwnerDeletion: true
+#       controller: true
+#       kind: Project
+#       name: llm-training1
+#       uid: 2d3f22ea-89e5-48fe-a976-5ed9d79b28b7
+#     resourceVersion: "92398823"
+#     uid: 4ec86cc0-47c0-468d-9735-77edaf2ce488
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: runai-project-controller-cluster-secret-per-project
+#   subjects:
+#   - kind: ServiceAccount
+#     name: runai-project-controller
+#     namespace: runai
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: runai-project-controller-project
+#     ownerReferences:
+#     - apiVersion: run.ai/v2
+#       blockOwnerDeletion: true
+#       controller: true
+#       kind: Project
+#       name: llm-training1
+#       uid: 2d3f22ea-89e5-48fe-a976-5ed9d79b28b7
+#     resourceVersion: "92398785"
+#     uid: 5e7e10a9-05dd-4b12-b2e2-01084884fae1
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: runai-project-controller-project
+#   subjects:
+#   - kind: ServiceAccount
+#     name: runai-project-controller
+#     namespace: runai
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: runai-prometheus-k8s
+#     ownerReferences:
+#     - apiVersion: run.ai/v2
+#       blockOwnerDeletion: true
+#       controller: true
+#       kind: Project
+#       name: llm-training1
+#       uid: 2d3f22ea-89e5-48fe-a976-5ed9d79b28b7
+#     resourceVersion: "92398817"
+#     uid: e03b9cda-bd77-4397-9da7-838fb76764f0
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: runai-prometheus-k8s
+#   subjects:
+#   - kind: ServiceAccount
+#     name: prometheus-k8s
+#     namespace: openshift-monitoring
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: runai-scheduler-rw
+#     ownerReferences:
+#     - apiVersion: run.ai/v2
+#       blockOwnerDeletion: true
+#       controller: true
+#       kind: Project
+#       name: llm-training1
+#       uid: 2d3f22ea-89e5-48fe-a976-5ed9d79b28b7
+#     resourceVersion: "92398787"
+#     uid: 9b0aecbc-4b39-4994-a7c6-4f8d3593da98
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: runai-scheduler-rw
+#   subjects:
+#   - kind: ServiceAccount
+#     name: runai-scheduler
+#     namespace: runai
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     creationTimestamp: "2024-04-26T22:54:10Z"
+#     labels:
+#       runai/project-accessrule-ar-5-cluster-system-administrator-tes: "true"
+#       runai/project-accessrule-ar-6-cluster-system-administrator-run: "true"
+#       runai/project-accessrule-ar-9-cluster-system-administrator-vip: "true"
+#       runai/project-accessrule-ar-12-cluster-system-administrator-ri: "true"
+#       runai/project-accessrule-ar-15-cluster-system-administrator-ph: "true"
+#       runai/project-accessrule-ar-16-cluster-system-administrator-ko: "true"
+#       runai/project-accessrule-ar-17-cluster-system-administrator-dm: "true"
+#       runai/project-accessrule-ar-21-cluster-system-administrator-kr: "true"
+#       runai/project-accessrule-ar-23-cluster-system-administrator-ve: "true"
+#       runai/project-accessrule-ar-37-cluster-system-administrator-ch: "true"
+#       runai/project-accessrule-ar-38-cluster-system-administrator-wi: "true"
+#       runai/project-accessrule-ar-43-cluster-system-administrator-ch: "true"
+#     name: runai-system-administrator-ns
+#     ownerReferences:
+#     - apiVersion: run.ai/v2
+#       controller: true
+#       kind: Project
+#       name: llm-training1
+#       uid: 2d3f22ea-89e5-48fe-a976-5ed9d79b28b7
+#     resourceVersion: "114665657"
+#     uid: af2e1d6a-a6bd-4b3a-b40a-237b6ac108e3
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: runai-system-administrator-ns
+#   subjects:
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: User
+#     name: wilson.paulraj@wellsfargo.com
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: User
+#     name: runai-test@run.ai
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: User
+#     name: venka.bhogasamudram@wellsfargo.com
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: User
+#     name: phi.h.truong@wellsfargo.com
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: User
+#     name: krishnakumar.chellappa@wellsfargo.com
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: User
+#     name: chintan@wellsfargo.com
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: User
+#     name: test@run.ai
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: User
+#     name: koree@redhat.com
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: User
+#     name: dmarcus@redhat.com
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: User
+#     name: vip.patel@wellsfargo.com
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: User
+#     name: chad.chapman@run.ai
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: User
+#     name: richard.joy@wellsfargo.com
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: runai-user-job
+#     ownerReferences:
+#     - apiVersion: run.ai/v2
+#       blockOwnerDeletion: true
+#       controller: true
+#       kind: Project
+#       name: llm-training1
+#       uid: 2d3f22ea-89e5-48fe-a976-5ed9d79b28b7
+#     resourceVersion: "92398794"
+#     uid: 402ef126-d8c8-492b-a83d-8eb1990cb778
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: runai-user-job
+#   subjects:
+#   - kind: ServiceAccount
+#     name: default
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: status-updater
+#     ownerReferences:
+#     - apiVersion: run.ai/v2
+#       blockOwnerDeletion: true
+#       controller: true
+#       kind: Project
+#       name: llm-training1
+#       uid: 2d3f22ea-89e5-48fe-a976-5ed9d79b28b7
+#     resourceVersion: "92398790"
+#     uid: 588bac4b-8e9a-4d84-b461-e93d5b0452b4
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: status-updater
+#   subjects:
+#   - kind: ServiceAccount
+#     name: status-updater
+#     namespace: runai
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     annotations:
+#       openshift.io/description: Allows deploymentconfigs in this namespace to rollout
+#         pods in this namespace.  It is auto-managed by a controller; remove subjects
+#         to disable.
+#     creationTimestamp: "2024-03-27T16:50:14Z"
+#     name: system:deployers
+#     resourceVersion: "11798326"
+#     uid: 62e8cb46-8728-4ff9-a946-576bc1a501c9
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: system:deployer
+#   subjects:
+#   - kind: ServiceAccount
+#     name: deployer
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     annotations:
+#       openshift.io/description: Allows builds in this namespace to push images to
+#         this namespace.  It is auto-managed by a controller; remove subjects to disable.
+#     creationTimestamp: "2024-03-27T16:50:14Z"
+#     name: system:image-builders
+#     resourceVersion: "11798314"
+#     uid: f1c08efa-2523-4c83-8623-ce99f343c674
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: system:image-builder
+#   subjects:
+#   - kind: ServiceAccount
+#     name: builder
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     annotations:
+#       openshift.io/description: Allows all pods in this namespace to pull images from
+#         this namespace.  It is auto-managed by a controller; remove subjects to disable.
+#     creationTimestamp: "2024-03-27T16:50:14Z"
+#     name: system:image-pullers
+#     resourceVersion: "11798299"
+#     uid: bbdde750-4bd4-4bc3-ba0f-541106cae5ba
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: system:image-puller
+#   subjects:
+#   - apiGroup: rbac.authorization.k8s.io
+#     kind: Group
+#     name: system:serviceaccounts:runai-sandbox
+# - apiVersion: rbac.authorization.k8s.io/v1
+#   kind: RoleBinding
+#   metadata:
+#     name: workload-controller-rw
+#     ownerReferences:
+#     - apiVersion: run.ai/v2
+#       blockOwnerDeletion: true
+#       controller: true
+#       kind: Project
+#       name: llm-training1
+#       uid: 2d3f22ea-89e5-48fe-a976-5ed9d79b28b7
+#     resourceVersion: "92398821"
+#     uid: 0f754422-df11-47ce-9993-130f5e3acbd6
+#   roleRef:
+#     apiGroup: rbac.authorization.k8s.io
+#     kind: ClusterRole
+#     name: workload-controller-rw
+#   subjects:
+#   - kind: ServiceAccount
+#     name: workload-controller
+#     namespace: runai
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

@@ -1,0 +1,13 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: runai-sandbox
+  annotations:
+    openshift.io/display-name: Run.ai - Sandbox
+    openshift.io/requester: automation
+    openshift.io/description: |
+      Run.ai sandbox for new users to test ideas
+  labels:
+    kubernetes.io/metadata.name: runai-sandbox
+    runai/namespace-version: v2
+    runai/queue: sandbox

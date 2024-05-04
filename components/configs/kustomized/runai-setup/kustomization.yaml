@@ -7,4 +7,3 @@ commonLabels:
 resources:
 - namespace.yaml
 # - runai-gcr-secret.yaml
-# - sandbox-ns.yaml
