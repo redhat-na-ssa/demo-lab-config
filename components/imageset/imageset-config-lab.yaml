@@ -32,6 +32,9 @@ mirror:
         - name: devworkspace-operator
           channels:
             - name: fast
+        - name: devspaces
+          channels:
+            - name: stable
         - name: cincinnati-operator
           channels:
             - name: v1
@@ -73,9 +76,11 @@ mirror:
             - name: stable
       targetName: filtered-certified-operator-index
       targetTag: v4.13.0.0
-  # additionalImages:
-  #   - name: ghcr.io/mellanox/network-operator-init-container:latest
-  #   - name: ghcr.io/codekow/web-terminal-tooling:latest
+  additionalImages:
+    - name: ghcr.io/codekow/web-terminal-tooling:latest
+    - name: ghcr.io/redhat-na-ssa/udi-cuda:12.3.2-cudnn9-devel-ubi8-python311
+    - name: ghcr.io/redhat-na-ssa/udi-cuda:latest
+    - name: ghcr.io/redhat-na-ssa/s2i-cuda:latest
   # blockedImages:
   #   - name: ghcr.io/mellanox/network-operator-init-container@sha256:eab20c1439fc0ff438ef84db9f289bf344db5584f4238cf7384e1d8f1b4982c8
   helm:

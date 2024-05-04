@@ -3,6 +3,7 @@ kind: OperatorHub
 metadata:
   name: cluster
 spec:
+  # disableAllDefaultSources: true
   sources:
     - disabled: true
       name: certified-operators

@@ -28,3 +28,9 @@ mirror:
             - name: stable
       targetName: nvidia-only-certified-operator-index
       targetTag: v4.13.0.0
+  helm:
+    repositories:
+      - name: console-plugin-nvidia-gpu
+        url: https://rh-ecosystem-edge.github.io/console-plugin-nvidia-gpu
+        charts:
+          - name: console-plugin-nvidia-gpu
