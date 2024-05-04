@@ -1,0 +1,9 @@
+apiVersion: config.openshift.io/v1
+kind: ClusterVersion
+metadata:
+  name: version
+spec:
+  channel: stable-4.13
+  # clusterID: 01483a44-a5e1-40d7-a790-78fb78b408f5
+  # upstream: >-
+  #   http://update-service-oc-mirror-policy-engine.openshift-update-service.svc.cluster.local

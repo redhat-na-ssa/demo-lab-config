@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
 - config-cluster-image.yaml
+- config-operatorhub.yaml
 - config-update-service.yaml
 - cs-filtered-certified.yaml
 - cs-filtered-redhat.yaml
@@ -30,31 +31,30 @@ resources:
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/servicemeshoperator/operator/overlays/stable
 
 # OpenShift Web Terminal
-- web-terminal-tooling.yaml
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/web-terminal/operator/overlays/fast
 
 # Nvidia GPU Operator
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/gpu-operator-certified/instance/overlays/default
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/gpu-operator-certified/operator/overlays/stable
 
-patches:
-  - target:
-      kind: Subscription
-    patch: |-
-      - op: replace
-        path: /spec/source
-        value: filtered-redhat-operators
-  - target:
-      kind: Subscription
-      name: gpu-operator-certified
-    patch: |-
-      - op: replace
-        path: /spec/source
-        value: filtered-certified-operators
-  - target:
-      kind: Subscription
-      name: vault-secrets-operator
-    patch: |-
-      - op: replace
-        path: /spec/source
-        value: filtered-certified-operators
+# patches:
+#   - target:
+#       kind: Subscription
+#     patch: |-
+#       - op: replace
+#         path: /spec/source
+#         value: filtered-redhat-operators
+#   - target:
+#       kind: Subscription
+#       name: gpu-operator-certified
+#     patch: |-
+#       - op: replace
+#         path: /spec/source
+#         value: filtered-certified-operators
+#   - target:
+#       kind: Subscription
+#       name: vault-secrets-operator
+#     patch: |-
+#       - op: replace
+#         path: /spec/source
+#         value: filtered-certified-operators
