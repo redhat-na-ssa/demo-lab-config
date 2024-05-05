@@ -54,6 +54,7 @@ mirror:
         - name: multicluster-engine
           channels:
             - name: stable-2.3
+              minVersion: v2.3.6
         - name: nfd
           channels:
             - name: stable
