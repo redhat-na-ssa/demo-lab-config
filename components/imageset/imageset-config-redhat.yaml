@@ -23,22 +23,22 @@ mirror:
           channels:
             - name: stable-5.9
             - name: stable
-        - name: compliance-operator
-          channels:
-            - name: stable
-              minVersion: 1.4.0
+        # - name: compliance-operator
+        #   channels:
+        #     - name: stable
+        #       minVersion: 1.4.0
         - name: devspaces
           channels:
             - name: stable
         - name: devworkspace-operator
           channels:
             - name: fast
-        - name: kubernetes-nmstate-operator
-          channels:
-            - name: stable
-        - name: kubevirt-hyperconverged
-          channels:
-            - name: stable
+        # - name: kubernetes-nmstate-operator
+        #   channels:
+        #     - name: stable
+        # - name: kubevirt-hyperconverged
+        #   channels:
+        #     - name: stable
         # - name: multicluster-engine
         #   channels:
         #     - name: stable-2.3
