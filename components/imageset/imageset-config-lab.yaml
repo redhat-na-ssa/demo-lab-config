@@ -4,7 +4,7 @@ kind: ImageSetConfiguration
 archiveSize: 4
 storageConfig:
   local:
-    path: ./scratch/mirror_media
+    path: ./mirror_media
   # registry:
   #   imageURL: "localhost:5000"
   #   skipTLS: true
@@ -82,7 +82,6 @@ mirror:
       targetTag: v4.13.0.0
     - catalog: 'registry.redhat.io/redhat/certified-operator-index:v4.13'
       packages:
-        # oc mirror list operators --catalog registry.redhat.io/redhat/certified-operator-index:v4.14 --package gpu-operator-certified --channel=stable
         - name: crunchy-postgres-operator
           channels:
             - name: 'v5'

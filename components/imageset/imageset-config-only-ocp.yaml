@@ -1,25 +1,23 @@
-# openshift platform images
 ---
 apiVersion: mirror.openshift.io/v1alpha2
 kind: ImageSetConfiguration
 archiveSize: 4
 storageConfig:
   local:
-    path: ./scratch/mirror_media
+    path: ./mirror_media
   # registry:
   #   imageURL: "localhost:5000"
-  #   skipTLS: false
+  #   skipTLS: true
 mirror:
   platform:
     architectures:
       - amd64
-    # graph: true
+    graph: true
     channels:
     - name: stable-4.13
       type: ocp
-      minVersion: 4.13.36
-      shortestPath: true
-    - name: stable-4.14
-      type: ocp
-      minVersion: 4.14.18
-      shortestPath: true
+      # minVersion: 4.13.36
+      # shortestPath: true
+    # - name: stable-4.14
+    #   type: ocp
+    #   minVersion: 4.14.18

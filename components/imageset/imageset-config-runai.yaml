@@ -1,15 +1,17 @@
-# run.ai helm chart images
 ---
 apiVersion: mirror.openshift.io/v1alpha2
 kind: ImageSetConfiguration
 archiveSize: 4
 storageConfig:
   local:
-    path: ./scratch/mirror_media
+    path: ./mirror_media
   # registry:
   #   imageURL: "localhost:5000"
-  #   skipTLS: false
+  #   skipTLS: true
 mirror:
+  # additionalImages:
+  #   - name: gcr.io/run-ai-demo/jupyter-demo
+  #   - name: nvcr.io/nvidia/pytorch:23.08-py3
   helm:
     repositories:
       - name: runai-backend

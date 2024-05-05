@@ -1,19 +1,18 @@
-# red hat supported operators
 ---
 apiVersion: mirror.openshift.io/v1alpha2
 kind: ImageSetConfiguration
 archiveSize: 4
 storageConfig:
   local:
-    path: ./scratch/mirror_media
+    path: ./mirror_media
   # registry:
   #   imageURL: "localhost:5000"
-  #   skipTLS: false
+  #   skipTLS: true
 mirror:
   operators:
     - catalog: 'registry.redhat.io/redhat/redhat-operator-index:v4.13'
       packages:
-        # oc mirror list operators --catalog registry.redhat.io/redhat/redhat-operator-index:v4.14 --package advanced-cluster-management --channel=release-2.10
+        # oc mirror list operators --catalog registry.redhat.io/redhat/redhat-operator-index:v4.14 --package nfd --channel=stable
         - name: nfd
           channels:
             - name: stable

@@ -4,7 +4,7 @@ kind: ImageSetConfiguration
 archiveSize: 4
 storageConfig:
   local:
-    path: ./scratch/mirror_media
+    path: ./mirror_media
   # registry:
   #   imageURL: "localhost:5000"
   #   skipTLS: true

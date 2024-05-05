@@ -1,19 +1,20 @@
-# operators from certified partners
 ---
 apiVersion: mirror.openshift.io/v1alpha2
 kind: ImageSetConfiguration
 archiveSize: 4
 storageConfig:
   local:
-    path: ./scratch/mirror_media
+    path: ./mirror_media
   # registry:
   #   imageURL: "localhost:5000"
-  #   skipTLS: false
+  #   skipTLS: true
 mirror:
   operators:
     - catalog: 'registry.redhat.io/redhat/certified-operator-index:v4.13'
       packages:
-        # oc mirror list operators --catalog registry.redhat.io/redhat/certified-operator-index:v4.14 --package gpu-operator-certified --channel=stable
+        - name: crunchy-postgres-operator
+          channels:
+            - name: 'v5'
         - name: gpu-operator-certified
           channels:
             - name: 'v24.3'
@@ -26,8 +27,8 @@ mirror:
         - name: vault-secrets-operator
           channels:
             - name: stable
-      # targetName: custom-ocp-index
-      # targetTag: v4.13.0.0
+      targetName: only-certified-operator-index
+      targetTag: v4.13.0.0
   # KLUDGE: START
   # BUG: ghcr.io/mellanox/network-operator-init-container@sha256:eab20c1439fc0ff438ef84db9f289bf344db5584f4238cf7384e1d8f1b4982c8: manifest unknown
   # additionalImages:
