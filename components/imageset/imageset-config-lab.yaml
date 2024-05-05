@@ -45,12 +45,12 @@ mirror:
         - name: devworkspace-operator
           channels:
             - name: fast
-        - name: kubernetes-nmstate-operator
-          channels:
-            - name: stable
-        - name: kubevirt-hyperconverged
-          channels:
-            - name: stable
+        # - name: kubernetes-nmstate-operator
+        #   channels:
+        #     - name: stable
+        # - name: kubevirt-hyperconverged
+        #   channels:
+        #     - name: stable
         # - name: multicluster-engine
         #   channels:
         #     - name: stable-2.3
