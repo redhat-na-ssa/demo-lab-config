@@ -1,0 +1,30 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v1alpha2
+archiveSize: 4
+storageConfig:
+  local:
+    path: ./scratch/mirror_media
+  # registry:
+  #   imageURL: "localhost:5000"
+  #   skipTLS: true
+mirror:
+  operators:
+    - catalog: 'registry.redhat.io/redhat/redhat-operator-index:v4.13'
+      packages:
+        - name: local-storage-operator
+          channels:
+            - name: stable
+        - name: mcg-operator
+          channels:
+            - name: stable-4.13
+        - name: ocs-operator
+          channels:
+            - name: stable-4.13
+        - name: odf-csi-addons-operator
+          channels:
+            - name: stable-4.13
+        - name: odf-operator
+          channels:
+            - name: stable-4.13
+      targetName: filtered-odf-operator-index
+      targetTag: v4.13.0.0

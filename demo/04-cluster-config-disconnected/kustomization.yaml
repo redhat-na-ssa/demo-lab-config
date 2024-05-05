@@ -9,9 +9,12 @@ resources:
 - cs-filtered-redhat.yaml
 - image-content.yaml
 
-# Advanced Cluster Security
+# Advanced Cluster Management
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/advanced-cluster-management/instance/base
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/advanced-cluster-management/operator/overlays/release-2.8
+
+# Multicluster Engine for ACM
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/multicluster-engine/operator/overlays/stable-2.3
 
 # OpenShift Update Operator
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/cincinnati-operator/operator/overlays/v1
@@ -56,13 +59,19 @@ resources:
 # Hashicorp Vault
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/vault-secrets-operator/operator/overlays/stable
 
-# patches:
-#   - target:
-#       kind: Subscription
-#     patch: |-
-#       - op: replace
-#         path: /spec/source
-#         value: filtered-redhat-operators
+# Local Storage Operator
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/local-storage/operator/overlays/stable
+
+# Openshift Data Foundation
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/odf-operator/operator/overlays/stable-4.13
+
+patches:
+  - target:
+      kind: NodeFeatureDiscovery
+    patch: |-
+      - op: replace
+        path: /spec/operand/image
+        value: registry.redhat.io/openshift4/ose-node-feature-discovery:v4.13
 #   - target:
 #       kind: Subscription
 #       name: gpu-operator-certified
