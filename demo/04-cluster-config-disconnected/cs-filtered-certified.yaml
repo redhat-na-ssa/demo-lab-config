@@ -4,5 +4,7 @@ metadata:
   name: certified-operators
   namespace: openshift-marketplace
 spec:
+  displayName: Certified
+  priority: 100
   image: 172.29.172.84:5000/disconnected/redhat/filtered-certified-operator-index:v4.13.0.0
   sourceType: grpc
