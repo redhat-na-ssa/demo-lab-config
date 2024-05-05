@@ -6,6 +6,12 @@ metadata:
 spec:
   repositoryDigestMirrors:
   - mirrors:
+    - 172.29.172.84:5000/disconnected/codekow
+    source: ghcr.io/codekow
+  - mirrors:
+    - 172.29.172.84:5000/disconnected/ubi8
+    source: registry.access.redhat.com/ubi8
+  - mirrors:
     - 172.29.172.84:5000/disconnected/run-ai-prod
     source: gcr.io/run-ai-prod
   - mirrors:
@@ -15,14 +21,11 @@ spec:
     - 172.29.172.84:5000/disconnected/redhat-na-ssa
     source: ghcr.io/redhat-na-ssa
   - mirrors:
-    - 172.29.172.84:5000/disconnected/ubi8
-    source: registry.access.redhat.com/ubi8
-  - mirrors:
-    - 172.29.172.84:5000/disconnected/codekow
-    source: ghcr.io/codekow
-  - mirrors:
     - 172.29.172.84:5000/disconnected/edge-infrastructure
     source: quay.io/edge-infrastructure
+  - mirrors:
+    - 172.29.172.84:5000/disconnected/library
+    source: docker.io/library
 ---
 apiVersion: operator.openshift.io/v1alpha1
 kind: ImageContentSourcePolicy
@@ -33,8 +36,26 @@ metadata:
 spec:
   repositoryDigestMirrors:
   - mirrors:
+    - 172.29.172.84:5000/disconnected/openshift-pipelines
+    source: registry.redhat.io/openshift-pipelines
+  - mirrors:
+    - 172.29.172.84:5000/disconnected/advanced-cluster-security
+    source: registry.redhat.io/advanced-cluster-security
+  - mirrors:
+    - 172.29.172.84:5000/disconnected/rhacm2
+    source: registry.redhat.io/rhacm2
+  - mirrors:
     - 172.29.172.84:5000/disconnected/openshift-serverless-1-tech-preview
     source: registry.redhat.io/openshift-serverless-1-tech-preview
+  - mirrors:
+    - 172.29.172.84:5000/disconnected/hashicorp
+    source: registry.connect.redhat.com/hashicorp
+  - mirrors:
+    - 172.29.172.84:5000/disconnected/rhscl
+    source: registry.redhat.io/rhscl
+  - mirrors:
+    - 172.29.172.84:5000/disconnected/rhel8
+    source: registry.redhat.io/rhel8
   - mirrors:
     - 172.29.172.84:5000/disconnected/openshift-serverless-1
     source: registry.redhat.io/openshift-serverless-1
@@ -42,59 +63,41 @@ spec:
     - 172.29.172.84:5000/disconnected/nvidia
     source: nvcr.io/nvidia
   - mirrors:
-    - 172.29.172.84:5000/disconnected/openshift-pipelines
-    source: registry.redhat.io/openshift-pipelines
-  - mirrors:
-    - 172.29.172.84:5000/disconnected/hashicorp
-    source: registry.connect.redhat.com/hashicorp
-  - mirrors:
-    - 172.29.172.84:5000/disconnected/openshift-update-service
-    source: registry.redhat.io/openshift-update-service
-  - mirrors:
-    - 172.29.172.84:5000/disconnected/rhacm2
-    source: registry.redhat.io/rhacm2
+    - 172.29.172.84:5000/disconnected/web-terminal
+    source: registry.redhat.io/web-terminal
   - mirrors:
     - 172.29.172.84:5000/disconnected/openshift-service-mesh
     source: registry.redhat.io/openshift-service-mesh
   - mirrors:
-    - 172.29.172.84:5000/disconnected/openshift-logging
-    source: registry.redhat.io/openshift-logging
-  - mirrors:
-    - 172.29.172.84:5000/disconnected/rhel8
-    source: registry.redhat.io/rhel8
-  - mirrors:
-    - 172.29.172.84:5000/disconnected/nvidia
-    source: registry.connect.redhat.com/nvidia
+    - 172.29.172.84:5000/disconnected/ubi8-minimal
+    source: registry.redhat.io/ubi8-minimal
   - mirrors:
     - 172.29.172.84:5000/disconnected/ubi8
     source: registry.redhat.io/ubi8
   - mirrors:
-    - 172.29.172.84:5000/disconnected/openshift4
-    source: registry.redhat.io/openshift4
+    - 172.29.172.84:5000/disconnected/rhel9
+    source: registry.redhat.io/rhel9
   - mirrors:
-    - 172.29.172.84:5000/disconnected/advanced-cluster-security
-    source: registry.redhat.io/advanced-cluster-security
+    - 172.29.172.84:5000/disconnected/openshift-update-service
+    source: registry.redhat.io/openshift-update-service
+  - mirrors:
+    - 172.29.172.84:5000/disconnected/nvidia
+    source: registry.connect.redhat.com/nvidia
   - mirrors:
     - 172.29.172.84:5000/disconnected/devspaces
     source: registry.redhat.io/devspaces
   - mirrors:
+    - 172.29.172.84:5000/disconnected/openshift4
+    source: registry.redhat.io/openshift4
+  - mirrors:
     - 172.29.172.84:5000/disconnected/devworkspace
     source: registry.redhat.io/devworkspace
   - mirrors:
-    - 172.29.172.84:5000/disconnected/rhscl
-    source: registry.redhat.io/rhscl
-  - mirrors:
-    - 172.29.172.84:5000/disconnected/rhel9
-    source: registry.redhat.io/rhel9
+    - 172.29.172.84:5000/disconnected/openshift-logging
+    source: registry.redhat.io/openshift-logging
   - mirrors:
     - 172.29.172.84:5000/disconnected/source-to-image
     source: registry.redhat.io/source-to-image
-  - mirrors:
-    - 172.29.172.84:5000/disconnected/web-terminal
-    source: registry.redhat.io/web-terminal
-  - mirrors:
-    - 172.29.172.84:5000/disconnected/ubi8-minimal
-    source: registry.redhat.io/ubi8-minimal
 ---
 apiVersion: operator.openshift.io/v1alpha1
 kind: ImageContentSourcePolicy

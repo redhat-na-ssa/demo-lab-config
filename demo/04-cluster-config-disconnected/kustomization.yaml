@@ -9,22 +9,34 @@ resources:
 - cs-filtered-redhat.yaml
 - image-content.yaml
 
-# Dev Spaces
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/devspaces/instance/overlays/nvidia-gpu
-- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/devspaces/operator/overlays/stable
+# Advanced Cluster Security
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/advanced-cluster-management/instance/base
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/advanced-cluster-management/operator/overlays/release-2.8
 
-# OpenShift Upgrade Operator
+# OpenShift Update Operator
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/cincinnati-operator/operator/overlays/v1
 
 # OpenShift Logging
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/cluster-logging/operator/overlays/stable
 
+# OpenShift Dev Spaces
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/devspaces/instance/overlays/nvidia-gpu
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/devspaces/operator/overlays/stable
+
 # Node Feature Discovery - for Nvidia
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/nfd/instance/overlays/only-nvidia
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/nfd/operator/overlays/stable
 
+# OpenShift GitOps
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/openshift-gitops-operator/instance/overlays/default
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/openshift-gitops-operator/operator/overlays/latest
+
 # OpenShift Pipelines
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/openshift-pipelines-operator-rh/operator/overlays/latest
+
+# Advanced Cluster Security
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/advanced-cluster-security/instance/overlays/default
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/advanced-cluster-security/operator/overlays/stable
 
 # OpenShift Serverless
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/serverless-operator/instance/knative-eventing/overlays/default
@@ -40,6 +52,9 @@ resources:
 # Nvidia GPU Operator
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/gpu-operator-certified/instance/overlays/default
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/gpu-operator-certified/operator/overlays/stable
+
+# Hashicorp Vault
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/vault-secrets-operator/operator/overlays/stable
 
 # patches:
 #   - target:
