@@ -51,10 +51,10 @@ mirror:
         - name: kubevirt-hyperconverged
           channels:
             - name: stable
-        - name: multicluster-engine
-          channels:
-            - name: stable-2.3
-            - name: 'v2.3.6'
+        # - name: multicluster-engine
+        #   channels:
+        #     - name: stable-2.3
+        #     - name: 'v2.3.6'
         - name: nfd
           channels:
             - name: stable
