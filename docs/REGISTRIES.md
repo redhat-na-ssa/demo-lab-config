@@ -20,7 +20,7 @@ registry.redhat.io/redhat
 
 `ImageContentSourcePolicy` allows aliasing public containers registries with disconnected environments. View docs [here](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.14/html/images/image-configuration#images-configuration-registry-mirror_image-configuration).
 
-Example: [ImageContentSourcePolicy](ImageContentSourcePolicy.yaml)
+Example: [ImageContentSourcePolicy](images/ImageContentSourcePolicy.yaml)
 
 ```sh
 # registries mapping translated from email
@@ -50,11 +50,11 @@ Example: [ImageContentSourcePolicy](ImageContentSourcePolicy.yaml)
 # registry.redhat.io              => container-proxy/docker-redhat-registry-remote?
 ```
 
-Recommendations
+## Recommendations
 
 It may be helpful to rename the following registries to help avoid confusion and maintain consistency.
 
-Below is an example:
+Example:
 
 ```sh
 quay.io/openshift-release-dev   => container-proxy/docker-ocp-private-remote

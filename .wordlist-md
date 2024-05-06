@@ -104,3 +104,12 @@ operatorhub
 OperatorHub
 XDG
 RUNTIME
+
+fcos
+FQDN
+gcr
+ImageContentSourcePolicy
+nvcr
+PASSTHROUGH
+perf
+RegistryAuthentication
