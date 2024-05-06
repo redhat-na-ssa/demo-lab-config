@@ -1,0 +1,8 @@
+apiVersion: updateservice.operator.openshift.io/v1
+kind: UpdateService
+metadata:
+  name: update-service-oc-mirror
+spec:
+  graphDataImage: registry-mirror.svc:5000/disconnected/openshift/graph-image@sha256:3302a957ba0bf78ba49782c49a553073442c5f91376d6d270a29dba29b7e7221
+  releases: registry-mirror.svc:5000/disconnected/openshift/release-images
+  replicas: 2

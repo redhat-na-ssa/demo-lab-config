@@ -22,6 +22,9 @@ resources:
 # OpenShift Logging
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/cluster-logging/operator/overlays/stable
 
+# Crunchy Postgres
+- https://github.com/codekow/demo-ai-gitops-catalog/components/operators/crunchy-postgres-operator/operator/overlays/v5
+
 # OpenShift Dev Spaces
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/devspaces/instance/overlays/nvidia-gpu
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/devspaces/operator/overlays/stable
