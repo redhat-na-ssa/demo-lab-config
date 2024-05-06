@@ -1,3 +1,6 @@
 nvcr.io/nvidia
+nvcr.io/nvidia/cloud-native
+nvcr.io/nvidia/k8s
+quay.io/edge-infrastructure
 registry.connect.redhat.com/nvidia
 registry.redhat.io/openshift4

@@ -1,0 +1,7 @@
+docker.io/library/registry@sha256:4fac7a8257b1d7a86599043fcc181dfbdf9c8f57e337db763ac94b0e67c6cfb5=library/registry:2
+ghcr.io/codekow/web-terminal-tooling@sha256:954d40dde0f0e048d53bd5bed6a6f5dcebf02c564baf77529bdb6fa64322c4e8=codekow/web-terminal-tooling:latest
+ghcr.io/redhat-na-ssa/s2i-cuda@sha256:87f7a1f385826e9f5b600e8186ab2472da4a6b8e3dd325164f3b00bae004f153=redhat-na-ssa/s2i-cuda:latest
+ghcr.io/redhat-na-ssa/udi-cuda@sha256:93bd226aa6e2ab6ed45280abd859c1d97e47eb0f5f3eb9f75c96cfaaae635703=redhat-na-ssa/udi-cuda:12.3.2-cudnn9-devel-ubi8-python311
+ghcr.io/redhat-na-ssa/udi-cuda@sha256:93bd226aa6e2ab6ed45280abd859c1d97e47eb0f5f3eb9f75c96cfaaae635703=redhat-na-ssa/udi-cuda:latest
+quay.io/troyer/mlflow-server@sha256:c1a78aaa9725dd789173f3274947e1f0c07d4a614b8ee19356b8c8f9bf6585df=troyer/mlflow-server:2.0
+registry.redhat.io/openshift4/ose-oauth-proxy@sha256:44fc54709645d5a446a48a076b0297b006d79bc0db3a57fd764d08483f8cd225=openshift4/ose-oauth-proxy:v4.10

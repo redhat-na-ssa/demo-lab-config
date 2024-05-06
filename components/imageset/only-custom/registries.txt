@@ -1,0 +1,5 @@
+docker.io/library
+ghcr.io/codekow
+ghcr.io/redhat-na-ssa
+quay.io/troyer
+registry.redhat.io/openshift4

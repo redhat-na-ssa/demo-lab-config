@@ -1,0 +1,7 @@
+docker.io/library/registry:2
+ghcr.io/codekow/web-terminal-tooling:latest
+ghcr.io/redhat-na-ssa/s2i-cuda:latest
+ghcr.io/redhat-na-ssa/udi-cuda:12.3.2-cudnn9-devel-ubi8-python311
+ghcr.io/redhat-na-ssa/udi-cuda:latest
+quay.io/troyer/mlflow-server:2.0
+registry.redhat.io/openshift4/ose-oauth-proxy:v4.10

@@ -1,0 +1,8 @@
+ghcr.io/codekow
+ghcr.io/redhat-na-ssa
+registry.redhat.io
+registry.redhat.io/devspaces
+registry.redhat.io/devworkspace
+registry.redhat.io/openshift4
+registry.redhat.io/rhscl
+registry.redhat.io/ubi8
