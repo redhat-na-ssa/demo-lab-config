@@ -42,7 +42,8 @@ If you have `podman`, you can authenticate with the pull-secret.txt from your CL
 
 ## Disconnected Notes
 
-See [Here](DISCONNECTED.md)
+See [Disconnected Notes](DISCONNECTED.md)
+See [Registry Notes](REGISTRIES.md)
 
 ## List of Container Images
 
@@ -122,6 +123,6 @@ Even though someone renamed `good_file` we can still verify that it is the `good
 
 ## Misc
 
-```sh
-pull_secret: '{"auths":{"none":{"auth":""}}}'
-```
+- https://access.redhat.com/articles/6990472
+- https://access.redhat.com/solutions/5121171
+- https://access.redhat.com/documentation/en-us/openshift_container_platform/4.13/html/post-installation_configuration/- post-install-node-tasks#post-install-config-adding-fcos-compute
