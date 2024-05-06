@@ -1,0 +1,7 @@
+nvcr.io/nvidia
+nvcr.io/nvidia/cloud-native
+nvcr.io/nvidia/k8s
+registry.connect.redhat.com/crunchydata
+registry.connect.redhat.com/hashicorp
+registry.connect.redhat.com/nvidia
+registry.redhat.io/openshift4

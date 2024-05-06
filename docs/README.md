@@ -42,6 +42,17 @@ If you have `podman`, you can authenticate with the pull-secret.txt from your CL
 
 ## List of Container Images
 
+Operator indexes come from the following registry:
+
+- registry.redhat.io/redhat
+
+Default OpenShift OperatorHub Sources
+
+- registry.redhat.io/redhat/certified-operator-index:v4.13 - Certified Operators
+- registry.redhat.io/redhat/community-operator-index:v4.13 - Community Operators
+- registry.redhat.io/redhat/redhat-marketplace-index:v4.13 - Red Hat Marketplace
+- registry.redhat.io/redhat/redhat-operator-index:v4.13    - Red Hat Operators
+
 You can find [release.txt](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.13/release.txt) [[local copy]](images/release.txt) to contain a list of images required to deploy the OpenShift Platform.
 
 The tool [oc-mirror](https://github.com/openshift/oc-mirror) is extremely useful for helping life cycle the OpenShift platform along with various operators and software that runs on the platform.

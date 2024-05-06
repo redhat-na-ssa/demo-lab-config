@@ -85,47 +85,85 @@ bin_check oc
 bin_check oc-mirror
 ocp_mirror_get_pull_secret
 
+pushd scratch || return
+
 # =================================
 
-get_mapping(){
-  IMAGE_SET_FILE=${1:-components/imageset/imageset-config-ocp.yaml}  
-  FILE=$(basename -- "${IMAGE_SET_FILE%.yaml}").map
-  MAPPING=scratch/mirror_media/${FILE}
+check_images(){
+  for image in $(cat ../docs/images/imageset-config-only-ocp-images.txt | sed '0,/Images/d; /quay.io/d; /registry.redhat.io/d; /registry.connect.redhat.com/d')
+  do
+    printf '%s ' "${image}"
+    if skopeo inspect --raw docker://"${image}" > /dev/null 2>&1; then
+      echo "[OK]"
+    else
+      echo "[ERROR]"
+    fi
+  done
+}
 
-  oc mirror \
-    -c "${IMAGE_SET_FILE}" \
-    --dry-run file://scratch/mirror_media > "${MAPPING%.map}-output.txt" 2>&1
+check_images_from_map(){
+  for image in $(cat ../docs/images/imageset-config-only-ocp.map | sed 's/=file.*//')
+  do
+    # podman --log-level debug pull "${image}"
 
-  [ -e "scratch/mirror_media/oc-mirror-workspace/mapping.txt" ] || return
-  cp scratch/mirror_media/oc-mirror-workspace/mapping.txt "${MAPPING}"
-
-  echo "============ Registries ============" > "${MAPPING%.map}-images.txt"  
-  get_list_registry "${MAPPING}" | tee -a "${MAPPING%.map}-images.txt"
-
-  echo "============== Images ==============" >> "${MAPPING%.map}-images.txt"
-  get_list_images_for_humans "${MAPPING}" | tee -a "${MAPPING%.map}-images.txt"
-
+    skopeo inspect --raw docker://"${image}" | jq .config.digest
+  done
 }
 
 get_list_registry(){
-  FILE=${1:-scratch/mirror_media/oc-mirror-workspace/mapping.txt}
-  sed 's#/.*##' "${FILE}" | sort -u
+  FILE=${1:-mirror_media/oc-mirror-workspace/mapping.txt}
+  sed 's#/[^/]*@.*$##' "${FILE}" | sort -u
 }
 
 get_list_images_for_humans(){
-  FILE=${1:-scratch/mirror_media/oc-mirror-workspace/mapping.txt}
-  sed 's#@sha256.*=file://.*:#:#' "${FILE}" | sort
+  FILE=${1:-mirror_media/oc-mirror-workspace/mapping.txt}
+  sed 's#@sha256.*=.*:#:#' "${FILE}" | sort -u
+}
+
+get_mapping(){
+  IMAGESET=${1:-../components/imageset/imageset-config-only-ocp.yaml}  
+  BASENAME=$(basename -- "${IMAGESET%.yaml}")
+  BASENAME=${BASENAME##imageset-config-}
+  DEST=../components/imageset/${BASENAME}
+
+  echo "
+    IMAGESET: ${IMAGESET}
+    DEST:     ${DEST}
+    BASENAME: ${BASENAME}
+  "
+
+  [ -d "${DEST}" ] || mkdir -p "${DEST}"
+
+  oc mirror \
+    -c "${IMAGESET}" \
+    file://mirror_media \
+    --dry-run \
+    --ignore-history \
+    --skip-metadata-check
+
+  mv -f .oc-mirror.log  "${BASENAME}-output.txt"
+
+  [ -e "mirror_media/oc-mirror-workspace/mapping.txt" ] || return
+  sort -u mirror_media/oc-mirror-workspace/mapping.txt > "${DEST}/mapping.txt"
+
+  # echo "============ Registries ============" > "${DEST}/registries.txt"  
+  get_list_registry "${MAPPING}" | tee "${DEST}/registries.txt"
+
+  # echo "============== Images ==============" > "${DEST}/images-tagged.txt"
+  get_list_images_for_humans "${MAPPING}" | tee "${DEST}/images-tagged.txt"
 }
 
 get_mapping_all(){
-  get_mapping components/imageset/imageset-config-nvidia-only.yaml
-  # get_mapping components/imageset/imageset-config-mvp.yaml
-  get_mapping components/imageset/imageset-config-all.yaml
-  get_mapping components/imageset/imageset-config-ocp.yaml
-  get_mapping components/imageset/imageset-config-ocp-upgrade.yaml
-  get_mapping components/imageset/imageset-config-redhat.yaml
-  get_mapping components/imageset/imageset-config-certified.yaml
-  get_mapping components/imageset/imageset-config-runai.yaml
+
+  # get_mapping
+
+  for i in ../components/imageset/imageset-config-*
+  do
+    [ -e ../components/imageset/test ] || mkdir -p test
+    get_mapping "${i}"
+  done
 }
 
 get_mapping_all
+
+popd || return

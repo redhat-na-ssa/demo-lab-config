@@ -1,0 +1,2 @@
+quay.io/openshift-release-dev
+registry.access.redhat.com/ubi8
