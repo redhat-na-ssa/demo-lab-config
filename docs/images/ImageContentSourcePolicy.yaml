@@ -1,0 +1,31 @@
+---
+apiVersion: operator.openshift.io/v1alpha1
+kind: ImageContentSourcePolicy
+metadata:
+  name: custom-0
+spec:
+  repositoryDigestMirrors:
+  - mirrors:
+    - container-proxy/docker-hub-perf
+    source: docker.io
+  - mirrors:
+    - container-proxy/??
+    source: gcr.io
+  - mirrors:
+    - container-proxy/docker-nvcr-remote
+    source: nvcr.io
+  - mirrors:
+    - container-proxy/??
+    source: quay.io
+  - mirrors:
+    - container-proxy/docker-quay-private-remote
+    source: quay.io/openshift-release-dev
+  - mirrors:
+    - container-proxy/redhat-docker-remote?
+    source: registry.access.redhat.com
+  - mirrors:
+    - container-proxy/docker-redhat-remote?
+    source: registry.connect.redhat.com
+  - mirrors:
+    - container-proxy/docker-redhat-registry-remote?
+    source: registry.redhat.io

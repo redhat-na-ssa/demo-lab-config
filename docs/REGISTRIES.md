@@ -1,18 +1,64 @@
 # OpenShift Registries
 
-OpenShift platform
+- https://access.redhat.com/RegistryAuthentication
 
-- quay.io/openshift-release-dev/ocp-release
-- quay.io/openshift-release-dev/ocp-v4.0-art-dev
+```sh
+# OpenShift platform registries
+quay.io/openshift-release-dev
 
-Red Hat operators come from:
+# Red Hat operators
+registry.redhat.io
 
-- registry.redhat.io
+# Certified Partner operators
+registry.connect.redhat.com
 
-Partner operators come from:
+# operator indexes
+registry.redhat.io/redhat
+```
 
-- registry.connect.redhat.com
+## Disconnected Notes
 
-All operator indexes come from:
+Example: [ImageContentSourcePolicy](ImageContentSourcePolicy.yaml)
 
-- registry.redhat.io/redhat
+View `ImageContentSourcePolicy` docs [here](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.14/html/images/image-configuration#images-configuration-registry-mirror_image-configuration)
+
+```sh
+# registries mapping translated from email
+#
+# ?   = need to confirm
+# ??  = unknown
+# container-proxy = FQDN for container registry
+#
+# PUBLIC                          => PASSTHROUGH
+#
+# authentication: no
+#
+# docker.io                       => container-proxy/docker-hub-perf
+# gcr.io                          => container-proxy/??
+# nvcr.io                         => container-proxy/docker-nvcr-remote
+# quay.io                         => container-proxy/??
+# registry.access.redhat.com      => container-proxy/redhat-docker-remote?
+
+#
+# authentication: yes
+#
+# you can login to the following registries with the pull-secret
+# the login is base64 encoded in the auth field
+# 
+# quay.io/openshift-release-dev   => container-proxy/docker-quay-private-remote
+# registry.connect.redhat.com     => container-proxy/docker-redhat-remote?
+# registry.redhat.io              => container-proxy/docker-redhat-registry-remote?
+```
+
+Recommendations
+
+It may be helpful to rename the following registries to help avoid confusion and maintain consistency.
+
+Below is an example:
+
+```sh
+quay.io/openshift-release-dev   => container-proxy/docker-ocp-private-remote
+registry.access.redhat.com      => container-proxy/docker-rh-access-remote?
+registry.connect.redhat.com     => container-proxy/docker-rh-connect-remote?
+registry.redhat.io              => container-proxy/docker-rh-io-remote?
+```
