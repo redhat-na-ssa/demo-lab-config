@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck disable=SC2013,SC2002
 
 check_git_root(){
   [ -n "${GIT_ROOT}" ] && return
