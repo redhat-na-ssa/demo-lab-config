@@ -1,0 +1,2 @@
+docker.io/bitnami
+gcr.io/run-ai-prod
