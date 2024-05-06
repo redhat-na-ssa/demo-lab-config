@@ -9,7 +9,8 @@ cp pull-secret.txt ${XDG_RUNTIME_DIR}/containers/auth.json
 oc-mirror \
   --config ../components/imageset/imageset-config-lab.yaml \
   docker://${MIRROR}/disconnected \
-  --ignore-history --skip-metadata-check
+  --ignore-history \
+  --skip-metadata-check
 
 # Error: Source image rejected: Invalid GPG signature
 # see https://access.redhat.com/solutions/6542281
