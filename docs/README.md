@@ -40,6 +40,10 @@ If you have `podman`, you can authenticate with the pull-secret.txt from your CL
 
 ![images](./images/podman-login-quay.png)
 
+## Disconnected Notes
+
+See [Here](DISCONNECTED.md)
+
 ## List of Container Images
 
 Operator indexes come from the following registry:
