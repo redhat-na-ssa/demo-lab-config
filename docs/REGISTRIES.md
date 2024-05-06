@@ -18,9 +18,9 @@ registry.redhat.io/redhat
 
 ## Disconnected Notes
 
-Example: [ImageContentSourcePolicy](ImageContentSourcePolicy.yaml)
+`ImageContentSourcePolicy` allows aliasing public containers registries with disconnected environments. View docs [here](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.14/html/images/image-configuration#images-configuration-registry-mirror_image-configuration).
 
-View `ImageContentSourcePolicy` docs [here](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.14/html/images/image-configuration#images-configuration-registry-mirror_image-configuration)
+Example: [ImageContentSourcePolicy](ImageContentSourcePolicy.yaml)
 
 ```sh
 # registries mapping translated from email
