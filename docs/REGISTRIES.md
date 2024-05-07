@@ -58,7 +58,7 @@ Example:
 
 ```sh
 quay.io/openshift-release-dev   => container-proxy/docker-ocp-private-remote
-registry.access.redhat.com      => container-proxy/docker-rh-access-remote?
-registry.connect.redhat.com     => container-proxy/docker-rh-connect-remote?
+registry.access.redhat.com      => container-proxy/docker-rh-access-remote
+registry.connect.redhat.com     => container-proxy/docker-rh-connect-remote
 registry.redhat.io              => container-proxy/docker-rh-io-remote?
 ```
