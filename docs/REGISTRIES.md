@@ -37,7 +37,7 @@ Example: [ImageContentSourcePolicy](images/ImageContentSourcePolicy.yaml)
 # gcr.io                          => container-proxy/gcr-io
 # nvcr.io                         => container-proxy/docker-nvcr-remote
 # quay.io                         => container-proxy/quay-docker-remote
-# registry.access.redhat.com      => container-proxy/redhat-docker-remote?
+# registry.access.redhat.com      => container-proxy/redhat-docker-remote
 
 #
 # authentication: yes
@@ -45,9 +45,9 @@ Example: [ImageContentSourcePolicy](images/ImageContentSourcePolicy.yaml)
 # you can login to the following registries with the pull-secret
 # the login is base64 encoded in the auth field
 # 
-# quay.io/openshift-release-dev   => container-proxy/docker-quay-private-remote
-# registry.connect.redhat.com     => container-proxy/docker-redhat-remote?
-# registry.redhat.io              => container-proxy/docker-redhat-registry-remote?
+# quay.io/openshift-release-dev   => container-proxy/docker-openshift-private-remote
+# registry.connect.redhat.com     => container-proxy/docker-openshift-redhat-connect-remote
+# registry.redhat.io              => container-proxy/docker-redhat-registry-remote
 ```
 
 ## Recommendations
