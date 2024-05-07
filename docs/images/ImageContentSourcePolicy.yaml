@@ -9,23 +9,23 @@ spec:
     - container-proxy/docker-hub-perf
     source: docker.io
   - mirrors:
-    - container-proxy/??
+    - container-proxy/gcr-io
     source: gcr.io
   - mirrors:
     - container-proxy/docker-nvcr-remote
     source: nvcr.io
   - mirrors:
-    - container-proxy/??
+    - container-proxy/quay-docker-remote
     source: quay.io
   - mirrors:
-    - container-proxy/docker-quay-private-remote
+    - container-proxy/docker-openshift-private-remote/openshift-release-dev
     source: quay.io/openshift-release-dev
   - mirrors:
-    - container-proxy/redhat-docker-remote?
+    - container-proxy/redhat-docker-remote
     source: registry.access.redhat.com
   - mirrors:
-    - container-proxy/docker-redhat-remote?
+    - container-proxy/docker-openshift-redhat-connect-remote
     source: registry.connect.redhat.com
   - mirrors:
-    - container-proxy/docker-redhat-registry-remote?
+    - container-proxy/docker-openshift-rh-io-remote
     source: registry.redhat.io
