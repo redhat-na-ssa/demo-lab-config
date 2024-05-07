@@ -34,7 +34,7 @@ Example: [ImageContentSourcePolicy](images/ImageContentSourcePolicy.yaml)
 # authentication: no
 #
 # docker.io                       => container-proxy/docker-hub-perf
-# gcr.io                          => container-proxy/??
+# gcr.io                          => container-proxy/gcr-io
 # nvcr.io                         => container-proxy/docker-nvcr-remote
 # quay.io                         => container-proxy/??
 # registry.access.redhat.com      => container-proxy/redhat-docker-remote?
