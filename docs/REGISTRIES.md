@@ -47,7 +47,7 @@ Example: [ImageContentSourcePolicy](images/ImageContentSourcePolicy.yaml)
 # 
 # quay.io/openshift-release-dev   => container-proxy/docker-openshift-private-remote
 # registry.connect.redhat.com     => container-proxy/docker-openshift-redhat-connect-remote
-# registry.redhat.io              => container-proxy/docker-redhat-registry-remote
+# registry.redhat.io              => container-proxy/docker-openshift-rh-io-remote
 ```
 
 ## Recommendations
@@ -60,5 +60,5 @@ Example:
 quay.io/openshift-release-dev   => container-proxy/docker-ocp-private-remote
 registry.access.redhat.com      => container-proxy/docker-rh-access-remote
 registry.connect.redhat.com     => container-proxy/docker-rh-connect-remote
-registry.redhat.io              => container-proxy/docker-rh-io-remote?
+registry.redhat.io              => container-proxy/docker-rh-io-remote
 ```
