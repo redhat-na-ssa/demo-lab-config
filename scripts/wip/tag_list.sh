@@ -11,7 +11,7 @@ tags_list(){
   do
     IMAGE=${image%:*}
     # echo "${IMAGE}" && continue
-    skopeo list-tags docker://"${IMAGE}" --authfile pull-secret >> "${DEBUG_OUTPUT}" 2>&1 || echo "${IMAGE} - [ERROR]"
+    skopeo list-tags docker://"${IMAGE}" >> "${DEBUG_OUTPUT}" 2>&1 || echo "${IMAGE} - [ERROR]"
   done
 }
 
