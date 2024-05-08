@@ -12,6 +12,12 @@ spec:
     - container-proxy/gcr-io
     source: gcr.io
   - mirrors:
+    - container-proxy/??
+    source: ghcr.io
+  - mirrors:
+    - container-proxy/??
+    source: registry.k8s.io
+  - mirrors:
     - container-proxy/docker-nvcr-remote
     source: nvcr.io
   - mirrors:

@@ -38,6 +38,8 @@ Example: [ImageContentSourcePolicy](images/ImageContentSourcePolicy.yaml)
 # nvcr.io                         => container-proxy/docker-nvcr-remote
 # quay.io                         => container-proxy/quay-docker-remote
 # registry.access.redhat.com      => container-proxy/redhat-docker-remote
+# ghcr.io                         => ??
+# registry.k8s.io                 => ??
 
 #
 # authentication: yes
@@ -48,6 +50,11 @@ Example: [ImageContentSourcePolicy](images/ImageContentSourcePolicy.yaml)
 # quay.io/openshift-release-dev   => container-proxy/docker-openshift-private-remote
 # registry.connect.redhat.com     => container-proxy/docker-openshift-redhat-connect-remote
 # registry.redhat.io              => container-proxy/docker-openshift-rh-io-remote
+```
+
+```sh
+# test tag list for each image
+scripts/wip/tag_list.sh
 ```
 
 ## Recommendations

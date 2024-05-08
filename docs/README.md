@@ -72,8 +72,8 @@ Executed Examples
 Operational Examples
 
 - [Lab config for disconnected](../components/imageset/lab/) - [[ImageSet Config](../components/imageset/imageset-config-lab.yaml)]
-- [OpensShift Upgrade - 4.13 to 4.14 (Platform Only)](../components/imageset/upgrade-ocp/) - [[ImageSet Config](../components/imageset/imageset-config-upgrade-ocp.yaml)]
-- [OpensShift Nvidia Operator Only](../components/imageset/only-nvidia/) - [[ImageSet Config](../components/imageset/imageset-config-only-nvidia.yaml)]
+- [OpenShift Upgrade - 4.13 to 4.14 (Platform Only)](../components/imageset/upgrade-ocp/) - [[ImageSet Config](../components/imageset/imageset-config-upgrade-ocp.yaml)]
+- [OpenShift Nvidia Operator Only](../components/imageset/only-nvidia/) - [[ImageSet Config](../components/imageset/imageset-config-only-nvidia.yaml)]
 
 Grouped Components
 
