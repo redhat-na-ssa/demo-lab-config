@@ -35,10 +35,10 @@ Example: [ImageContentSourcePolicy](images/ImageContentSourcePolicy.yaml)
 #
 # docker.io                       => container-proxy/docker-hub-perf
 # gcr.io                          => container-proxy/gcr-io
+# ghcr.io                         => container-proxy/docker-ghcr-io
 # nvcr.io                         => container-proxy/docker-nvcr-remote
 # quay.io                         => container-proxy/quay-docker-remote
 # registry.access.redhat.com      => container-proxy/redhat-docker-remote
-# ghcr.io                         => container-proxy/docker-ghcr-io
 # registry.k8s.io                 => container-proxy/docker-kube-state-metrics
 
 #
