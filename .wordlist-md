@@ -22,6 +22,7 @@ OperatorHub
 PASSTHROUGH
 Postgres
 Pre
+RUNTIME
 RegistryAuthentication
 Repo
 RollingUpdate
@@ -51,6 +52,7 @@ entrypoint
 fc
 fcos
 gcr
+ghcr
 github
 gitops
 html
