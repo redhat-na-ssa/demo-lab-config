@@ -38,8 +38,8 @@ Example: [ImageContentSourcePolicy](images/ImageContentSourcePolicy.yaml)
 # nvcr.io                         => container-proxy/docker-nvcr-remote
 # quay.io                         => container-proxy/quay-docker-remote
 # registry.access.redhat.com      => container-proxy/redhat-docker-remote
-# ghcr.io                         => ??
-# registry.k8s.io                 => ??
+# ghcr.io                         => container-proxy/docker-ghcr-io
+# registry.k8s.io                 => container-proxy/docker-kube-state-metrics
 
 #
 # authentication: yes
