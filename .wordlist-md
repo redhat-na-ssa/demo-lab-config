@@ -35,6 +35,7 @@ XDG
 YAML
 YOLOv
 acs
+activedirectory
 ai
 auth
 bb
@@ -82,6 +83,7 @@ nfs
 nvcr
 oc
 ocp
+olm
 openshift
 operatorhub
 perf

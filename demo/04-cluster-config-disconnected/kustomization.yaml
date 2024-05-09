@@ -7,8 +7,8 @@ resources:
 # - config-update-service.yaml
 - cs-filtered-certified.yaml
 - cs-filtered-redhat.yaml
-- image-digest-mirrorsets.yaml
-- image-tag-mirrorsets.yaml
+- image-digest-mirrorset.yaml
+- image-tag-mirrorset.yaml
 
 # Advanced Cluster Management
 - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/advanced-cluster-management/instance/base
