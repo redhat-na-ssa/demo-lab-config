@@ -1,10 +1,10 @@
 ---
 apiVersion: operator.openshift.io/v1alpha1
-kind: ImageContentSourcePolicy
+kind: ImageTagMirrorSet
 metadata:
   name: custom-0
 spec:
-  repositoryDigestMirrors:
+  imageTagMirrors:
   - mirrors:
     - container-proxy/docker-hub-perf
     source: docker.io
@@ -12,10 +12,10 @@ spec:
     - container-proxy/gcr-io
     source: gcr.io
   - mirrors:
-    - container-proxy/??
+    - container-proxy/docker-ghcr-io
     source: ghcr.io
   - mirrors:
-    - container-proxy/??
+    - container-proxy/docker-kube-state-metrics
     source: registry.k8s.io
   - mirrors:
     - container-proxy/docker-nvcr-remote

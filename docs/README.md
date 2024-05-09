@@ -126,3 +126,7 @@ Even though someone renamed `good_file` we can still verify that it is the `good
 - https://access.redhat.com/articles/6990472
 - https://access.redhat.com/solutions/5121171
 - https://access.redhat.com/documentation/en-us/openshift_container_platform/4.13/html/post-installation_configuration/- post-install-node-tasks#post-install-config-adding-fcos-compute
+- https://docs.openshift.com/container-platform/4.13/security/certificates/updating-ca-bundle.html
+- https://docs.openshift.com/container-platform/4.13/installing/disconnected_install/installing-mirroring-disconnected.html
+- https://docs.openshift.com/container-platform/4.13/authentication/identity_providers/configuring-ldap-identity-provider.html
+- https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner

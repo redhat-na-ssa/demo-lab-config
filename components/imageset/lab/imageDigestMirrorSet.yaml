@@ -1,0 +1,125 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ImageDigestMirrorSet
+metadata:
+    name: generic-0
+spec:
+    imageDigestMirrors:
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/run-ai-prod
+          source: gcr.io/run-ai-prod
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/bitnami
+          source: docker.io/bitnami
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/redhat-na-ssa
+          source: ghcr.io/redhat-na-ssa
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/ubi8
+          source: registry.access.redhat.com/ubi8
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/codekow
+          source: ghcr.io/codekow
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/openshift4
+          source: registry.redhat.io/openshift4
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/library
+          source: docker.io/library
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/edge-infrastructure
+          source: quay.io/edge-infrastructure
+---
+apiVersion: config.openshift.io/v1
+kind: ImageDigestMirrorSet
+metadata:
+    labels:
+        operators.openshift.org/catalog: "true"
+    name: operator-0
+spec:
+    imageDigestMirrors:
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/rhacm2
+          source: registry.redhat.io/rhacm2
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/openshift4
+          source: registry.redhat.io/openshift4
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/openshift-update-service
+          source: registry.redhat.io/openshift-update-service
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/web-terminal
+          source: registry.redhat.io/web-terminal
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/hashicorp
+          source: registry.connect.redhat.com/hashicorp
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/openshift-logging
+          source: registry.redhat.io/openshift-logging
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/openshift-serverless-1
+          source: registry.redhat.io/openshift-serverless-1
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/devspaces
+          source: registry.redhat.io/devspaces
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/nvidia
+          source: nvcr.io/nvidia
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/advanced-cluster-security
+          source: registry.redhat.io/advanced-cluster-security
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/ubi8-minimal
+          source: registry.redhat.io/ubi8-minimal
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/source-to-image
+          source: registry.redhat.io/source-to-image
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/openshift-gitops-1
+          source: registry.redhat.io/openshift-gitops-1
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/openshift-pipelines
+          source: registry.redhat.io/openshift-pipelines
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/ubi8
+          source: registry.redhat.io/ubi8
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/rhel9
+          source: registry.redhat.io/rhel9
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/nvidia
+          source: registry.connect.redhat.com/nvidia
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/rhscl
+          source: registry.redhat.io/rhscl
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/openshift-serverless-1-tech-preview
+          source: registry.redhat.io/openshift-serverless-1-tech-preview
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/rh-sso-7
+          source: registry.redhat.io/rh-sso-7
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/rhel8
+          source: registry.redhat.io/rhel8
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/devworkspace
+          source: registry.redhat.io/devworkspace
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/openshift-service-mesh
+          source: registry.redhat.io/openshift-service-mesh
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/crunchydata
+          source: registry.connect.redhat.com/crunchydata
+---
+apiVersion: config.openshift.io/v1
+kind: ImageDigestMirrorSet
+metadata:
+    name: release-0
+spec:
+    imageDigestMirrors:
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/openshift/release
+          source: quay.io/openshift-release-dev/ocp-v4.0-art-dev
+        - mirrors:
+            - registry-mirror.svc:5000/disconnected/openshift/release-images
+          source: quay.io/openshift-release-dev/ocp-release
