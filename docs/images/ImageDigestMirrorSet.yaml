@@ -23,9 +23,13 @@ spec:
   - mirrors:
     - container-proxy/quay-docker-remote
     source: quay.io
-  - mirrors:
-    - container-proxy/docker-openshift-private-remote/openshift-release-dev
-    source: quay.io/openshift-release-dev
+---
+apiVersion: config.openshift.io/v1
+kind: ImageDigestMirrorSet
+metadata:
+  name: redhat-0
+spec:
+  imageDigestMirrors:
   - mirrors:
     - container-proxy/redhat-docker-remote
     source: registry.access.redhat.com
@@ -35,3 +39,13 @@ spec:
   - mirrors:
     - container-proxy/docker-openshift-rh-io-remote
     source: registry.redhat.io
+---
+apiVersion: config.openshift.io/v1
+kind: ImageDigestMirrorSet
+metadata:
+  name: release-0
+spec:
+  imageDigestMirrors:
+  - mirrors:
+    - container-proxy/docker-openshift-private-remote/openshift-release-dev
+    source: quay.io/openshift-release-dev
