@@ -139,3 +139,4 @@ Even though someone renamed `good_file` we can still verify that it is the `good
 - https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html/authentication_and_authorization/ldap-syncing
 - https://docs.openshift.com/container-platform/4.14/installing/installing_bare_metal/installing-restricted-networks-bare-metal.html
 - https://docs.openshift.com/container-platform/4.14/security/certificates/updating-ca-bundle.html
+- https://runai.jfrog.io/ui/native/cp-charts-prod/control-plane
