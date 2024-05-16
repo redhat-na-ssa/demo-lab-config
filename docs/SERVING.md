@@ -12,3 +12,5 @@
 - https://github.com/redhat-na-ssa/demo-ocp-gpu/blob/main/containers/udi-cuda/ubi8/Dockerfile
 - https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tritonserver/tags
 - https://github.com/triton-inference-server/vllm_backend
+- https://github.com/run-ai/runai-samples/blob/main/Dockerfiles/Triton%20Inference%20Server/Dockerfile
+- https://github.com/triton-inference-server/server
